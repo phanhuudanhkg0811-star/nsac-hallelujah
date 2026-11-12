@@ -30,6 +30,7 @@
 - [Getting Started](#-getting-started)
 - [MVP Scope & Roadmap](#-mvp-scope--roadmap)
 - [Pedagogical Impact & STEM Goals](#-pedagogical-impact--stem-goals)
+- [Contributing](#-contributing)
 - [Attribution & References](#-attribution--references)
 
 ---
@@ -283,6 +284,12 @@ nsac-hallelujah/
 1. **Systems Thinking**: Children observe how interdependent variables (energy, biology, hardware) react under extreme planetary constraints.
 2. **Scientific Traceability**: Dispel misconceptions regarding space; every space weather anomaly cites authentic NASA DONKI observation tags.
 3. **Resilience & Critical Reasoning**: Emphasizes strategic planning and calculated risk management over reflex twitching or chance.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please check out our [Contributing Guidelines](file:///d:/nsac-hallelujah/CONTRIBUTING.md) for branch naming strategies, commit conventions (Conventional Commits), PR templates, and React 19 / TypeScript coding standards.
 
 ---
 
