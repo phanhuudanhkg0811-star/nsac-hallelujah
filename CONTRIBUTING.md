@@ -20,10 +20,10 @@ We follow a structured Git feature-branch workflow.
 
 ### 1.1. Core Branches
 - `main`: Production-ready, stable releases and live demo builds. Protected; direct commits are prohibited.
-- `develop`: Integration branch where all completed features and fixes converge.
+- `dev`: Integration branch where all completed features and fixes converge.
 
 ### 1.2. Branch Naming Rules
-Always create your working branch from `develop`. Use lowercase letters, numbers, and hyphens (`-`).
+Always create your working branch from `dev`. Use lowercase letters, numbers, and hyphens (`-`).
 
 Format:
 ```text
@@ -117,7 +117,7 @@ Follow the commit format for the PR title:
 
 ### 3.2. PR Checklist Before Submitting
 Make sure you have:
-- [ ] Branched off the latest `develop` branch.
+- [ ] Branched off the latest `dev` branch.
 - [ ] Followed the React 19 & TypeScript clean coding standards.
 - [ ] Run `npm run lint` and resolved all warnings/errors.
 - [ ] Run `npm test` and ensured all engine tests pass.
@@ -151,7 +151,7 @@ Closes #<issue_number>
 ```
 
 ### 3.4. Code Review & Merging Policy
-- At least **1 peer review approval** is required before merging into `develop`.
+- At least **1 peer review approval** is required before merging into `dev`.
 - Prefer **Squash and Merge** or **Rebase and Merge** to keep the commit tree linear and readable.
 - Delete your branch after merging to keep the repository clean.
 
@@ -162,9 +162,9 @@ Closes #<issue_number>
 Here is the step-by-step workflow for implementing a task:
 
 ```bash
-# 1. Ensure you have the latest code from develop
-git checkout develop
-git pull origin develop
+# 1. Ensure you have the latest code from dev
+git checkout dev
+git pull origin dev
 
 # 2. Create a new branch for your task
 git checkout -b feat/crew-assignment-validation
@@ -179,7 +179,7 @@ git commit -m "feat(crew): validate single daily assignment per astronaut"
 # 5. Push your branch to the remote repository
 git push -u origin feat/crew-assignment-validation
 
-# 6. Open a Pull Request on GitHub against develop
+# 6. Open a Pull Request on GitHub against dev
 ```
 
 ---
