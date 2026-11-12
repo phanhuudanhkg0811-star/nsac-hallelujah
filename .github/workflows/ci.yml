@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   validate:
-    name: Lint, Typecheck & Test
+    name: Lint, Typecheck & Test (${{ matrix.node-version }})
     runs-on: ubuntu-latest
 
     strategy:
@@ -31,24 +31,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: 'npm'
 
       - name: 📦 Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm install
-          fi
+        run: npm ci
 
       - name: 🔍 TypeScript Typecheck
-        run: npm run typecheck --if-present
-
-      - name: 🧹 ESLint Code Quality
-        run: npm run lint --if-present
+        run: npm run typecheck
 
       - name: 🧪 Unit Tests (Game Engine & Resolver)
-        run: npm test --if-present
+        run: npm test
 
       - name: 🏗️ Production Build Check
-        run: npm run build --if-present
+        run: npm run build
