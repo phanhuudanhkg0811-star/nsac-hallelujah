@@ -1,0 +1,381 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-space-900 text-slate-100 antialiased selection:bg-nasa-cyan selection:text-space-950;
+  }
+}
+
+/* Glassmorphism Sci-Fi Panels */
+.hud-panel {
+  @apply bg-slate-900/70 backdrop-blur-md border border-slate-700/60 shadow-2xl;
+}
+
+.hud-panel-glow {
+  @apply bg-slate-900/80 backdrop-blur-lg border border-cyan-500/40 shadow-[0_0_20px_rgba(6,182,212,0.15)];
+}
+
+.hud-button {
+  @apply px-4 py-2 rounded font-semibold text-sm transition-all duration-150 active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070B14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06B6D4;
+}
+
+.parsecs-room-header,
+.parsecs-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .85rem 1rem;
+  background: #171d23;
+  border-bottom: 1px solid #39434d;
+}
+
+.parsecs-room-header h1,
+.parsecs-dialog-header h2 {
+  color: #f3e9d9;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.parsecs-room-header p {
+  color: #b7c1cb;
+  font-size: .8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.parsecs-room-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.parsecs-room-control {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: .5rem;
+  padding: .45rem .9rem;
+  border: 1px solid #586473;
+  border-radius: .375rem;
+  background: #202932;
+  color: #f0f2f4;
+  font-weight: 600;
+}
+
+.parsecs-room-control:hover { background: #333f4a; }
+.parsecs-end-sol { background: #edb96c; color: #25190e; border-color: #edb96c; }
+.parsecs-end-sol:hover { background: #ffd193; }
+.parsecs-hotspot:focus-visible,
+.parsecs-room-control:focus-visible {
+  outline: 2px solid #ffd193;
+  outline-offset: 3px;
+}
+
+.parsecs-hotspot-label {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: .12rem .4rem;
+  border-radius: .25rem;
+  background: #171d23;
+  color: #ffdc9e;
+  white-space: nowrap;
+  font-size: .65rem;
+}
+
+.parsecs-dialog {
+  width: min(52rem, calc(100% - 1rem));
+  max-height: min(85dvh, 54rem);
+  padding: 0;
+  border: 1px solid #586473;
+  border-radius: .75rem;
+  background: #111820;
+  color: #f0f2f4;
+}
+
+.parsecs-dialog::backdrop { background: rgb(6 10 15 / .76); }
+.parsecs-dialog-header { position: sticky; top: 0; z-index: 1; }
+.parsecs-dialog-body { padding: .75rem; }
+
+@media (max-width: 640px) {
+  .parsecs-hotspot-label { display: none; }
+}
+
+.parsecs-cabin {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: #232620;
+}
+.parsecs-cabin .parsecs-hotspot { cursor: pointer; }
+.parsecs-cabin .parsecs-hotspot img { transition: filter .16s ease; }
+.parsecs-cabin .parsecs-hotspot:hover img { filter: brightness(1.14) drop-shadow(0 0 8px #ffd789); }
+.parsecs-stage .parsecs-hotspot span { display: none; }
+.parsecs-sol-counter {
+  position: absolute;
+  z-index: 40;
+  top: 17%;
+  right: 1.5%;
+  border: .26em solid #3a3527;
+  border-radius: .2em;
+  padding: .05em .16em;
+  background: #e7d9ac;
+  color: #191710;
+  box-shadow: 0 0 1em #ffe3905c;
+  font: 800 clamp(.9rem, 3vw, 3rem)/1 monospace;
+  letter-spacing: .08em;
+}
+.parsecs-game-menu {
+  position: absolute;
+  z-index: 45;
+  bottom: .65rem;
+  left: .65rem;
+  color: #fff3ce;
+  font: 600 .82rem/1.4 monospace;
+}
+.parsecs-game-menu summary, .parsecs-game-menu nav {
+  border: 1px solid #c1a86c;
+  background: #252820ee;
+  border-radius: .35rem;
+  padding: .35rem .65rem;
+}
+.parsecs-game-menu summary { cursor: pointer; width: max-content; }
+.parsecs-game-menu nav {
+  position: absolute;
+  bottom: 2.15rem;
+  display: grid;
+  min-width: 13rem;
+  gap: .15rem;
+}
+.parsecs-game-menu button { padding: .4rem .3rem; text-align: left; }
+.parsecs-game-menu button:hover { background: #484533; }
+
+.parsecs-cabin .parsecs-dialog {
+  width: min(74vw, 95dvh, 66rem);
+  max-height: 94dvh;
+  overflow: hidden;
+  margin: auto;
+  border: .35rem solid #251d18;
+  border-radius: 1rem;
+  background: #53423a;
+  color: #21190e;
+  box-shadow: 0 .8rem 2rem #17150fa6;
+}
+.parsecs-cabin .parsecs-dialog::backdrop { background: #1b180f2b; }
+.parsecs-cabin .parsecs-dialog-header {
+  position: relative;
+  z-index: 2;
+  padding: .7rem 1rem;
+  color: #fff4d5;
+  background: #43362b;
+  border-color: #252018;
+}
+.parsecs-cabin .parsecs-dialog-header h2 { font-family: monospace; font-size: 1rem; }
+.parsecs-panel-close {
+  min-height: 2.35rem;
+  min-width: 2.35rem;
+  border: 2px solid #322215;
+  border-radius: .24rem;
+  box-shadow: inset 0 0 0 2px #ffe3a6;
+  background: #d9923b;
+  color: #1b150e;
+  font: 700 1.2rem/1 monospace;
+}
+.parsecs-panel-close:hover { background: #efb654; }
+.parsecs-panel-close:focus-visible, .parsecs-craft-options button:focus-visible, .parsecs-lever:focus-visible {
+  outline: 3px solid #fff3c2;
+  outline-offset: 3px;
+}
+.parsecs-cabin .parsecs-dialog-body { position: relative; max-height: 80dvh; overflow: auto; }
+.parsecs-panel-art { display: none; }
+@media (min-width: 700px) and (orientation: landscape) {
+  .parsecs-cabin :is(.parsecs-dialog--log, .parsecs-dialog--craft, .parsecs-dialog--expedition) {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    overflow: hidden;
+  }
+  .parsecs-dialog--log { aspect-ratio: 485 / 640; width: min(52vw, 71dvh) !important; }
+  .parsecs-dialog--craft { aspect-ratio: 640 / 489; width: min(68vw, 120dvh) !important; }
+  .parsecs-dialog--expedition { aspect-ratio: 640 / 445; width: min(69vw, 128dvh) !important; }
+  .parsecs-panel-art { display: block; position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  .parsecs-cabin :is(.parsecs-dialog--log, .parsecs-dialog--craft, .parsecs-dialog--expedition) .parsecs-dialog-header {
+    position: absolute; inset: 13% 9% auto 8%; padding: 0; border: 0; background: none;
+  }
+  .parsecs-cabin :is(.parsecs-dialog--log, .parsecs-dialog--craft, .parsecs-dialog--expedition) .parsecs-dialog-header h2 {
+    background: #ded8bd; color: #201c14; padding: .18rem .45rem; border-radius: .25rem;
+  }
+  .parsecs-cabin :is(.parsecs-dialog--log, .parsecs-dialog--craft, .parsecs-dialog--expedition) .parsecs-dialog-body {
+    position: absolute; max-height: none; padding: 0;
+  }
+  .parsecs-dialog--log .parsecs-dialog-body { inset: 31% 12% 3% 36%; }
+  .parsecs-dialog--craft .parsecs-dialog-body { inset: 24% 16% 13% 7%; }
+  .parsecs-dialog--expedition .parsecs-dialog-body { inset: 19% 34% 8% 6%; }
+}
+
+.parsecs-dialog--log .parsecs-dialog-body,
+.parsecs-dialog--craft .parsecs-dialog-body,
+.parsecs-dialog--expedition .parsecs-dialog-body {
+  color: #292113;
+  background: #f4ebd3;
+  font-family: monospace;
+}
+.parsecs-dialog--expedition .parsecs-dialog-body { background: #c9e6e4; }
+.parsecs-dialog--log .parsecs-dialog-body .hud-panel,
+.parsecs-dialog--craft .parsecs-dialog-body .hud-panel,
+.parsecs-dialog--expedition .parsecs-dialog-body .hud-panel {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.parsecs-dialog--log .parsecs-dialog-body .hud-panel {
+  background: #eee4ca;
+}
+.parsecs-dialog--log .parsecs-dialog-body .hud-panel > div:not([class*="bg-"]),
+.parsecs-dialog--log .parsecs-dialog-body .hud-panel h2 {
+  color: #292113;
+}
+.parsecs-craft-home { display: grid; gap: .65rem; padding: .7rem; text-align: center; }
+.parsecs-craft-resources { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; }
+.parsecs-craft-resources span { background: #2d2b22; color: #fff3cf; padding: .2rem .4rem; }
+.parsecs-craft-home h3 { font-size: clamp(1rem, 2vw, 1.45rem); font-weight: 700; }
+.parsecs-craft-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; }
+.parsecs-craft-options button {
+  min-height: clamp(3rem, 11dvh, 6.5rem);
+  display: grid; place-items: center;
+  border: 3px double #292113;
+  background: #f5e9c4;
+  font-weight: 700;
+}
+.parsecs-craft-options button:hover { background: #ffda8b; }
+.parsecs-craft-options img { width: 2.25rem; height: 2.25rem; object-fit: contain; }
+.parsecs-end-console {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: .8rem;
+  background: #53423a;
+}
+.parsecs-ration-sheet { padding: .8rem; background: #f6f1dc; border: 2px solid #2b231b; }
+.parsecs-ration-sheet h3 { font-weight: 700; margin-bottom: .5rem; }
+.parsecs-ration-row { display: grid; grid-template-columns: 2rem minmax(0, 1fr) auto auto; align-items: center; gap: .35rem; min-height: 2.55rem; }
+.parsecs-ration-row img { width: 1.85rem; height: 1.85rem; object-fit: contain; }
+.parsecs-ration-row label { display: flex; align-items: center; gap: .2rem; }
+.parsecs-ration-row label img { width: 1.1rem; }
+.parsecs-lever {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: .8rem;
+  padding: 1rem;
+  min-height: 10rem;
+  border: .28rem solid #837c63;
+  border-radius: .65rem;
+  background: #252820;
+  color: #fff0bd;
+  font-family: monospace;
+  font-weight: 700;
+}
+.parsecs-lever span {
+  width: min(100%, 12rem);
+  height: 3rem;
+  border: .22rem solid #19170e;
+  border-radius: 1rem;
+  background: repeating-linear-gradient(-48deg, #1f1a10 0 1rem, #d7a330 1rem 2rem);
+  box-shadow: 0 .5rem 0 #13150f;
+  transition: transform .12s ease;
+}
+.parsecs-lever:active span { transform: translateY(.35rem); }
+.parsecs-lever:disabled { opacity: .5; }
+@media (max-width: 699px), (orientation: portrait) {
+  .parsecs-cabin .parsecs-dialog { width: calc(100% - 1.25rem); }
+  .parsecs-end-console { grid-template-columns: 1fr; padding: .3rem; }
+  .parsecs-lever { min-height: 6rem; }
+}
+
+.parsecs-craft-options img,
+.parsecs-ration-row img { filter: brightness(.16); }
+.parsecs-craft-options button { align-content: center; gap: .35rem; font-size: clamp(.9rem, 1.4vw, 1.2rem); }
+.parsecs-expedition-unavailable {
+  display: grid;
+  place-items: center;
+  gap: .75rem;
+  padding: 2rem .75rem;
+  border-block: .6rem solid #302719;
+  text-align: center;
+}
+.parsecs-expedition-unavailable strong { font-size: 1.15rem; }
+@media (min-width: 700px) and (orientation: landscape) {
+  .parsecs-dialog--craft .parsecs-craft-resources {
+    position: absolute;
+    z-index: 1;
+    top: 3.4%;
+    left: 12.7%;
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4.2%;
+  }
+  .parsecs-dialog--craft .parsecs-craft-resources span {
+    padding: .12em;
+    background: #e7dcba;
+    border: 2px solid #352a1c;
+    color: #261c0f;
+    font: 700 clamp(.75rem, 1.65vw, 1.4rem)/1 monospace;
+    text-align: center;
+  }
+  .parsecs-dialog--craft .parsecs-dialog-body { background: transparent; }
+  .parsecs-craft-home { gap: 1rem; }
+}
+
+.parsecs-paper {
+  padding: .65rem .75rem;
+  color: #272219;
+  line-height: 1.55;
+  font-size: clamp(.85rem, 1.1vw, 1.05rem);
+}
+.parsecs-paper h3 { font-weight: 800; margin-bottom: .65rem; border-bottom: 1px solid #8b8168; }
+.parsecs-paper .hud-button { background: #423521; color: #fff2ca; }
+.parsecs-paper .hud-button:hover { background: #674c25; }
+.parsecs-dialog--expedition .parsecs-dialog-body label,
+.parsecs-dialog--expedition .parsecs-dialog-body h2 { color: #234442; }
+@media (min-width: 700px) and (orientation: landscape) {
+  .parsecs-dialog--log .parsecs-dialog-body { inset: 26% 11% 2% 29%; background: transparent; }
+  .parsecs-dialog--expedition .parsecs-dialog-body { inset: 18% 37% 10% 6%; background: transparent; }
+  .parsecs-dialog--expedition .parsecs-dialog-header { right: 35%; top: 9%; }
+}
+
+/* One 4:3 coordinate space keeps the sprite art and hit targets aligned. */
+.parsecs-stage {
+  width: min(100%, calc(100dvh * 4 / 3));
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+.parsecs-cabin .parsecs-dialog--nasa .parsecs-dialog-body > .hud-panel {
+  background: #111b25;
+  color: #f0f4fa;
+  padding: .65rem;
+}

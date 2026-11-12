@@ -1,0 +1,2661 @@
+{
+  "generator": "scripts/optimize-cabin-sprites.py",
+  "encoder": {
+    "name": "Pillow/libwebp",
+    "webpVersion": "1.5.0",
+    "quality": 82,
+    "method": 6,
+    "lossless": false,
+    "resize": false,
+    "alphaVerifiedPixelExact": true
+  },
+  "count": 139,
+  "sourceBytes": 17250343,
+  "webpBytes": 4046218,
+  "savedPercent": 76.54,
+  "under2_5MB": false,
+  "budgetNote": "This total counts only converted image files, not JS/CSS, other images or source PNGs.",
+  "assets": [
+    {
+      "name": "SpaceshipChair",
+      "source": "public/assets/parsecs/SpaceshipChair.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipChair.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipChair.webp",
+      "width": 877,
+      "height": 996,
+      "sourceBytes": 366963,
+      "webpBytes": 71710,
+      "savedPercent": 80.46,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.8795,
+      "sourceSha256": "587c119bb2c9980da5ffda804ffb8c17737551bb6202d932e561b760cc79efb6",
+      "webpSha256": "8a79275bc1440eb8da000378095c3bd38d518249a93fa8dce7956884a8bc85ad"
+    },
+    {
+      "name": "SpaceshipChairCaptain",
+      "source": "public/assets/parsecs/SpaceshipChairCaptain.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipChairCaptain.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipChairCaptain.webp",
+      "width": 875,
+      "height": 1127,
+      "sourceBytes": 422304,
+      "webpBytes": 82238,
+      "savedPercent": 80.53,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.8419,
+      "sourceSha256": "8a3cc7e6ddbf71735f5d6286f937e3721eff0dc2252732599bb764edf0bae0b3",
+      "webpSha256": "9c73321f933984e3df444300a0beb3ff28751afd3d36276f26fea6a710a486e0"
+    },
+    {
+      "name": "SpaceshipClock",
+      "source": "public/assets/parsecs/SpaceshipClock.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClock.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClock.webp",
+      "width": 405,
+      "height": 666,
+      "sourceBytes": 117464,
+      "webpBytes": 26482,
+      "savedPercent": 77.46,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.8675,
+      "sourceSha256": "4fb145e11d545d65b862e7ba836fa584065b37b9b5886a38ca6ebfd14ed51580",
+      "webpSha256": "42180212c43c528f82b07fdb8133b50f3fed4f9f71b41c07e30347142b6d59ad"
+    },
+    {
+      "name": "SpaceshipClockLightGreen",
+      "source": "public/assets/parsecs/SpaceshipClockLightGreen.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockLightGreen.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockLightGreen.webp",
+      "width": 285,
+      "height": 299,
+      "sourceBytes": 41841,
+      "webpBytes": 18444,
+      "savedPercent": 55.92,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.3562,
+      "sourceSha256": "4d39475e1ca9b32bcac903ba5d62ed8a7c9c1cc0595f516d7aacba1880694b07",
+      "webpSha256": "40407e3926a3db237cd4fcfe2490833cecd0702552480eb2fa0efef43660dbdb"
+    },
+    {
+      "name": "SpaceshipClockLightRed",
+      "source": "public/assets/parsecs/SpaceshipClockLightRed.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockLightRed.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockLightRed.webp",
+      "width": 285,
+      "height": 299,
+      "sourceBytes": 41733,
+      "webpBytes": 18702,
+      "savedPercent": 55.19,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.3515,
+      "sourceSha256": "90067234986a075f4e7895ed860710b2a4c6acc9eb32fe61994bddd90dfa7fd1",
+      "webpSha256": "ed02e664706320e898a8e6d4ef29a6a1a3049c5a8ff5ab4221d8082a76bd3d01"
+    },
+    {
+      "name": "SpaceshipClockLightYellow",
+      "source": "public/assets/parsecs/SpaceshipClockLightYellow.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockLightYellow.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockLightYellow.webp",
+      "width": 746,
+      "height": 866,
+      "sourceBytes": 255861,
+      "webpBytes": 150192,
+      "savedPercent": 41.3,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.1111,
+      "sourceSha256": "15d63fc11c3ef67c23c324bee0c999de0539a1b7a27b3109b2044aeeef365200",
+      "webpSha256": "34135ae32a986adbde154f029180c15e4bad80e3213f7bb421e75e61b66eb257"
+    },
+    {
+      "name": "SpaceshipClockNumber0",
+      "source": "public/assets/parsecs/SpaceshipClockNumber0.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockNumber0.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockNumber0.webp",
+      "width": 37,
+      "height": 127,
+      "sourceBytes": 2447,
+      "webpBytes": 1064,
+      "savedPercent": 56.52,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.2986,
+      "sourceSha256": "7c793e54350b1114356f057a7a816cdb9f1d43baaeed917f20289ba9eaf59548",
+      "webpSha256": "f5e0d3c3b2a579a6bc62c6d9877b0b904324b34ea10d08184776bbe7d42dc631"
+    },
+    {
+      "name": "SpaceshipClockNumber1",
+      "source": "public/assets/parsecs/SpaceshipClockNumber1.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockNumber1.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockNumber1.webp",
+      "width": 31,
+      "height": 126,
+      "sourceBytes": 1751,
+      "webpBytes": 790,
+      "savedPercent": 54.88,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.1889,
+      "sourceSha256": "0fbd9081b788834a8c9887a7f42b0d49f28e33e465a992086dbc05877084a9a3",
+      "webpSha256": "21f422474431670a04339801014728198a0cb996e1dfe4248d2b9da31fbea3b7"
+    },
+    {
+      "name": "SpaceshipClockNumber2",
+      "source": "public/assets/parsecs/SpaceshipClockNumber2.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockNumber2.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockNumber2.webp",
+      "width": 47,
+      "height": 127,
+      "sourceBytes": 2625,
+      "webpBytes": 1188,
+      "savedPercent": 54.74,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.2123,
+      "sourceSha256": "75dba7b0e23b9e7bda81e47e7fcc22301b9c86fc68792bd920998219aa3d6f66",
+      "webpSha256": "1d21c9d3970d693c5e7ef95917b99b157ce75c093a59ce91b92bd85b437d8a69"
+    },
+    {
+      "name": "SpaceshipClockNumber3",
+      "source": "public/assets/parsecs/SpaceshipClockNumber3.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockNumber3.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockNumber3.webp",
+      "width": 41,
+      "height": 128,
+      "sourceBytes": 2655,
+      "webpBytes": 1196,
+      "savedPercent": 54.95,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.1927,
+      "sourceSha256": "8ecde81adb5cb8f60ca5aa9a0cb5eb41d1baa1dc8b1e2110bcc4d3800353e24c",
+      "webpSha256": "2eea1ce843b6c3a6fc915aa37acbbf69885e7a27f307ced7f0a66ef6218c8808"
+    },
+    {
+      "name": "SpaceshipClockNumber4",
+      "source": "public/assets/parsecs/SpaceshipClockNumber4.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockNumber4.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockNumber4.webp",
+      "width": 36,
+      "height": 128,
+      "sourceBytes": 1909,
+      "webpBytes": 860,
+      "savedPercent": 54.95,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.4081,
+      "sourceSha256": "4d29cc32d9da6a38f084993128a5b9585c13a043afc03f6a9b5717305068c4d3",
+      "webpSha256": "940e0b3666214074ca8942dd867872cfe2a18b9e15aaaac3b2e8fdf10828c446"
+    },
+    {
+      "name": "SpaceshipClockNumber5",
+      "source": "public/assets/parsecs/SpaceshipClockNumber5.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockNumber5.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockNumber5.webp",
+      "width": 39,
+      "height": 129,
+      "sourceBytes": 2453,
+      "webpBytes": 1136,
+      "savedPercent": 53.69,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.22,
+      "sourceSha256": "11bdd7b6226be74f7e9be5aae582aa06e100d84eb20b9c3077f5a8816021ee8d",
+      "webpSha256": "bd770498dbff810bc3a6d5550edccb14a017bf85ff8f2fdf73ccf155cddbb310"
+    },
+    {
+      "name": "SpaceshipClockNumber6",
+      "source": "public/assets/parsecs/SpaceshipClockNumber6.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockNumber6.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockNumber6.webp",
+      "width": 37,
+      "height": 134,
+      "sourceBytes": 2715,
+      "webpBytes": 1214,
+      "savedPercent": 55.29,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.2125,
+      "sourceSha256": "773b2a34249e69d8c5f1925c1c182c9cea565ca4be61fb23c5e70f60d7765e37",
+      "webpSha256": "4973afa2140f6d8e335889af8039eb5d0d7ec97fa726272750ffefaa73ee2e63"
+    },
+    {
+      "name": "SpaceshipClockNumber7",
+      "source": "public/assets/parsecs/SpaceshipClockNumber7.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockNumber7.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockNumber7.webp",
+      "width": 46,
+      "height": 127,
+      "sourceBytes": 2379,
+      "webpBytes": 1048,
+      "savedPercent": 55.95,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.1615,
+      "sourceSha256": "425d1a60343b0088712009256a5f706de7dccd05191b5a789089c00b3f0c26ab",
+      "webpSha256": "bae98ff41efbbe89c65fafb02438b887372cf4b2bb70abab10d41d581bb93df3"
+    },
+    {
+      "name": "SpaceshipClockNumber8",
+      "source": "public/assets/parsecs/SpaceshipClockNumber8.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockNumber8.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockNumber8.webp",
+      "width": 36,
+      "height": 133,
+      "sourceBytes": 2893,
+      "webpBytes": 1274,
+      "savedPercent": 55.96,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.2565,
+      "sourceSha256": "9ca195c13be93e64df6c2459b167775948ec4ce39d165bd1522a6db47171379b",
+      "webpSha256": "cc30284bbafe1ecc0ef744fc6025a0106a29d7904a19079585ca47124fecda47"
+    },
+    {
+      "name": "SpaceshipClockNumber9",
+      "source": "public/assets/parsecs/SpaceshipClockNumber9.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockNumber9.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockNumber9.webp",
+      "width": 38,
+      "height": 132,
+      "sourceBytes": 2749,
+      "webpBytes": 1252,
+      "savedPercent": 54.46,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.286,
+      "sourceSha256": "c8e026147654de9c3e07bca0291a1e45ef2baea92373dde6974e7200fcb76ee4",
+      "webpSha256": "e9e2b9839f0715edbebbf58120558deecb443c5fbf5ee180105b781b7379ca45"
+    },
+    {
+      "name": "SpaceshipClockNumberX",
+      "source": "public/assets/parsecs/SpaceshipClockNumberX.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipClockNumberX.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipClockNumberX.webp",
+      "width": 37,
+      "height": 127,
+      "sourceBytes": 2442,
+      "webpBytes": 1064,
+      "savedPercent": 56.43,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.2986,
+      "sourceSha256": "558a1af2157dfda9e3cb7ce281cdf625cf24d7f53ce12d77916ff4da3342bc52",
+      "webpSha256": "b6bc8ac244714fc861fc560c690e5c6edf4c6d334a11f1fc45bce08543f75a71"
+    },
+    {
+      "name": "SpaceshipConsole",
+      "source": "public/assets/parsecs/SpaceshipConsole.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipConsole.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipConsole.webp",
+      "width": 1036,
+      "height": 960,
+      "sourceBytes": 279293,
+      "webpBytes": 63072,
+      "savedPercent": 77.42,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.6533,
+      "sourceSha256": "a9ea45906c02eb9f219371e601b37a2f70dffc1d5d76e03ec41a8ee5f04493f9",
+      "webpSha256": "143672a30054ec5f506cf879cb94ffb56429032d692c89f51875bcf0c2427524"
+    },
+    {
+      "name": "SpaceshipConsoleCommunicator",
+      "source": "public/assets/parsecs/SpaceshipConsoleCommunicator.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipConsoleCommunicator.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipConsoleCommunicator.webp",
+      "width": 517,
+      "height": 782,
+      "sourceBytes": 279406,
+      "webpBytes": 63338,
+      "savedPercent": 77.33,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.6232,
+      "sourceSha256": "2dfb865825f5ebe4c7cb4589db70ff983d115ce0bab2b83a79207bda3169c671",
+      "webpSha256": "d840500679cdc05581df7d9a455d64f107ee2482bb436f7c21f6434c0191620e"
+    },
+    {
+      "name": "SpaceshipConsoleCommunicatorBroken",
+      "source": "public/assets/parsecs/SpaceshipConsoleCommunicatorBroken.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipConsoleCommunicatorBroken.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipConsoleCommunicatorBroken.webp",
+      "width": 476,
+      "height": 763,
+      "sourceBytes": 210338,
+      "webpBytes": 47620,
+      "savedPercent": 77.36,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.7123,
+      "sourceSha256": "448628bd3d94a2cf2527462b2c2fea40c336e8895d6baaa01a029a097f356856",
+      "webpSha256": "cfaf0fd26b59e051afbea20aa84bff093d2871f03532069c82819ca3c23d0741"
+    },
+    {
+      "name": "SpaceshipConsoleItemCommunicator",
+      "source": "public/assets/parsecs/SpaceshipConsoleItemCommunicator.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipConsoleItemCommunicator.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipConsoleItemCommunicator.webp",
+      "width": 379,
+      "height": 775,
+      "sourceBytes": 250312,
+      "webpBytes": 57780,
+      "savedPercent": 76.92,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.3665,
+      "sourceSha256": "0888eadaaf88c87c09177ba4070985a7b67694e58ec640b63c36ba1c1695ca78",
+      "webpSha256": "e29db8e7d5e6b16598f1272c4a526056f82d00113409998a3c24dc0f33fd1d5e"
+    },
+    {
+      "name": "SpaceshipConsoleItemCommunicatorLevel2",
+      "source": "public/assets/parsecs/SpaceshipConsoleItemCommunicatorLevel2.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipConsoleItemCommunicatorLevel2.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipConsoleItemCommunicatorLevel2.webp",
+      "width": 426,
+      "height": 959,
+      "sourceBytes": 299039,
+      "webpBytes": 65188,
+      "savedPercent": 78.2,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.1398,
+      "sourceSha256": "f0c7c91e6d79e4efcf13a9c5372d03e720ab1d0e55f21c0e687a69587444261e",
+      "webpSha256": "8f5befc5b8de6d78fc823cd22ad5ad4aff09432f1901e8bc4f645068ddc9a393"
+    },
+    {
+      "name": "SpaceshipCrafting",
+      "source": "public/assets/parsecs/SpaceshipCrafting.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipCrafting.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipCrafting.webp",
+      "width": 371,
+      "height": 738,
+      "sourceBytes": 166782,
+      "webpBytes": 40236,
+      "savedPercent": 75.88,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.98,
+      "sourceSha256": "e6aa8b3e96b51e6eaa69f47576c7351d312f3e79f7aca92eeca648de578d98dd",
+      "webpSha256": "dc333221397d9157ed94d1b1152a0a7b0b893b0cac23d18ef70c6669c9b8c24a"
+    },
+    {
+      "name": "SpaceshipCraftingLevel2",
+      "source": "public/assets/parsecs/SpaceshipCraftingLevel2.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipCraftingLevel2.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipCraftingLevel2.webp",
+      "width": 517,
+      "height": 602,
+      "sourceBytes": 165157,
+      "webpBytes": 22486,
+      "savedPercent": 86.39,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.1209,
+      "sourceSha256": "a1740579f95aa6557b022e900392b22e829a49a52b5eea5aa39e4a3ad0702d76",
+      "webpSha256": "651e837cab3c06b53490ad28249509a3aa34a94fc01e3110417e0194ee4f31a3"
+    },
+    {
+      "name": "SpaceshipCraftingLevel3",
+      "source": "public/assets/parsecs/SpaceshipCraftingLevel3.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipCraftingLevel3.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipCraftingLevel3.webp",
+      "width": 463,
+      "height": 394,
+      "sourceBytes": 42668,
+      "webpBytes": 9904,
+      "savedPercent": 76.79,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.3209,
+      "sourceSha256": "806d12d5c1728a0c0f705d825677af14b8b5daa0f0fffca43444c4d4d30d33f9",
+      "webpSha256": "70f6e839610b02b736c2c45624f43067ff00fea24ba0df30035697d4049931c0"
+    },
+    {
+      "name": "SpaceshipCraftingLightGreen",
+      "source": "public/assets/parsecs/SpaceshipCraftingLightGreen.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipCraftingLightGreen.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipCraftingLightGreen.webp",
+      "width": 239,
+      "height": 242,
+      "sourceBytes": 32286,
+      "webpBytes": 13684,
+      "savedPercent": 57.62,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.4131,
+      "sourceSha256": "7920fc92c1041a03982c8e38538bc4d21612eeff90e112a63f4eeb60e8468e67",
+      "webpSha256": "156d040c82a216845f9f40737866f68cce2d13c79a183a327dbf32c06c610e78"
+    },
+    {
+      "name": "SpaceshipCraftingLightRed",
+      "source": "public/assets/parsecs/SpaceshipCraftingLightRed.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipCraftingLightRed.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipCraftingLightRed.webp",
+      "width": 239,
+      "height": 242,
+      "sourceBytes": 28706,
+      "webpBytes": 14002,
+      "savedPercent": 51.22,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.3679,
+      "sourceSha256": "917ae474fa5533c6e95714b1bd58726177ccfcc3da23f19c9ba9d26a27d590a8",
+      "webpSha256": "df2c49d7d833c268392916ae9e41b95b2ce8741c07ebb0e7b7cd47cd01cd926c"
+    },
+    {
+      "name": "SpaceshipCraftingLightYellow",
+      "source": "public/assets/parsecs/SpaceshipCraftingLightYellow.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipCraftingLightYellow.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipCraftingLightYellow.webp",
+      "width": 839,
+      "height": 851,
+      "sourceBytes": 675452,
+      "webpBytes": 162760,
+      "savedPercent": 75.9,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.1229,
+      "sourceSha256": "3db7abe4de8f1e16d861c720b874fd2d7e911562a25d251676a6d27d0ec96505",
+      "webpSha256": "ac4cec0bb8d71dc86fbb5269f1e45f6f07be77a0dea74dca2bf3020733d84093"
+    },
+    {
+      "name": "SpaceshipEndday",
+      "source": "public/assets/parsecs/SpaceshipEndday.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipEndday.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipEndday.webp",
+      "width": 375,
+      "height": 579,
+      "sourceBytes": 126402,
+      "webpBytes": 26726,
+      "savedPercent": 78.86,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.176,
+      "sourceSha256": "e4517b6f959593f298efc0a7b4bdf754611ea6ccb717b13274268b0ca6664fca",
+      "webpSha256": "19c477f60b6f3fc05c8c74b873b9e7aeb7f39e2e3c993ebe8caf68ec12204d6a"
+    },
+    {
+      "name": "SpaceshipEnddayAnim_0001",
+      "source": "public/assets/parsecs/SpaceshipEnddayAnim_0001.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipEnddayAnim_0001.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipEnddayAnim_0001.webp",
+      "width": 110,
+      "height": 230,
+      "sourceBytes": 11410,
+      "webpBytes": 3618,
+      "savedPercent": 68.29,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.1763,
+      "sourceSha256": "40afaf5aa79a624d46f9e5c21b7c7d35e3c3173fe03749b24028934e1dec7831",
+      "webpSha256": "29262efa90b7f0ef23d26fd3ca4b196b6bc387fe8f22953d02166931a4008ae6"
+    },
+    {
+      "name": "SpaceshipEnddayCrafting",
+      "source": "public/assets/parsecs/SpaceshipEnddayCrafting.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipEnddayCrafting.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipEnddayCrafting.webp",
+      "width": 79,
+      "height": 92,
+      "sourceBytes": 7586,
+      "webpBytes": 1840,
+      "savedPercent": 75.74,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.3505,
+      "sourceSha256": "3bdb5bf3e3cd55f2a12808cc71a235e5bd197b5755336caa692891460fbbe266",
+      "webpSha256": "4f1335e10d8d8f27c64fc6d66a50743101e48ac6b68f6d90129b2b570b0fb02a"
+    },
+    {
+      "name": "SpaceshipEnddayEvent",
+      "source": "public/assets/parsecs/SpaceshipEnddayEvent.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipEnddayEvent.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipEnddayEvent.webp",
+      "width": 81,
+      "height": 82,
+      "sourceBytes": 5509,
+      "webpBytes": 1814,
+      "savedPercent": 67.07,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.4282,
+      "sourceSha256": "5193fb5068ae453e4708ddf9363b910d4f1f8528b1fa7aeb12226beda878adc4",
+      "webpSha256": "731182c1b90578d583b6cacd2d25056387ff61a4999b42cc477b49ed1bafc9e9"
+    },
+    {
+      "name": "SpaceshipEnddayExpedition",
+      "source": "public/assets/parsecs/SpaceshipEnddayExpedition.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipEnddayExpedition.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipEnddayExpedition.webp",
+      "width": 79,
+      "height": 144,
+      "sourceBytes": 9299,
+      "webpBytes": 2282,
+      "savedPercent": 75.46,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.0995,
+      "sourceSha256": "ca80a608ecf6b39a2df0000585846c4bdd6d3107abb19c3a7dae1863ef688721",
+      "webpSha256": "c57d73b801c85f28b4b893d16a12088a3e154dcfea910f5b2611f9c868173ec2"
+    },
+    {
+      "name": "SpaceshipEnddayRationing",
+      "source": "public/assets/parsecs/SpaceshipEnddayRationing.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipEnddayRationing.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipEnddayRationing.webp",
+      "width": 118,
+      "height": 135,
+      "sourceBytes": 12232,
+      "webpBytes": 2588,
+      "savedPercent": 78.84,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.0189,
+      "sourceSha256": "3d26fbc749f8f6147f358e45e97ca77cafb5ad2db306383245139a30dc15be50",
+      "webpSha256": "bff84bc32d73327a7c5c3d80b97c0b887a9827c9d495249537888ca71376ad6c"
+    },
+    {
+      "name": "SpaceshipEvent",
+      "source": "public/assets/parsecs/SpaceshipEvent.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipEvent.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipEvent.webp",
+      "width": 405,
+      "height": 475,
+      "sourceBytes": 134923,
+      "webpBytes": 31534,
+      "savedPercent": 76.63,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.4511,
+      "sourceSha256": "f15062c9759eddf0bc2ada83f2abc1b75e02e171b171a5e1ab7ffbfc2ee85791",
+      "webpSha256": "7c8e89b840ead57222150859bcbdd8f2addb318549e783899785050d6b2cf482"
+    },
+    {
+      "name": "SpaceshipEventLightGreen",
+      "source": "public/assets/parsecs/SpaceshipEventLightGreen.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipEventLightGreen.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipEventLightGreen.webp",
+      "width": 226,
+      "height": 228,
+      "sourceBytes": 29546,
+      "webpBytes": 12508,
+      "savedPercent": 57.67,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.4493,
+      "sourceSha256": "37c7dc7a1b14f673b659bd5e06ec473d635561b477f41d102cbc3f09dd5f7996",
+      "webpSha256": "e3ce3e60d76c2a3c076da035633a7a5151c60159456f750a18d6ff5192450098"
+    },
+    {
+      "name": "SpaceshipEventLightRed",
+      "source": "public/assets/parsecs/SpaceshipEventLightRed.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipEventLightRed.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipEventLightRed.webp",
+      "width": 226,
+      "height": 228,
+      "sourceBytes": 29468,
+      "webpBytes": 12992,
+      "savedPercent": 55.91,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.4445,
+      "sourceSha256": "8dd92238e0e03d2d48708837b123fbc99ad2a8182f799a426af6a866734aeb34",
+      "webpSha256": "e0dc5b880ff6f62277280b0b7fe52c9d1a8820d60b7ec81f0c011c7c49b7f964"
+    },
+    {
+      "name": "SpaceshipEventLightYellow",
+      "source": "public/assets/parsecs/SpaceshipEventLightYellow.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipEventLightYellow.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipEventLightYellow.webp",
+      "width": 839,
+      "height": 851,
+      "sourceBytes": 339303,
+      "webpBytes": 159654,
+      "savedPercent": 52.95,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.1102,
+      "sourceSha256": "14493074db42a62fc24bfe8ca44a6795a2a85b7714b505272c384c8ed773a200",
+      "webpSha256": "7b9fd7f92fb6b64b81de71253a03d1185a3a619f12124dbf14be5f979a3be509"
+    },
+    {
+      "name": "SpaceshipExpedition",
+      "source": "public/assets/parsecs/SpaceshipExpedition.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipExpedition.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipExpedition.webp",
+      "width": 338,
+      "height": 355,
+      "sourceBytes": 82146,
+      "webpBytes": 15696,
+      "savedPercent": 80.89,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.7016,
+      "sourceSha256": "7499644acf2058e1a9a7e7c60d8f3d660daaa35f16083a04a917fb5bb494672a",
+      "webpSha256": "2fee49ca9f9ecf3746786e2956f826c48cd5e9bc842c5387fdd16011f36aeb4d"
+    },
+    {
+      "name": "SpaceshipExpeditionLightGreen",
+      "source": "public/assets/parsecs/SpaceshipExpeditionLightGreen.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipExpeditionLightGreen.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipExpeditionLightGreen.webp",
+      "width": 241,
+      "height": 244,
+      "sourceBytes": 32569,
+      "webpBytes": 13756,
+      "savedPercent": 57.76,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.5254,
+      "sourceSha256": "20d062afe140b4b4e133eb15527149fe3379bfab1b6e7f7686ea3d42dd2321b7",
+      "webpSha256": "31fdb9d1d73fae8bec02573bb194802d006d853f9a6bfe1458e4a20ca007fec6"
+    },
+    {
+      "name": "SpaceshipExpeditionLightRed",
+      "source": "public/assets/parsecs/SpaceshipExpeditionLightRed.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipExpeditionLightRed.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipExpeditionLightRed.webp",
+      "width": 241,
+      "height": 244,
+      "sourceBytes": 30926,
+      "webpBytes": 14376,
+      "savedPercent": 53.51,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.4715,
+      "sourceSha256": "cee723360e7403e42a338880260d6e4599f9fe024b29bb733ae8b435e4bc551a",
+      "webpSha256": "35c2540dcbc6be5f901db99b1ee29e98e3e031961e0e906eccdd0b0262ea9ab2"
+    },
+    {
+      "name": "SpaceshipExpeditionLightYellow",
+      "source": "public/assets/parsecs/SpaceshipExpeditionLightYellow.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipExpeditionLightYellow.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipExpeditionLightYellow.webp",
+      "width": 241,
+      "height": 244,
+      "sourceBytes": 27165,
+      "webpBytes": 13670,
+      "savedPercent": 49.68,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.4997,
+      "sourceSha256": "cd9f9e8b27736508adb52eee0b1426beaef88d938077f2c5cb99294da47510d9",
+      "webpSha256": "d104fcdce2708601377aacc1133f88cc2201974d7fc80ff88fdf03f33c92811f"
+    },
+    {
+      "name": "SpaceshipExpeditionNavigationLevel1",
+      "source": "public/assets/parsecs/SpaceshipExpeditionNavigationLevel1.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipExpeditionNavigationLevel1.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipExpeditionNavigationLevel1.webp",
+      "width": 491,
+      "height": 412,
+      "sourceBytes": 92012,
+      "webpBytes": 19690,
+      "savedPercent": 78.6,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.9726,
+      "sourceSha256": "f02d2e87d6f5be18d1a9b9d27aca6a427d813e3bb2d38a5ea43ceb06c2d760c8",
+      "webpSha256": "26a4dee5159238f066c4db8845d1873d88765349e6a66ea4352a819267900ece"
+    },
+    {
+      "name": "SpaceshipExpeditionNavigationLevel2",
+      "source": "public/assets/parsecs/SpaceshipExpeditionNavigationLevel2.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipExpeditionNavigationLevel2.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipExpeditionNavigationLevel2.webp",
+      "width": 133,
+      "height": 256,
+      "sourceBytes": 27388,
+      "webpBytes": 6056,
+      "savedPercent": 77.89,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.6554,
+      "sourceSha256": "b61139ac944853fd83f2bacf0d9763a22c349cf3fea77451b822a99eccdea4f7",
+      "webpSha256": "4d070fc367380fe668ea7b2ab9f3f9088c32d7f719b551657bec7317604104d6"
+    },
+    {
+      "name": "SpaceshipExpeditionNavigationLevel3Base",
+      "source": "public/assets/parsecs/SpaceshipExpeditionNavigationLevel3Base.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipExpeditionNavigationLevel3Base.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipExpeditionNavigationLevel3Base.webp",
+      "width": 97,
+      "height": 176,
+      "sourceBytes": 15988,
+      "webpBytes": 4382,
+      "savedPercent": 72.59,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.9709,
+      "sourceSha256": "64f27a0e53751b79ded288902a618524edad84ef1c50a98f1a8fcbe415b66072",
+      "webpSha256": "5d3967159e7925a0ed1d2e4450569085344fdab6870f1d594547325228e25381"
+    },
+    {
+      "name": "SpaceshipExpeditionNavigationLevel3Dish",
+      "source": "public/assets/parsecs/SpaceshipExpeditionNavigationLevel3Dish.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipExpeditionNavigationLevel3Dish.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipExpeditionNavigationLevel3Dish.webp",
+      "width": 139,
+      "height": 140,
+      "sourceBytes": 23117,
+      "webpBytes": 5114,
+      "savedPercent": 77.88,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.6913,
+      "sourceSha256": "fdfe8a6671913572f3e8181856ca09d82a00faa05032fb418b5d3aa40c30994b",
+      "webpSha256": "35821aaa261ca70bd94b5420032110fc0faef74d526b6cf99642f0f48de21292"
+    },
+    {
+      "name": "SpaceshipExpeditionNavigationLevel3Plug",
+      "source": "public/assets/parsecs/SpaceshipExpeditionNavigationLevel3Plug.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipExpeditionNavigationLevel3Plug.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipExpeditionNavigationLevel3Plug.webp",
+      "width": 73,
+      "height": 82,
+      "sourceBytes": 6721,
+      "webpBytes": 2378,
+      "savedPercent": 64.62,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.0212,
+      "sourceSha256": "79a5d1f47bda0be19d8d2c8a684dc7a896846a87e74caf5791513297e83c8663",
+      "webpSha256": "9c6459bd3259338a466b155415c430a88efdd65cafe5d58044b668ccf5b3812e"
+    },
+    {
+      "name": "SpaceshipExpeditionPatch",
+      "source": "public/assets/parsecs/SpaceshipExpeditionPatch.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipExpeditionPatch.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipExpeditionPatch.webp",
+      "width": 212,
+      "height": 938,
+      "sourceBytes": 104682,
+      "webpBytes": 10630,
+      "savedPercent": 89.85,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.6648,
+      "sourceSha256": "244f955434717e804cbcb0d9b81089675baf9af3a13dc703939538e00545f7a7",
+      "webpSha256": "dbd9dfb66c774fc46d4a7796ac41b0bf69ef4bbd28a3278959cfeccdd52e88bc"
+    },
+    {
+      "name": "SpaceshipFanSmallAnim_0001",
+      "source": "public/assets/parsecs/SpaceshipFanSmallAnim_0001.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipFanSmallAnim_0001.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipFanSmallAnim_0001.webp",
+      "width": 286,
+      "height": 132,
+      "sourceBytes": 16247,
+      "webpBytes": 3938,
+      "savedPercent": 75.76,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.0189,
+      "sourceSha256": "04083a23551c85bea69e8905a526bf1dd7e0a4e1f0501c833e8472f9175311f6",
+      "webpSha256": "0b5844664b56925fd12ec8e76e439620f802779809192e14e75ebecfe5975975"
+    },
+    {
+      "name": "SpaceshipFlipclockAnim_0001",
+      "source": "public/assets/parsecs/SpaceshipFlipclockAnim_0001.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipFlipclockAnim_0001.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipFlipclockAnim_0001.webp",
+      "width": 66,
+      "height": 143,
+      "sourceBytes": 11625,
+      "webpBytes": 3744,
+      "savedPercent": 67.79,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.5287,
+      "sourceSha256": "dc92d656cbc900346c3bb6f226901d30e56fc59ae92fb21dcb5e1be9c6efd30a",
+      "webpSha256": "6b3918bb2cbaba7e3c9aad42b5805cff77af9c5b2af351ed414a4afff8c54091"
+    },
+    {
+      "name": "SpaceshipItemArmor",
+      "source": "public/assets/parsecs/SpaceshipItemArmor.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemArmor.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemArmor.webp",
+      "width": 351,
+      "height": 523,
+      "sourceBytes": 141191,
+      "webpBytes": 31410,
+      "savedPercent": 77.75,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.3098,
+      "sourceSha256": "6e885ab95a638de4afd3f644683e36575bff68b79d0885ca6b531457491ce87f",
+      "webpSha256": "fde0df547b7368086e7138763dfdf40fca08408f60f7be4c03b39557fed2c76d"
+    },
+    {
+      "name": "SpaceshipItemArmorDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemArmorDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemArmorDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemArmorDamaged.webp",
+      "width": 340,
+      "height": 509,
+      "sourceBytes": 155779,
+      "webpBytes": 35256,
+      "savedPercent": 77.37,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.4063,
+      "sourceSha256": "394386dc558f8f153e4317a5f373e610abb4e1164127eead68756a349bd68bd8",
+      "webpSha256": "d7b831a042d8ca7e5b6c3b0816fe96c36f322bb0b5f0364726c4988d5bf321f9"
+    },
+    {
+      "name": "SpaceshipItemArmorHanger",
+      "source": "public/assets/parsecs/SpaceshipItemArmorHanger.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemArmorHanger.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemArmorHanger.webp",
+      "width": 338,
+      "height": 264,
+      "sourceBytes": 49855,
+      "webpBytes": 15614,
+      "savedPercent": 68.68,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.4781,
+      "sourceSha256": "6737e25d4f44ae7b3d43c2caf312f4e961ee2ed120fc94cb2545845ecbe48f41",
+      "webpSha256": "babf433ad6b89af092a248cc6fb73a9000f7932e2b6d12467a44faea00201ab4"
+    },
+    {
+      "name": "SpaceshipItemArmorUpgraded",
+      "source": "public/assets/parsecs/SpaceshipItemArmorUpgraded.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemArmorUpgraded.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemArmorUpgraded.webp",
+      "width": 366,
+      "height": 523,
+      "sourceBytes": 165906,
+      "webpBytes": 34158,
+      "savedPercent": 79.41,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.6053,
+      "sourceSha256": "4663c8d5c516d9848e405d17c44938ea2e8e74b3a56b903fc5a8abb594a35318",
+      "webpSha256": "29947341a8d761794830b29f428d568137bd942c6bb8e7310325ed89405adb8b"
+    },
+    {
+      "name": "SpaceshipItemArmorUpgradedDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemArmorUpgradedDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemArmorUpgradedDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemArmorUpgradedDamaged.webp",
+      "width": 355,
+      "height": 523,
+      "sourceBytes": 178793,
+      "webpBytes": 35894,
+      "savedPercent": 79.92,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.5292,
+      "sourceSha256": "c129e7d738653b7c59eaabef1c254f3077a38722098a4000ed0738663af59b1e",
+      "webpSha256": "470816e3b8a1430fe84a2050f81eaa2cc312c1e7bd62aeeadcaf0463d99c639c"
+    },
+    {
+      "name": "SpaceshipItemArtifact",
+      "source": "public/assets/parsecs/SpaceshipItemArtifact.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemArtifact.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemArtifact.webp",
+      "width": 267,
+      "height": 540,
+      "sourceBytes": 88589,
+      "webpBytes": 23032,
+      "savedPercent": 74.0,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.5319,
+      "sourceSha256": "308fb07d0e4d2bb8308afdf1715f7de7ba049f9c2fe1d89f3860f9a7002d8af8",
+      "webpSha256": "d31a256d51289c5cd7af00f83578d00e4b2e3463458bfc7624ae88d47f2c3a49"
+    },
+    {
+      "name": "SpaceshipItemArtifactDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemArtifactDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemArtifactDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemArtifactDamaged.webp",
+      "width": 345,
+      "height": 592,
+      "sourceBytes": 93831,
+      "webpBytes": 27958,
+      "savedPercent": 70.2,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.1629,
+      "sourceSha256": "8b1f894d10227694fa4925c1674e404ab24849dc59a3500c90007b7564a7cafa",
+      "webpSha256": "0371a4764583e6b2ac382fa7c97c4233cd617e06be0d084cb58fd8a6a452632e"
+    },
+    {
+      "name": "SpaceshipItemArtifactUpgraded",
+      "source": "public/assets/parsecs/SpaceshipItemArtifactUpgraded.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemArtifactUpgraded.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemArtifactUpgraded.webp",
+      "width": 267,
+      "height": 540,
+      "sourceBytes": 105791,
+      "webpBytes": 23674,
+      "savedPercent": 77.62,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.6728,
+      "sourceSha256": "83c9089416180ce596d3c200b9e495f4b7d8e56a6baebdfe78f68b6a519e0f07",
+      "webpSha256": "24383dcd68bc68e8dd2bf520ba2f37bb2ced53a67d33496fe4ceb1ab72fe01a4"
+    },
+    {
+      "name": "SpaceshipItemArtifactUpgradedDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemArtifactUpgradedDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemArtifactUpgradedDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemArtifactUpgradedDamaged.webp",
+      "width": 368,
+      "height": 593,
+      "sourceBytes": 163224,
+      "webpBytes": 43568,
+      "savedPercent": 73.31,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.1948,
+      "sourceSha256": "32e663d5b233ab55f9ecb2a323643503c1ff9f7eaf37b7ce826605c277819d37",
+      "webpSha256": "2b8652e6e5299eef671f86447b550e46a556a91be25847b0ffc154b7dee50765"
+    },
+    {
+      "name": "SpaceshipItemBattery",
+      "source": "public/assets/parsecs/SpaceshipItemBattery.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemBattery.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemBattery.webp",
+      "width": 339,
+      "height": 384,
+      "sourceBytes": 119992,
+      "webpBytes": 24186,
+      "savedPercent": 79.84,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.6534,
+      "sourceSha256": "ed869de53e406b15c420b0977d997b10c840436226f084703a06625810f1df43",
+      "webpSha256": "4baef7d529a5c8b237e0c7971aa52679118fd982e2876c8a2a0357880482f6ec"
+    },
+    {
+      "name": "SpaceshipItemBatteryDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemBatteryDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemBatteryDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemBatteryDamaged.webp",
+      "width": 318,
+      "height": 424,
+      "sourceBytes": 119306,
+      "webpBytes": 22862,
+      "savedPercent": 80.84,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.641,
+      "sourceSha256": "73ac929bb32d2672dbd15ca966b5a247b1998efa941c2b5742635366a2eea525",
+      "webpSha256": "40f4251b28a9738ef63c4ebc53cf85d4e1e041f3214ea58bd300143758c0ba1b"
+    },
+    {
+      "name": "SpaceshipItemBatteryUpgrade",
+      "source": "public/assets/parsecs/SpaceshipItemBatteryUpgrade.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemBatteryUpgrade.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemBatteryUpgrade.webp",
+      "width": 352,
+      "height": 461,
+      "sourceBytes": 166579,
+      "webpBytes": 40516,
+      "savedPercent": 75.68,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.3734,
+      "sourceSha256": "b210a4e78fc2d20dfb8cc84785324a1ffb66af1be94c7356361ce0e6aaa21eea",
+      "webpSha256": "5ae379f68838144e0cdeb19856e66b38ea1c8ca8d012c598210931e542a9b310"
+    },
+    {
+      "name": "SpaceshipItemBatteryUpgradeDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemBatteryUpgradeDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemBatteryUpgradeDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemBatteryUpgradeDamaged.webp",
+      "width": 365,
+      "height": 352,
+      "sourceBytes": 128963,
+      "webpBytes": 24688,
+      "savedPercent": 80.86,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.6849,
+      "sourceSha256": "648d2fb2a9115c47ea1a62df3cfa6e67fc065b5954ed4b40919a9b7eeecccb2b",
+      "webpSha256": "486701dd5cf214ff79951360699767740077757b00a1eb9ce00028d6a6a87a89"
+    },
+    {
+      "name": "SpaceshipItemBook",
+      "source": "public/assets/parsecs/SpaceshipItemBook.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemBook.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemBook.webp",
+      "width": 250,
+      "height": 286,
+      "sourceBytes": 70311,
+      "webpBytes": 14172,
+      "savedPercent": 79.84,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.2865,
+      "sourceSha256": "477b2c8740d0bce79e858ba0889d80d4d9c0c190e75c4a6e24cc0e05dad6fa35",
+      "webpSha256": "056aebbc11ca95da53295317ac579b3a3cba33de2e2a58a4d314c502706c27b1"
+    },
+    {
+      "name": "SpaceshipItemBookDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemBookDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemBookDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemBookDamaged.webp",
+      "width": 244,
+      "height": 304,
+      "sourceBytes": 73686,
+      "webpBytes": 16882,
+      "savedPercent": 77.09,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.5496,
+      "sourceSha256": "f0f43cc9c5e687464ee25322af6c42b8135f51c75cd4a027e0b678777353781d",
+      "webpSha256": "d0b8dc2ce1543bcf279a02a4146b9ca0e60f5befb09b19c5fa437c03aaeba132"
+    },
+    {
+      "name": "SpaceshipItemBookUpgrade",
+      "source": "public/assets/parsecs/SpaceshipItemBookUpgrade.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemBookUpgrade.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemBookUpgrade.webp",
+      "width": 256,
+      "height": 308,
+      "sourceBytes": 63275,
+      "webpBytes": 16912,
+      "savedPercent": 73.27,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.9053,
+      "sourceSha256": "e108b5912cf60931a19a24f662993fc26be1eb6e4cea1e6642e3232ad192c9ce",
+      "webpSha256": "b5e4ac295f9424a98837224d55a9674222fc3356945e398b5bf07da9eedfd35b"
+    },
+    {
+      "name": "SpaceshipItemBookUpgradeDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemBookUpgradeDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemBookUpgradeDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemBookUpgradeDamaged.webp",
+      "width": 270,
+      "height": 304,
+      "sourceBytes": 94126,
+      "webpBytes": 18406,
+      "savedPercent": 80.45,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.8342,
+      "sourceSha256": "e63d69a6f219e90b6346093c494e06edc3d7d1796fe8c25252739176d34dead6",
+      "webpSha256": "5d0c7744dead4bd20849cdf377b60889b8410eebaefd21ebbed348a4f68e141a"
+    },
+    {
+      "name": "SpaceshipItemCommunicator",
+      "source": "public/assets/parsecs/SpaceshipItemCommunicator.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemCommunicator.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemCommunicator.webp",
+      "width": 459,
+      "height": 347,
+      "sourceBytes": 127205,
+      "webpBytes": 29900,
+      "savedPercent": 76.49,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.5826,
+      "sourceSha256": "c4e254595329c0622ec218fb44515b47376bea6e01ecdbd783d1f04c4f71f332",
+      "webpSha256": "6bf4249604d39a9999db499500a5ff0b0672e85a6c721bba92c1cfce21d4011b"
+    },
+    {
+      "name": "SpaceshipItemCommunicatorDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemCommunicatorDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemCommunicatorDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemCommunicatorDamaged.webp",
+      "width": 446,
+      "height": 345,
+      "sourceBytes": 140511,
+      "webpBytes": 28932,
+      "savedPercent": 79.41,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.7243,
+      "sourceSha256": "3bde3db3f16add1a4343a72a39b4eeaaef2762211aff24facfd507ea6e935968",
+      "webpSha256": "bc9f52367a3ee95084e3a67b0401b178536ae6663e987f96c66c39662bf0ddb8"
+    },
+    {
+      "name": "SpaceshipItemCommunicatorUpgrade",
+      "source": "public/assets/parsecs/SpaceshipItemCommunicatorUpgrade.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemCommunicatorUpgrade.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemCommunicatorUpgrade.webp",
+      "width": 477,
+      "height": 525,
+      "sourceBytes": 204865,
+      "webpBytes": 42246,
+      "savedPercent": 79.38,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.3683,
+      "sourceSha256": "252e0a0647ef1a82213049d281009c60975017ea2b5d32b795308b01eb296d3a",
+      "webpSha256": "e7c3c620d50f9fc2239dfecc619399713fef541aa5860973e6e0d8e1c8cbbf73"
+    },
+    {
+      "name": "SpaceshipItemCommunicatorUpgradeDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemCommunicatorUpgradeDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemCommunicatorUpgradeDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemCommunicatorUpgradeDamaged.webp",
+      "width": 464,
+      "height": 417,
+      "sourceBytes": 197351,
+      "webpBytes": 41954,
+      "savedPercent": 78.74,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.7602,
+      "sourceSha256": "cdab2787d6b9c9604a0eb11f5ddc52143201eaf025e3d617af38799326a4fc5f",
+      "webpSha256": "8e91981f26716377183595ad1d53d3324fb2e09ed7841820b36cbe6b94c29a25"
+    },
+    {
+      "name": "SpaceshipItemConcentrate",
+      "source": "public/assets/parsecs/SpaceshipItemConcentrate.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemConcentrate.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemConcentrate.webp",
+      "width": 238,
+      "height": 168,
+      "sourceBytes": 34691,
+      "webpBytes": 7990,
+      "savedPercent": 76.97,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.6331,
+      "sourceSha256": "c2ec393a6c2a7b6c964a766c640d2430f455a50bc7b226b3e22a9c73fee0dd83",
+      "webpSha256": "9bddf8906779e4d048cea632a929f0c3698ec57b6eab43cc4d0d881671abc79e"
+    },
+    {
+      "name": "SpaceshipItemDuckttape",
+      "source": "public/assets/parsecs/SpaceshipItemDuckttape.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemDuckttape.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemDuckttape.webp",
+      "width": 196,
+      "height": 216,
+      "sourceBytes": 36256,
+      "webpBytes": 7580,
+      "savedPercent": 79.09,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.5308,
+      "sourceSha256": "00c219674b776eca12e4fe6b5f60bdda7aed787c89981a408509530ea72bc37c",
+      "webpSha256": "c67d9040b93dc4ea2e0125f7534253f8d70fedb1aa60e07ce8ccd1d2d44ba33e"
+    },
+    {
+      "name": "SpaceshipItemDuckttapeDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemDuckttapeDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemDuckttapeDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemDuckttapeDamaged.webp",
+      "width": 161,
+      "height": 146,
+      "sourceBytes": 21011,
+      "webpBytes": 5044,
+      "savedPercent": 75.99,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.4767,
+      "sourceSha256": "f13b21b1ea71d74ede34c69db038c2777b3e9681fe811ebe4970b9f4cb0bfd51",
+      "webpSha256": "77f32d555b2f2d90271c976f59130e511b9fbc66e5c5e11d8cd499119a3adc98"
+    },
+    {
+      "name": "SpaceshipItemDuckttapeUpgrade",
+      "source": "public/assets/parsecs/SpaceshipItemDuckttapeUpgrade.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemDuckttapeUpgrade.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemDuckttapeUpgrade.webp",
+      "width": 228,
+      "height": 323,
+      "sourceBytes": 67649,
+      "webpBytes": 16038,
+      "savedPercent": 76.29,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.6506,
+      "sourceSha256": "19faf88a960ce25d503951e34a0954c63a06a3bde04426289709f5db0d2d0615",
+      "webpSha256": "a7340583ad0dbed14310440d039215972bc05712804d69e18cad439795c7e771"
+    },
+    {
+      "name": "SpaceshipItemDuckttapeUpgradeDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemDuckttapeUpgradeDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemDuckttapeUpgradeDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemDuckttapeUpgradeDamaged.webp",
+      "width": 214,
+      "height": 307,
+      "sourceBytes": 63112,
+      "webpBytes": 13592,
+      "savedPercent": 78.46,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.7993,
+      "sourceSha256": "29281dcad3102735ba6e6fd009580a69a453a35c8351e5ed08aab16d80a47ad0",
+      "webpSha256": "4a67cee72ff444875da7a596e511c3ba7f4219bbaaa39381b97ea1c0a10a99d2"
+    },
+    {
+      "name": "SpaceshipItemGun",
+      "source": "public/assets/parsecs/SpaceshipItemGun.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemGun.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemGun.webp",
+      "width": 480,
+      "height": 442,
+      "sourceBytes": 167458,
+      "webpBytes": 30908,
+      "savedPercent": 81.54,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.4041,
+      "sourceSha256": "59bae90159ba3c037812c8a9f274107e7931a1b6bbdbb6aee5514f4b3441228a",
+      "webpSha256": "8dd92839af0981292b025c88b3ef33a2238a311804bad687f302912af4bba78e"
+    },
+    {
+      "name": "SpaceshipItemGunDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemGunDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemGunDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemGunDamaged.webp",
+      "width": 480,
+      "height": 442,
+      "sourceBytes": 156288,
+      "webpBytes": 29502,
+      "savedPercent": 81.12,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.4143,
+      "sourceSha256": "cce666c29312259883c82d08cf58dac7e9f18a192c85a1690709270189dec2bc",
+      "webpSha256": "fa3777b66462f332e493fecd25644bbc82febdc964a1f4f0f7bd88592d8d5538"
+    },
+    {
+      "name": "SpaceshipItemGunUpgrade",
+      "source": "public/assets/parsecs/SpaceshipItemGunUpgrade.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemGunUpgrade.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemGunUpgrade.webp",
+      "width": 480,
+      "height": 442,
+      "sourceBytes": 154535,
+      "webpBytes": 30094,
+      "savedPercent": 80.53,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.5564,
+      "sourceSha256": "cb4cb42fd2c8d45c58893f4df8932c64d1a2b23dba20a0a9429cde839ebe70f2",
+      "webpSha256": "7894f6db8f322b5f9e81d7f4b52d8f657831c19b644b2a1342381a2fa69bae20"
+    },
+    {
+      "name": "SpaceshipItemGunUpgradeDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemGunUpgradeDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemGunUpgradeDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemGunUpgradeDamaged.webp",
+      "width": 480,
+      "height": 442,
+      "sourceBytes": 156901,
+      "webpBytes": 30804,
+      "savedPercent": 80.37,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.5828,
+      "sourceSha256": "1924492d4e49e49f7c9a3c195e6ef5f008f15e8fc827fa7a597f5a7159a4cf6c",
+      "webpSha256": "a98a9284fdaedd6c06b96a68a420ed7286aff3cf49f6e60c1a16b7523215ad9b"
+    },
+    {
+      "name": "SpaceshipItemLighter",
+      "source": "public/assets/parsecs/SpaceshipItemLighter.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemLighter.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemLighter.webp",
+      "width": 177,
+      "height": 160,
+      "sourceBytes": 19805,
+      "webpBytes": 4918,
+      "savedPercent": 75.17,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.0959,
+      "sourceSha256": "bc02bf7d3b17e7cee639bc47958dbb84b293c8903b3e752637fda13d35ed5ce2",
+      "webpSha256": "2a02fb32a8e2339285068ab80e98b7a9881e6d7f419c4d9e7d966a5241f54f6b"
+    },
+    {
+      "name": "SpaceshipItemLighterDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemLighterDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemLighterDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemLighterDamaged.webp",
+      "width": 175,
+      "height": 158,
+      "sourceBytes": 24321,
+      "webpBytes": 5726,
+      "savedPercent": 76.46,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.3235,
+      "sourceSha256": "ae7f49e2f0f8596feb28a8250acc1ac81ec1b793ee3e031f6e6de21eba96607c",
+      "webpSha256": "363f1787a9ccef708bb8fb311ee725a87be9f412ec551cebaa66d6c47de172be"
+    },
+    {
+      "name": "SpaceshipItemLighterUpgrade",
+      "source": "public/assets/parsecs/SpaceshipItemLighterUpgrade.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemLighterUpgrade.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemLighterUpgrade.webp",
+      "width": 153,
+      "height": 165,
+      "sourceBytes": 27532,
+      "webpBytes": 7280,
+      "savedPercent": 73.56,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.993,
+      "sourceSha256": "6faaa48a98745dcabe0a2a8953ed2e52e2bc67963120e1e759ead02a4915e748",
+      "webpSha256": "fb0dfb28c093e6030733fcfc673127bc833decc5d2c0167135729fa7c187db03"
+    },
+    {
+      "name": "SpaceshipItemLighterUpgradeDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemLighterUpgradeDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemLighterUpgradeDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemLighterUpgradeDamaged.webp",
+      "width": 149,
+      "height": 163,
+      "sourceBytes": 31973,
+      "webpBytes": 7004,
+      "savedPercent": 78.09,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.0049,
+      "sourceSha256": "12c90a84b685fe8df287dd29d521492ff6220ec05751843b36cbbaf00ceb76b4",
+      "webpSha256": "fc18f0bf70f0e632061ba78f6c41a6f684d5e265bb818554d2e8d051bbb82130"
+    },
+    {
+      "name": "SpaceshipItemMask",
+      "source": "public/assets/parsecs/SpaceshipItemMask.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemMask.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemMask.webp",
+      "width": 193,
+      "height": 301,
+      "sourceBytes": 36836,
+      "webpBytes": 9754,
+      "savedPercent": 73.52,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.4177,
+      "sourceSha256": "7f84bf220956a36111a888d16ff1c493c0e6f26af916b8f61e4f60fe5870fbd2",
+      "webpSha256": "22c7692022714fdd03236ff3f0b6fb5a77210b9a54ea4979da4adb81687457a4"
+    },
+    {
+      "name": "SpaceshipItemMaskDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemMaskDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemMaskDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemMaskDamaged.webp",
+      "width": 137,
+      "height": 214,
+      "sourceBytes": 31717,
+      "webpBytes": 7418,
+      "savedPercent": 76.61,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.8282,
+      "sourceSha256": "700d7bdfca818f239aff33b8bd29bd94d05ca83a928456433964a7b7ffde917a",
+      "webpSha256": "f017edff53ed8375f2b38288e5d46889cd328ac5abf2a75d1c0c41efb20e3f75"
+    },
+    {
+      "name": "SpaceshipItemMaskUpgrade",
+      "source": "public/assets/parsecs/SpaceshipItemMaskUpgrade.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemMaskUpgrade.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemMaskUpgrade.webp",
+      "width": 200,
+      "height": 340,
+      "sourceBytes": 53497,
+      "webpBytes": 13566,
+      "savedPercent": 74.64,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.8755,
+      "sourceSha256": "402ec47b555fa9649dd96bdfd3cede7240cae822f2fadee6adac6eb78fda9d5c",
+      "webpSha256": "7068c7eec8d61a9b5d06d59568ef27feb1b16d9ac697ce01bfde30e31541d939"
+    },
+    {
+      "name": "SpaceshipItemMaskUpgradeDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemMaskUpgradeDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemMaskUpgradeDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemMaskUpgradeDamaged.webp",
+      "width": 178,
+      "height": 258,
+      "sourceBytes": 59130,
+      "webpBytes": 12554,
+      "savedPercent": 78.77,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.1725,
+      "sourceSha256": "4a855786aa53ac68d0209f7df73afad57528a3d76b629b08fa0ef0e4100ff9d0",
+      "webpSha256": "45f4ba1e7204a86880f6f2051855d7110311f5b7b1de630065ae78c8394b7235"
+    },
+    {
+      "name": "SpaceshipItemMedkit",
+      "source": "public/assets/parsecs/SpaceshipItemMedkit.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemMedkit.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemMedkit.webp",
+      "width": 271,
+      "height": 249,
+      "sourceBytes": 39877,
+      "webpBytes": 9402,
+      "savedPercent": 76.42,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.1841,
+      "sourceSha256": "49c5192a8accc5c579141c3bc2c843fdc30015ac8c2860d0c7140126094733f0",
+      "webpSha256": "caab95e626b25460f3fe143509be8752e6b236ea0264de17eaa8cf00a8838d7c"
+    },
+    {
+      "name": "SpaceshipItemMedkitUpgrade",
+      "source": "public/assets/parsecs/SpaceshipItemMedkitUpgrade.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemMedkitUpgrade.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemMedkitUpgrade.webp",
+      "width": 291,
+      "height": 257,
+      "sourceBytes": 53876,
+      "webpBytes": 15444,
+      "savedPercent": 71.33,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.7136,
+      "sourceSha256": "8246869c2e8a90f7264f8d3349f83fc72eec778c00a54483321852afce894d8c",
+      "webpSha256": "019cf792cf362238d24871554a2d5d9d05ba47f411f7f56ebff2275b6b6c6522"
+    },
+    {
+      "name": "SpaceshipItemShovel",
+      "source": "public/assets/parsecs/SpaceshipItemShovel.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemShovel.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemShovel.webp",
+      "width": 265,
+      "height": 694,
+      "sourceBytes": 108588,
+      "webpBytes": 20872,
+      "savedPercent": 80.78,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.4784,
+      "sourceSha256": "f574143f2dc5c48369464fa705260f124e69dd5cd202804e41534fcea962a9eb",
+      "webpSha256": "7aa72b4fd49745d1bbf057302dd4ef1e25e35f7008e3feda8a41a07b89e4a5c9"
+    },
+    {
+      "name": "SpaceshipItemShovelDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemShovelDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemShovelDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemShovelDamaged.webp",
+      "width": 270,
+      "height": 428,
+      "sourceBytes": 76992,
+      "webpBytes": 17872,
+      "savedPercent": 76.79,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.9088,
+      "sourceSha256": "1920e13659af1c46a468e2ad71e8a9e9aad625961def85084c2795e708962b39",
+      "webpSha256": "44af1bb8eab023539cbd9b9d1f43fdea05d1b0cd82a234ee7cb8867c51d7723f"
+    },
+    {
+      "name": "SpaceshipItemShovelUpgrade",
+      "source": "public/assets/parsecs/SpaceshipItemShovelUpgrade.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemShovelUpgrade.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemShovelUpgrade.webp",
+      "width": 314,
+      "height": 705,
+      "sourceBytes": 167623,
+      "webpBytes": 39884,
+      "savedPercent": 76.21,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.129,
+      "sourceSha256": "0d9c2e43cadb388ffc6cdf6a2eb1da4f70381a9edba01145eafca8291a423c09",
+      "webpSha256": "1935da86d61a2fdec95225231e8ef1935cf1ec9452951aa0dde09f06233fcb9c"
+    },
+    {
+      "name": "SpaceshipItemShovelUpgradeDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemShovelUpgradeDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemShovelUpgradeDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemShovelUpgradeDamaged.webp",
+      "width": 314,
+      "height": 706,
+      "sourceBytes": 184302,
+      "webpBytes": 42728,
+      "savedPercent": 76.82,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.1842,
+      "sourceSha256": "35efb82eb7fad4be6062054f64bb02af79ea0c364c12357ed01b6f7da5f91a01",
+      "webpSha256": "a947f3ccd3c1c73af8855c4c5b68626be38256d37933ad27ec7face222d1d072"
+    },
+    {
+      "name": "SpaceshipItemSock",
+      "source": "public/assets/parsecs/SpaceshipItemSock.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSock.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSock.webp",
+      "width": 345,
+      "height": 281,
+      "sourceBytes": 73924,
+      "webpBytes": 12656,
+      "savedPercent": 82.88,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.6334,
+      "sourceSha256": "5b64f86e0ff5bd3ef223c03245b0ad8ca38d4f65a528eb49e30591d4fdb18ebc",
+      "webpSha256": "8e960455dbfd9210c417eead4a8747dc3cc87e45f1b875506fe27fe62b95a7ca"
+    },
+    {
+      "name": "SpaceshipItemSockUpgrade",
+      "source": "public/assets/parsecs/SpaceshipItemSockUpgrade.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSockUpgrade.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSockUpgrade.webp",
+      "width": 345,
+      "height": 281,
+      "sourceBytes": 80800,
+      "webpBytes": 13392,
+      "savedPercent": 83.43,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.8553,
+      "sourceSha256": "b6b9335a86aafac89b4022c5e800ce0fc6a1f72414128d06f90282df0de7ae7e",
+      "webpSha256": "bfccb5d1b92563d0e0a30ded76e8325af50efa4072a4b0f63907c8cb11f47f20"
+    },
+    {
+      "name": "SpaceshipItemSoup01",
+      "source": "public/assets/parsecs/SpaceshipItemSoup01.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSoup01.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSoup01.webp",
+      "width": 108,
+      "height": 153,
+      "sourceBytes": 14045,
+      "webpBytes": 3510,
+      "savedPercent": 75.01,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.4717,
+      "sourceSha256": "c239a4f9c5d54d5b3913726c5ce11b0e443037f8cdce0eb32c5908f5e18c2c1e",
+      "webpSha256": "447ab90fc521eef8d8f7b00ca3d8692f6b04e181bc0f2715dc946c2b40456d71"
+    },
+    {
+      "name": "SpaceshipItemSoup02",
+      "source": "public/assets/parsecs/SpaceshipItemSoup02.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSoup02.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSoup02.webp",
+      "width": 100,
+      "height": 144,
+      "sourceBytes": 9048,
+      "webpBytes": 3022,
+      "savedPercent": 66.6,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.6609,
+      "sourceSha256": "aa94168d373c6c5960370c37aecc5ccbb37de3bf1d6ad2647dda59db15d84174",
+      "webpSha256": "53ebb72ae569efa1d1dcc66b48a9eb6cc3b0c1803d796d4d3e40097650b048a8"
+    },
+    {
+      "name": "SpaceshipItemSoup03",
+      "source": "public/assets/parsecs/SpaceshipItemSoup03.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSoup03.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSoup03.webp",
+      "width": 93,
+      "height": 133,
+      "sourceBytes": 12281,
+      "webpBytes": 2974,
+      "savedPercent": 75.78,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.8755,
+      "sourceSha256": "8d79b346cf64bad6c71ce35bc9c9f210eefd4f8ff5a0b52c7edb879a2a67fbdc",
+      "webpSha256": "086db41c32ae0da167b4bc755bdca27f9e5990a7ebf797879e1b17469ab6c246"
+    },
+    {
+      "name": "SpaceshipItemSoup04",
+      "source": "public/assets/parsecs/SpaceshipItemSoup04.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSoup04.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSoup04.webp",
+      "width": 112,
+      "height": 156,
+      "sourceBytes": 13546,
+      "webpBytes": 3816,
+      "savedPercent": 71.83,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.2803,
+      "sourceSha256": "0b149b1f126b44e43c9e15dda170a2def2cd3827ded9faeba8ec835d6f6900f5",
+      "webpSha256": "ffc17549c34f39d4ba11b69f3e58f3a661434e0eb68b0a43533aa97e8e0373a3"
+    },
+    {
+      "name": "SpaceshipItemSoup05",
+      "source": "public/assets/parsecs/SpaceshipItemSoup05.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSoup05.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSoup05.webp",
+      "width": 106,
+      "height": 146,
+      "sourceBytes": 15467,
+      "webpBytes": 3728,
+      "savedPercent": 75.9,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.2988,
+      "sourceSha256": "7b3de203088566a71eb75e8b99898a7ad51fc5a1bd2fb17f0e51e3a8ebb9cdfc",
+      "webpSha256": "7815a066069d7d8daae3080474e1f09ab5a0ba84a030fcfc341cc978270c4063"
+    },
+    {
+      "name": "SpaceshipItemSoup06",
+      "source": "public/assets/parsecs/SpaceshipItemSoup06.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSoup06.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSoup06.webp",
+      "width": 97,
+      "height": 135,
+      "sourceBytes": 12510,
+      "webpBytes": 3244,
+      "savedPercent": 74.07,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.4326,
+      "sourceSha256": "52967b981a3cdbdd02720f03f6c3a745b594b429050b2f23d233cb1f7b0ee869",
+      "webpSha256": "448531c7ad7cb25dda2f5cf44e0dfb2cdea8260d638574ac2ff5fb8b7eabaf34"
+    },
+    {
+      "name": "SpaceshipItemSoup07",
+      "source": "public/assets/parsecs/SpaceshipItemSoup07.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSoup07.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSoup07.webp",
+      "width": 112,
+      "height": 155,
+      "sourceBytes": 15666,
+      "webpBytes": 4074,
+      "savedPercent": 73.99,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.2538,
+      "sourceSha256": "30ac61effe3210207bde93522042c04392f2cf32b997c11240f4139b32b3f217",
+      "webpSha256": "e9e27c941a82a3ffb07c6435d29bc28cfcb3201e74e702428a2874e7163786d6"
+    },
+    {
+      "name": "SpaceshipItemSoup08",
+      "source": "public/assets/parsecs/SpaceshipItemSoup08.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSoup08.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSoup08.webp",
+      "width": 105,
+      "height": 145,
+      "sourceBytes": 15355,
+      "webpBytes": 3902,
+      "savedPercent": 74.59,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.4033,
+      "sourceSha256": "11d1596519b44372cc66e4dea788edded6874f496ea9ca53671f11cb3cb24ce8",
+      "webpSha256": "a4e1979b68817405bd0bef98e2ae4d3db907240c8401159679bd3c79421993fe"
+    },
+    {
+      "name": "SpaceshipItemSoup09",
+      "source": "public/assets/parsecs/SpaceshipItemSoup09.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSoup09.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSoup09.webp",
+      "width": 95,
+      "height": 131,
+      "sourceBytes": 13735,
+      "webpBytes": 3442,
+      "savedPercent": 74.94,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.5082,
+      "sourceSha256": "b5ea9c5c43f521aa1ca4453b61b9fe756c425df8081806ce4ff81f51669048fc",
+      "webpSha256": "3dac9876fb950197aae5aa049970d29ebd113434278223a66b627ccb47baa33d"
+    },
+    {
+      "name": "SpaceshipItemSuit",
+      "source": "public/assets/parsecs/SpaceshipItemSuit.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSuit.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSuit.webp",
+      "width": 335,
+      "height": 819,
+      "sourceBytes": 189228,
+      "webpBytes": 37244,
+      "savedPercent": 80.32,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.3374,
+      "sourceSha256": "28a7a9dd1c8604f6b1292cc0dca6676688da3fa4d6449ba4cf1163f095631e86",
+      "webpSha256": "7d76a5f7a688f846f3ec2c374137d8ce8c9643749e39c44fccc0cac8c6c02c92"
+    },
+    {
+      "name": "SpaceshipItemSuitArmor",
+      "source": "public/assets/parsecs/SpaceshipItemSuitArmor.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSuitArmor.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSuitArmor.webp",
+      "width": 343,
+      "height": 357,
+      "sourceBytes": 89607,
+      "webpBytes": 16308,
+      "savedPercent": 81.8,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.6649,
+      "sourceSha256": "2f7135abb18a8f5846bfc6ddf9dc91c4ae48a5cfc1150fffc1c3e7cd24779a1e",
+      "webpSha256": "9b72b9d7e658070a7a68ef70c1cfd1efee2ef2273241f5c96048d089024d39c7"
+    },
+    {
+      "name": "SpaceshipItemSuitArmorDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemSuitArmorDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSuitArmorDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSuitArmorDamaged.webp",
+      "width": 332,
+      "height": 346,
+      "sourceBytes": 115178,
+      "webpBytes": 23390,
+      "savedPercent": 79.69,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.6475,
+      "sourceSha256": "78fce5570e0b0b95aaa94d63ceba63bc399ebf773a715efae5fb1dda544d3008",
+      "webpSha256": "ea0fb618a70e7dcba0dceb3d20b45800dd13f0fa7eedaf88732046a76683d9aa"
+    },
+    {
+      "name": "SpaceshipItemSuitArmorUpgraded",
+      "source": "public/assets/parsecs/SpaceshipItemSuitArmorUpgraded.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSuitArmorUpgraded.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSuitArmorUpgraded.webp",
+      "width": 358,
+      "height": 363,
+      "sourceBytes": 126515,
+      "webpBytes": 24378,
+      "savedPercent": 80.73,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.0832,
+      "sourceSha256": "8c9e6323fcf10f2fddb62abac8cb71599959efd01eba8f904c0ac06b8d2e323e",
+      "webpSha256": "bf878393a8fcd621d45f111a1354bab68a968ba6ab820db497dceb0be55e6c8d"
+    },
+    {
+      "name": "SpaceshipItemSuitArmorUpgradedDamaged",
+      "source": "public/assets/parsecs/SpaceshipItemSuitArmorUpgradedDamaged.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSuitArmorUpgradedDamaged.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSuitArmorUpgradedDamaged.webp",
+      "width": 356,
+      "height": 363,
+      "sourceBytes": 139405,
+      "webpBytes": 28388,
+      "savedPercent": 79.64,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.9408,
+      "sourceSha256": "f11aa916b7d5ec7338cc64fc45751b8530e5bb42001d488574c219cd65bf5400",
+      "webpSha256": "3682f660b0d981a33004ce3e30281158784a9925a46cb513f552c8a00a5a6029"
+    },
+    {
+      "name": "SpaceshipItemSuitAttachment",
+      "source": "public/assets/parsecs/SpaceshipItemSuitAttachment.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSuitAttachment.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSuitAttachment.webp",
+      "width": 327,
+      "height": 587,
+      "sourceBytes": 132529,
+      "webpBytes": 37182,
+      "savedPercent": 71.94,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.7887,
+      "sourceSha256": "d1e026480e8a9e77d5c37ef9b59a472628bd5e2909434d128d51003337c10962",
+      "webpSha256": "ad78eeea252d9602980329011ebaa45cf9e2a6b826c5d38f23a13ac5855a9978"
+    },
+    {
+      "name": "SpaceshipItemSuitLevel2",
+      "source": "public/assets/parsecs/SpaceshipItemSuitLevel2.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSuitLevel2.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSuitLevel2.webp",
+      "width": 365,
+      "height": 821,
+      "sourceBytes": 248395,
+      "webpBytes": 47504,
+      "savedPercent": 80.88,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.4196,
+      "sourceSha256": "32fcae6df5fe73b7e36acd91ea2e8993e412437ffba217042590929b2ebdde2c",
+      "webpSha256": "6216fbacdb9399a5003bb1d76c7b461ebe38082becaee59e70f4b82c0aaa9254"
+    },
+    {
+      "name": "SpaceshipItemSuitLevel3",
+      "source": "public/assets/parsecs/SpaceshipItemSuitLevel3.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipItemSuitLevel3.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipItemSuitLevel3.webp",
+      "width": 369,
+      "height": 822,
+      "sourceBytes": 268639,
+      "webpBytes": 48268,
+      "savedPercent": 82.03,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.5335,
+      "sourceSha256": "9ac6c378707655e30cc3fd84fee1a88946f7762d180abba6fe552a0e2a22b51d",
+      "webpSha256": "8a834ee7551f6fd644e4b3f92f88dcb0c25915f762341f989acaa25a72093b04"
+    },
+    {
+      "name": "SpaceshipLight",
+      "source": "public/assets/parsecs/SpaceshipLight.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipLight.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipLight.webp",
+      "width": 2048,
+      "height": 506,
+      "sourceBytes": 368088,
+      "webpBytes": 87926,
+      "savedPercent": 76.11,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.0372,
+      "sourceSha256": "72ad96828fdc78d29e5049e119c7c7d34ed7ad47b00665e49e51ec57dfde70d8",
+      "webpSha256": "72f3046f1f91d19d2c2a6f455fc69b7681ff3d0c2dca12b00a3335f107ef31fc"
+    },
+    {
+      "name": "SpaceshipRedAlert",
+      "source": "public/assets/parsecs/SpaceshipRedAlert.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipRedAlert.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipRedAlert.webp",
+      "width": 152,
+      "height": 171,
+      "sourceBytes": 29431,
+      "webpBytes": 7018,
+      "savedPercent": 76.15,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 2.2598,
+      "sourceSha256": "71fd8c2ddf122c6997930853d9f0ca2037b6b23e041cb320c5cb66176b80830f",
+      "webpSha256": "da192b44b6c0643bd13dfb761fba85792d009a5a6c05aad13ec8e22961d993a7"
+    },
+    {
+      "name": "SpaceshipShelfLeftClosed0",
+      "source": "public/assets/parsecs/SpaceshipShelfLeftClosed0.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipShelfLeftClosed0.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipShelfLeftClosed0.webp",
+      "width": 438,
+      "height": 294,
+      "sourceBytes": 38920,
+      "webpBytes": 8852,
+      "savedPercent": 77.26,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.6612,
+      "sourceSha256": "a25e20665a343875e194195ba6569207a2c3eefba3be4c84576e926a126e0fd2",
+      "webpSha256": "2928cf521ef56cf45001df6228f43778485f8a73142dd8cf42c9db41db5f0184"
+    },
+    {
+      "name": "SpaceshipShelfLeftClosed1",
+      "source": "public/assets/parsecs/SpaceshipShelfLeftClosed1.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipShelfLeftClosed1.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipShelfLeftClosed1.webp",
+      "width": 446,
+      "height": 240,
+      "sourceBytes": 28026,
+      "webpBytes": 6628,
+      "savedPercent": 76.35,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.7773,
+      "sourceSha256": "eb5ba68423ef28d1f8420c08714e7b698a4fd37720262fd3a7d8820a2694b9f0",
+      "webpSha256": "eff484bfe747c39ed86a7a89f05b85b3296b45e54bb6979330f8a0a20bc90fb7"
+    },
+    {
+      "name": "SpaceshipShelfLeftClosed2",
+      "source": "public/assets/parsecs/SpaceshipShelfLeftClosed2.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipShelfLeftClosed2.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipShelfLeftClosed2.webp",
+      "width": 443,
+      "height": 208,
+      "sourceBytes": 30516,
+      "webpBytes": 5384,
+      "savedPercent": 82.36,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.9292,
+      "sourceSha256": "1b5b0d7c8200f107f1fbecc2df96fbfe29119236ea21afdfac375cbd4fd129be",
+      "webpSha256": "db655ca97e21b653f1f1cdf5b86028474f1ac0ff36fb35b3a7a1be6b354ea801"
+    },
+    {
+      "name": "SpaceshipShelfLeftClosed3",
+      "source": "public/assets/parsecs/SpaceshipShelfLeftClosed3.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipShelfLeftClosed3.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipShelfLeftClosed3.webp",
+      "width": 440,
+      "height": 223,
+      "sourceBytes": 28850,
+      "webpBytes": 6158,
+      "savedPercent": 78.66,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.775,
+      "sourceSha256": "5c80b980353aaab8ff4d3451ca4a71a1ad76620b38ca43e734f0ae58181f34b9",
+      "webpSha256": "09ec9ce84faa1e2b9d458406e61cbb898d354cdde2c07447b8db4aecf7771c99"
+    },
+    {
+      "name": "SpaceshipShelfRightClosed",
+      "source": "public/assets/parsecs/SpaceshipShelfRightClosed.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipShelfRightClosed.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipShelfRightClosed.webp",
+      "width": 458,
+      "height": 463,
+      "sourceBytes": 149780,
+      "webpBytes": 28752,
+      "savedPercent": 80.8,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.7846,
+      "sourceSha256": "f542f86d712603d08ee911ae92260f9cff6a2d79607072bc229af73f51c32246",
+      "webpSha256": "1683af176b410c7b18ecab588f1572bf1dfe8291bab698dd9cb4d1c65151952e"
+    },
+    {
+      "name": "SpaceshipStarlog",
+      "source": "public/assets/parsecs/SpaceshipStarlog.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipStarlog.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipStarlog.webp",
+      "width": 389,
+      "height": 993,
+      "sourceBytes": 195304,
+      "webpBytes": 44526,
+      "savedPercent": 77.2,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.7978,
+      "sourceSha256": "ef86582bffbfe1654a0851e59018b6a65f0ce2dd034b830f0ff46dad66de75cb",
+      "webpSha256": "60a7a1817a782f29ab8f9676becadba4b0614d388dcfd67635f5364831917f44"
+    },
+    {
+      "name": "SpaceshipStarlogLightGreen",
+      "source": "public/assets/parsecs/SpaceshipStarlogLightGreen.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipStarlogLightGreen.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipStarlogLightGreen.webp",
+      "width": 453,
+      "height": 538,
+      "sourceBytes": 105225,
+      "webpBytes": 41244,
+      "savedPercent": 60.8,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.1597,
+      "sourceSha256": "4b7e97e3dc5487a4e809f2a9dc9e7bc8b520e4dbb92efb155ca0e1d85d0875b2",
+      "webpSha256": "a00fbe0c9ed20691cdf337975840cc788ffdc55bfa275310eb4050ae7f3323fe"
+    },
+    {
+      "name": "SpaceshipStarlogLightRed",
+      "source": "public/assets/parsecs/SpaceshipStarlogLightRed.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipStarlogLightRed.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipStarlogLightRed.webp",
+      "width": 453,
+      "height": 538,
+      "sourceBytes": 85277,
+      "webpBytes": 40126,
+      "savedPercent": 52.95,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.1443,
+      "sourceSha256": "ec5dc678431a36a4a5c77ed35e30bc9be64ffe24d269e787816c01d524c0cf44",
+      "webpSha256": "932783f7d42757afd5cab38646ed813b3af3c29ed13af884139ac6f99105069a"
+    },
+    {
+      "name": "SpaceshipStarlogLightYellow",
+      "source": "public/assets/parsecs/SpaceshipStarlogLightYellow.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipStarlogLightYellow.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipStarlogLightYellow.webp",
+      "width": 453,
+      "height": 538,
+      "sourceBytes": 102414,
+      "webpBytes": 41256,
+      "savedPercent": 59.72,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.131,
+      "sourceSha256": "009ee66f139d883a9ef19dd1db7f8425db39d960b0b863f2eafc5fd2e60c68ed",
+      "webpSha256": "a304436ae480ac4300c8200fe88c8e5a4add38cfca22f40cf6aa442333957dd3"
+    },
+    {
+      "name": "SpaceshipStarlogPaper1",
+      "source": "public/assets/parsecs/SpaceshipStarlogPaper1.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipStarlogPaper1.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipStarlogPaper1.webp",
+      "width": 213,
+      "height": 387,
+      "sourceBytes": 70708,
+      "webpBytes": 18454,
+      "savedPercent": 73.9,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.9834,
+      "sourceSha256": "44c638f67ad23aaf685c64e7079b3a99ccefb931b00232f198f7165ea0e69528",
+      "webpSha256": "568b7d258274ff7a30d59c260985a58494949e3e1766cf9a036bfe76baaf798b"
+    },
+    {
+      "name": "SpaceshipStarlogPaper2",
+      "source": "public/assets/parsecs/SpaceshipStarlogPaper2.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipStarlogPaper2.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipStarlogPaper2.webp",
+      "width": 251,
+      "height": 732,
+      "sourceBytes": 120175,
+      "webpBytes": 25872,
+      "savedPercent": 78.47,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.8053,
+      "sourceSha256": "8d2d3e2f0a6dd16fd9340446ca1453638abd1f4d6f0f452332841db6c4ef0ee6",
+      "webpSha256": "1774e155dd370229b722d5c5afd5e82354bd0244def68416a04ec83d28aaf411"
+    },
+    {
+      "name": "SpaceshipStarlogPaper3",
+      "source": "public/assets/parsecs/SpaceshipStarlogPaper3.png",
+      "output": "public/assets/parsecs/optimized/SpaceshipStarlogPaper3.webp",
+      "url": "/assets/parsecs/optimized/SpaceshipStarlogPaper3.webp",
+      "width": 501,
+      "height": 1230,
+      "sourceBytes": 342807,
+      "webpBytes": 70914,
+      "savedPercent": 79.31,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.7091,
+      "sourceSha256": "8572976a5b3b2dfe81170ac0912ac940c0e26261e3243e2e0c74e19684aa44c0",
+      "webpSha256": "56e69a02c53b8d1b12699f96e60916c3bbcc97ad3cbd40514b9d8b1170035cd3"
+    },
+    {
+      "name": "SrvAprilDeadSitting",
+      "source": "public/assets/parsecs/SrvAprilDeadSitting.png",
+      "output": "public/assets/parsecs/optimized/SrvAprilDeadSitting.webp",
+      "url": "/assets/parsecs/optimized/SrvAprilDeadSitting.webp",
+      "width": 971,
+      "height": 1004,
+      "sourceBytes": 427134,
+      "webpBytes": 81982,
+      "savedPercent": 80.81,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.7837,
+      "sourceSha256": "dc8d39794e6f18eecdfefc45cb6ee80f574664c658adc4a69f3e6674fce6d373",
+      "webpSha256": "96cf95d3ddedc5b04a72b8b6c2e1f894b605d09a4ab2c4816b56ded963072100"
+    },
+    {
+      "name": "SrvAprilSitting",
+      "source": "public/assets/parsecs/SrvAprilSitting.png",
+      "output": "public/assets/parsecs/optimized/SrvAprilSitting.webp",
+      "url": "/assets/parsecs/optimized/SrvAprilSitting.webp",
+      "width": 623,
+      "height": 1062,
+      "sourceBytes": 384642,
+      "webpBytes": 72652,
+      "savedPercent": 81.11,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.2642,
+      "sourceSha256": "35cf24bd6343435c5edfd2fb75a741abd3f3a01ce51547bf4aeab2c8c4269ac7",
+      "webpSha256": "d0a04af554ab1588101e5d9ff5ac69468fae6444e2c7f1c319fe681e9c589a4b"
+    },
+    {
+      "name": "SrvBabyDeadSitting",
+      "source": "public/assets/parsecs/SrvBabyDeadSitting.png",
+      "output": "public/assets/parsecs/optimized/SrvBabyDeadSitting.webp",
+      "url": "/assets/parsecs/optimized/SrvBabyDeadSitting.webp",
+      "width": 1021,
+      "height": 1124,
+      "sourceBytes": 429738,
+      "webpBytes": 94860,
+      "savedPercent": 77.93,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.841,
+      "sourceSha256": "054eba452f70fb2deae5ec1a597fc5b1947cd83e674d868f3b3a70a8641a6f1e",
+      "webpSha256": "6dbaf26817e222a433cc5ae5078c4a91bf48d0e2e2b0f725d76049b453f71b66"
+    },
+    {
+      "name": "SrvBabySitting",
+      "source": "public/assets/parsecs/SrvBabySitting.png",
+      "output": "public/assets/parsecs/optimized/SrvBabySitting.webp",
+      "url": "/assets/parsecs/optimized/SrvBabySitting.webp",
+      "width": 787,
+      "height": 1173,
+      "sourceBytes": 440092,
+      "webpBytes": 87654,
+      "savedPercent": 80.08,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.3234,
+      "sourceSha256": "036bad35e3e5607b22d5bf4952c84e445a6e4b2b14c975e3d90b21fdae7b07c8",
+      "webpSha256": "88a4ad0d64daf922d5a2126172d1699d9404629e3e5bf8622941438bbad853c8"
+    },
+    {
+      "name": "SrvDeeDeeDeadSitting",
+      "source": "public/assets/parsecs/SrvDeeDeeDeadSitting.png",
+      "output": "public/assets/parsecs/optimized/SrvDeeDeeDeadSitting.webp",
+      "url": "/assets/parsecs/optimized/SrvDeeDeeDeadSitting.webp",
+      "width": 980,
+      "height": 1085,
+      "sourceBytes": 446619,
+      "webpBytes": 99060,
+      "savedPercent": 77.82,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.9,
+      "sourceSha256": "970821eeafde1ac7911958ec59c384d70199ddb8029b60ab9727bf4272a5eb69",
+      "webpSha256": "55d44ff31b4dd4f4e388e5e5c6dbcc27a4f15831d4c95665c84f6dc11d43b7a2"
+    },
+    {
+      "name": "SrvDeeDeeSitting",
+      "source": "public/assets/parsecs/SrvDeeDeeSitting.png",
+      "output": "public/assets/parsecs/optimized/SrvDeeDeeSitting.webp",
+      "url": "/assets/parsecs/optimized/SrvDeeDeeSitting.webp",
+      "width": 662,
+      "height": 1140,
+      "sourceBytes": 344889,
+      "webpBytes": 81148,
+      "savedPercent": 76.47,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.2404,
+      "sourceSha256": "685e86db16051a29771725654c90af2db95cc3f0391c7531461ebe07969dd162",
+      "webpSha256": "78f337d62bd9deb5e69d4fbf724819d06a1db61914a534d7bcda3f0c949e6fea"
+    },
+    {
+      "name": "SrvEmmetDeadSitting",
+      "source": "public/assets/parsecs/SrvEmmetDeadSitting.png",
+      "output": "public/assets/parsecs/optimized/SrvEmmetDeadSitting.webp",
+      "url": "/assets/parsecs/optimized/SrvEmmetDeadSitting.webp",
+      "width": 1104,
+      "height": 1251,
+      "sourceBytes": 422568,
+      "webpBytes": 106322,
+      "savedPercent": 74.84,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.6475,
+      "sourceSha256": "27848c03bd6a1385dd789b4ad3a365be0e489c6efa65304aa712e296a3db6401",
+      "webpSha256": "5831cfb37801f4b8ed24ce86e3935e7cddce8f5527280ea6ce5a7dd733735e84"
+    },
+    {
+      "name": "SrvEmmetSitting",
+      "source": "public/assets/parsecs/SrvEmmetSitting.png",
+      "output": "public/assets/parsecs/optimized/SrvEmmetSitting.webp",
+      "url": "/assets/parsecs/optimized/SrvEmmetSitting.webp",
+      "width": 738,
+      "height": 1359,
+      "sourceBytes": 356404,
+      "webpBytes": 74872,
+      "savedPercent": 78.99,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.8883,
+      "sourceSha256": "d8e8b9486f08f84b515c8a906f69fd93e0cf350bde86d3c4901ce22427791fb2",
+      "webpSha256": "324e01701c16f5d71f3cc8f5b30f0097de895066e673933fbd9b4f607dc03ed8"
+    },
+    {
+      "name": "SrvMaeganDeadSitting",
+      "source": "public/assets/parsecs/SrvMaeganDeadSitting.png",
+      "output": "public/assets/parsecs/optimized/SrvMaeganDeadSitting.webp",
+      "url": "/assets/parsecs/optimized/SrvMaeganDeadSitting.webp",
+      "width": 771,
+      "height": 924,
+      "sourceBytes": 334374,
+      "webpBytes": 73930,
+      "savedPercent": 77.89,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.808,
+      "sourceSha256": "b258b9644c6a88de937d1859dff6e73ef67451e3c76bb83ba8834cf6803893fc",
+      "webpSha256": "2840aaf5299bbdf05aea4bf978b4ad59d5185fcb1fadf574329a260b6cc2637e"
+    },
+    {
+      "name": "SrvMaeganSitting",
+      "source": "public/assets/parsecs/SrvMaeganSitting.png",
+      "output": "public/assets/parsecs/optimized/SrvMaeganSitting.webp",
+      "url": "/assets/parsecs/optimized/SrvMaeganSitting.webp",
+      "width": 589,
+      "height": 1055,
+      "sourceBytes": 315607,
+      "webpBytes": 64230,
+      "savedPercent": 79.65,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.9645,
+      "sourceSha256": "fd119a114df7b3ce9131eb6cedbcfd5fe8837e3d0cef7c6bfccca2f1a06d53bf",
+      "webpSha256": "a3fc9da41a87991df2a57c0f0939c934cbe6c00a7c3d7e839e4f22c238b04413"
+    },
+    {
+      "name": "SrvTomDeadSitting",
+      "source": "public/assets/parsecs/SrvTomDeadSitting.png",
+      "output": "public/assets/parsecs/optimized/SrvTomDeadSitting.webp",
+      "url": "/assets/parsecs/optimized/SrvTomDeadSitting.webp",
+      "width": 920,
+      "height": 1108,
+      "sourceBytes": 383244,
+      "webpBytes": 95222,
+      "savedPercent": 75.15,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 0.9328,
+      "sourceSha256": "7219be98ce87498224b652676b19e7cbc07dae576ffecb53e8b8f2163caca8e9",
+      "webpSha256": "8acadc6a47d71d8ba67348039425807b0b441ba684a83828bdc1f9b8b774ca19"
+    },
+    {
+      "name": "SrvTomSitting",
+      "source": "public/assets/parsecs/SrvTomSitting.png",
+      "output": "public/assets/parsecs/optimized/SrvTomSitting.webp",
+      "url": "/assets/parsecs/optimized/SrvTomSitting.webp",
+      "width": 829,
+      "height": 1100,
+      "sourceBytes": 381652,
+      "webpBytes": 73650,
+      "savedPercent": 80.7,
+      "alphaExact": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "compositedMeanAbsoluteError": 1.0622,
+      "sourceSha256": "f9df02aa267f1a2cc89e71540fea60a1083134ccdfd77f71f7a2bebffec28e09",
+      "webpSha256": "8a496e6332de4cdbdcdb9e50a850c84ae01a40a649b0710e9a5e29c66a7ba9f9"
+    }
+  ]
+}

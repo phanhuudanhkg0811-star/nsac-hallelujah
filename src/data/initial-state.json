@@ -1,0 +1,40 @@
+{
+  "sol": 1,
+  "phase": "briefing",
+  "planet": "moon",
+  "seed": 42,
+  "radioClockMs": 0,
+  "crew": [
+    { "id": "cmd", "name": "Sarah Chen", "health": 100, "stress": 0, "fatigue": 0, "hunger": 0, "thirst": 0, "status": "fit" },
+    { "id": "eng", "name": "Alex Rivera", "health": 100, "stress": 0, "fatigue": 0, "hunger": 0, "thirst": 0, "status": "fit" },
+    { "id": "doc", "name": "Marcus Vance", "health": 100, "stress": 0, "fatigue": 0, "hunger": 0, "thirst": 0, "status": "fit" },
+    { "id": "geo", "name": "Elena Rostova", "health": 100, "stress": 0, "fatigue": 0, "hunger": 0, "thirst": 0, "status": "fit" }
+  ],
+  "resources": {
+    "oxygenKg": 60,
+    "waterL": 80,
+    "wasteWaterL": 0,
+    "foodKg": 50,
+    "partsKg": 30,
+    "batteryKWh": 60
+  },
+  "systems": {
+    "scrubber": { "level": 1, "integrity": 1 },
+    "recycler": { "level": 1, "integrity": 1 },
+    "solar": { "level": 1, "integrity": 1 },
+    "airlock": { "level": 1, "integrity": 1 }
+  },
+  "missions": [],
+  "radio": [],
+  "seenEvents": [],
+  "activeEvent": null,
+  "log": ["Trạm Mặt Trăng Artemis Base Camp được kích hoạt thành công vào Sol 1."],
+  "plan": {
+    "oxygenFraction": 1,
+    "waterFraction": 1,
+    "foodFraction": 1,
+    "restFraction": 1,
+    "recycle": true,
+    "moxie": false
+  }
+}

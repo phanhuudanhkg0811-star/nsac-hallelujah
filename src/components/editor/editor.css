@@ -1,0 +1,141 @@
+/* Cabin Layout Editor Stylesheet */
+
+.editor-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #080B10;
+  color: #E2E8F0;
+  overflow: hidden;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  user-select: none;
+}
+
+/* Stage Workspace */
+.editor-workspace {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 24px;
+  background: radial-gradient(circle at center, #111827 0%, #080B10 100%);
+}
+
+.editor-canvas-wrapper {
+  position: relative;
+  width: min(85vw, calc(85vh * (4 / 3)));
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background-color: #0B0F19;
+  overflow: hidden;
+}
+
+/* Grid Overlay */
+.editor-grid-pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-size: 5% 5%;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.editor-grid-crosshair {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background-image: 
+    linear-gradient(to right, transparent calc(50% - 1px), rgba(0, 229, 255, 0.15) 50%, transparent calc(50% + 1px)),
+    linear-gradient(to bottom, transparent calc(50% - 1px), rgba(0, 229, 255, 0.15) 50%, transparent calc(50% + 1px));
+}
+
+/* Cabin Box */
+.cabin-box {
+  position: absolute;
+  box-sizing: border-box;
+  touch-action: none;
+  transition: box-shadow 0.15s ease, outline-color 0.15s ease;
+  cursor: move;
+}
+
+.cabin-box.is-locked {
+  cursor: not-allowed;
+}
+
+.cabin-box:hover:not(.is-selected) {
+  outline: 1.5px dashed rgba(255, 255, 255, 0.4);
+}
+
+.cabin-box.is-selected {
+  outline: 2px solid #00E5FF;
+  box-shadow: 0 0 0 1px #000, 0 0 16px rgba(0, 229, 255, 0.45);
+  z-index: 9999 !important; /* Temporarily lift selected for manipulation */
+}
+
+/* Wireframe Look */
+.box-wireframe {
+  width: 100%;
+  height: 100%;
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6px 8px;
+  backdrop-filter: blur(2px);
+}
+
+/* Hybrid Sprite Background */
+.box-sprite-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Resize Handles */
+.resize-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #00E5FF;
+  border: 1.5px solid #000;
+  border-radius: 2px;
+  z-index: 10000;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+.handle-nw { top: -5px; left: -5px; cursor: nwse-resize; }
+.handle-n  { top: -5px; left: calc(50% - 5px); cursor: ns-resize; }
+.handle-ne { top: -5px; right: -5px; cursor: nesw-resize; }
+.handle-e  { top: calc(50% - 5px); right: -5px; cursor: ew-resize; }
+.handle-se { bottom: -5px; right: -5px; cursor: nwse-resize; }
+.handle-s  { bottom: -5px; left: calc(50% - 5px); cursor: ns-resize; }
+.handle-sw { bottom: -5px; left: -5px; cursor: nesw-resize; }
+.handle-w  { top: calc(50% - 5px); left: -5px; cursor: ew-resize; }
+
+/* Custom Scrollbar for sidebar and dialogs */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}

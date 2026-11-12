@@ -1,0 +1,48 @@
+# Dependencies
+node_modules
+/node_modules
+node_modules/
+.pnp
+.pnp.js
+
+# Production build
+dist/
+build/
+
+# Archives & Large Zips
+*.zip
+*.rar
+*.tar.gz
+
+# Environment & Local configs
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Agent caches & temp research
+.agent/
+.hail-research/
+archive/reference-game/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class

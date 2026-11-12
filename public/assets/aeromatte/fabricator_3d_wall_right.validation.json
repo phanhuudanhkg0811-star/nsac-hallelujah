@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-11-12T07:30:38.555073+00:00",
+  "blenderVersion": "5.3.0 Release Candidate",
+  "renderEngine": "BLENDER_EEVEE",
+  "commandExecuted": "blender -b -P scripts/blender_render_pipeline.py",
+  "outputFiles": [
+    "fabricator_3d_wall_right_idle_composite.webp",
+    "fabricator_3d_wall_right_idle_alpha.webp",
+    "fabricator_3d_wall_right_idle_depth.webp",
+    "fabricator_3d_wall_right_idle_occlusion.webp",
+    "fabricator_3d_wall_right_idle_emissive.webp",
+    "fabricator_3d_wall_right_idle_outline.webp",
+    "fabricator_3d_wall_right_working_composite.webp",
+    "fabricator_3d_wall_right_working_alpha.webp",
+    "fabricator_3d_wall_right_working_depth.webp",
+    "fabricator_3d_wall_right_working_occlusion.webp",
+    "fabricator_3d_wall_right_working_emissive.webp",
+    "fabricator_3d_wall_right_working_outline.webp"
+  ],
+  "verificationGates": {
+    "dimensionsMatch": "PASS",
+    "alphaTransparencyNoHalo": "PASS",
+    "chassisStabilityBetweenStates": "PASS",
+    "paletteAdherenceAeroMatte2050": "PASS",
+    "rearMountBehindWall": "PASS",
+    "chassisInFrontOfWall": "PASS",
+    "zIndexHierarchyCompliant": "PASS",
+    "foregroundOcclusionClearance": "PASS",
+    "baseLinePlaceholderMatch": "NOT VERIFIED",
+    "browserSmokeIntegration": "NOT VERIFIED"
+  },
+  "knownLimitations": [
+    "baseLine and mountPoint marked TBD until final in-browser layout test against parsecsSceneCoordinates.json",
+    "outline pass derived via edge filter; Inverted Hull geometry modifier available for future revision",
+    "browser smoke test not executed inside headless CLI; marked NOT VERIFIED per Brief Section 5"
+  ]
+}

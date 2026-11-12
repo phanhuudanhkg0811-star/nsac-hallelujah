@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+const base = 'src/components';
+const old = fs.readFileSync(`${base}/ParsecsSurvivalBench.tsx`, 'utf8').replaceAll('\r\n', '\n');
+const template = fs.readFileSync('scripts/refactor-ui.py', 'utf8');
+for (const folder of ['cabin', 'hud', 'modals']) fs.mkdirSync(`${base}/${folder}`, { recursive: true });
+let helpers = old.slice(old.indexOf('const ASSET_BASE'), old.indexOf('export const ParsecsSurvivalBench'));
+helpers = helpers.replace(/^(const|function) /gm, 'export $1 ');
+fs.writeFileSync(`${base}/cabin/assets.ts`, "import type { ParsecsCrewRuntime, ParsecsShelfItem, ParsecsSystemId } from '../../engine/ParsecsDecompiledEngine.ts';\n" + helpers);
+const craftStart = old.indexOf("              {referenceMode && panel === 'craft' && !craftOperation");
+const expStart = old.indexOf("              {referenceMode && panel === 'expedition' && (", craftStart);
+let craft = old.slice(craftStart, expStart).replaceAll("referenceMode && panel === 'craft' && ", '').replace('Chế tạo Súp (ConsumableRemedium):', 'Chế tạo súp');
+const craftHeader = template.match(/craft_header = '''([\s\S]*?)'''/)[1];
+fs.writeFileSync(`${base}/modals/CraftingModal.tsx`, craftHeader + craft + '\n  </>;\n}\n');
+let expedition = old.slice(expStart, old.indexOf("              {referenceMode && panel === 'trace' && ("));
+expedition = expedition.slice(expedition.indexOf('\n') + 1, expedition.lastIndexOf('              )}'));
+expedition = expedition.replace('Chọn Điểm Đến (36 Địa điểm từ sharedassets0):', 'Chọn điểm đến:').replace(' (PathID #{d.pathId})', '').replace('<select\n                          value={selectedDestId}', '<select aria-label="Điểm đến"\n                          value={selectedDestId}').replace('<select\n                          value={selectedExplorerId}', '<select aria-label="Người thám hiểm"\n                          value={selectedExplorerId}').replace('key={it.id}\n                                  onClick', 'key={it.id}\n                                  aria-pressed={active}\n                                  onClick');
+const expHeader = template.match(/expedition_header = '''([\s\S]*?)'''/)[1];
+fs.writeFileSync(`${base}/modals/ExpeditionModal.tsx`, expHeader + expedition + '\n  );\n}\n');

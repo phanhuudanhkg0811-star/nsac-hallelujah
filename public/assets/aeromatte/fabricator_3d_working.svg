@@ -1,0 +1,315 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="100%" height="100%">
+  <defs>
+    <!-- Dark Cel-Shade Outline -->
+    <style>
+      .ink-line { stroke: #1E293B; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+      .ink-line-sm { stroke: #1E293B; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .ink-line-xs { stroke: #1E293B; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+
+    <!-- Wrench Glowing Gradient -->
+    <linearGradient id="wrenchGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="60%" stop-color="#FFB300" />
+      <stop offset="100%" stop-color="#FF8F00" />
+    </linearGradient>
+
+    <!-- Glowing Laser Beam -->
+    <linearGradient id="laserBeam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFA000" stop-opacity="1" />
+      <stop offset="80%" stop-color="#FFD54F" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#FFE082" stop-opacity="1" />
+    </linearGradient>
+
+    <!-- HUD Background Gradient -->
+    <linearGradient id="hudBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A1828" />
+      <stop offset="100%" stop-color="#050E17" />
+    </linearGradient>
+
+    <!-- Amber Chamber Lamp Glow -->
+    <linearGradient id="amberLamp" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF8F00" />
+      <stop offset="50%" stop-color="#FFC107" />
+      <stop offset="100%" stop-color="#FF8F00" />
+    </linearGradient>
+
+    <!-- Chamber Interior Deep Gradient -->
+    <linearGradient id="chamberInterior" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#181C28" />
+      <stop offset="70%" stop-color="#141724" />
+      <stop offset="100%" stop-color="#10121C" />
+    </linearGradient>
+
+    <!-- Glass Glare Reflection -->
+    <linearGradient id="glassGlare" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.16" />
+      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.05" />
+      <stop offset="70%" stop-color="#FFFFFF" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Gantry Rails Metallic Gradient -->
+    <linearGradient id="metalRail" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0" />
+      <stop offset="50%" stop-color="#94A3B8" />
+      <stop offset="100%" stop-color="#64748B" />
+    </linearGradient>
+  </defs>
+
+  <!-- ========================================== -->
+  <!-- 1. BASE SKID FEET                          -->
+  <!-- ========================================== -->
+  <g id="skid-feet">
+    <polygon points="170,642 190,668 310,668 330,642" fill="#1E293B" class="ink-line" />
+    <polygon points="670,642 690,668 810,668 830,642" fill="#1E293B" class="ink-line" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 2. MAIN COMPOSITE CHASSIS SHELL            -->
+  <!-- ========================================== -->
+  <g id="main-chassis">
+    <!-- Outer Shell Body with Chamfered Corners -->
+    <polygon points="
+      140,48 860,48
+      930,118 930,572
+      860,642 140,642
+      70,572 70,118
+    " fill="#F5F2EB" class="ink-line" />
+
+    <!-- 2-Tone Shade Band on Lower Chassis -->
+    <polygon points="
+      70,530 930,530
+      930,572 860,642
+      140,642 70,572
+    " fill="#D6D3CD" class="ink-line-sm" />
+
+    <!-- Top Heavy Handle Mounts & Grip -->
+    <polygon points="410,48 430,22 570,22 590,48" fill="#FF5722" class="ink-line" />
+    <rect x="440" y="22" width="120" height="12" rx="4" fill="#FFA000" class="ink-line-xs" />
+    <rect x="395" y="42" width="28" height="12" rx="3" fill="#2B2D42" class="ink-line-xs" />
+    <rect x="577" y="42" width="28" height="12" rx="3" fill="#2B2D42" class="ink-line-xs" />
+
+    <!-- Orange Corner Armor Bumpers with Bolt Dots -->
+    <!-- Top-Left -->
+    <polygon points="70,118 140,48 175,48 105,118" fill="#FF5722" class="ink-line-sm" />
+    <circle cx="120" cy="75" r="4.5" fill="#1E293B" />
+    <!-- Top-Right -->
+    <polygon points="930,118 860,48 825,48 895,118" fill="#FF5722" class="ink-line-sm" />
+    <circle cx="880" cy="75" r="4.5" fill="#1E293B" />
+    <!-- Bottom-Left -->
+    <polygon points="70,572 140,642 175,642 105,572" fill="#FF5722" class="ink-line-sm" />
+    <circle cx="120" cy="615" r="4.5" fill="#1E293B" />
+    <!-- Bottom-Right -->
+    <polygon points="930,572 860,642 825,642 895,572" fill="#FF5722" class="ink-line-sm" />
+    <circle cx="880" cy="615" r="4.5" fill="#1E293B" />
+
+    <!-- Top Chassis Ventilation Grilles -->
+    <g fill="#2B2D42">
+      <polygon points="205,68 215,68 200,90 190,90" />
+      <polygon points="225,68 235,68 220,90 210,90" />
+      <polygon points="245,68 255,68 240,90 230,90" />
+
+      <polygon points="755,68 765,68 750,90 740,90" />
+      <polygon points="775,68 785,68 770,90 760,90" />
+      <polygon points="795,68 805,68 790,90 780,90" />
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 3. LOWER TOOL DRAWER                       -->
+  <!-- ========================================== -->
+  <g id="tool-drawer">
+    <rect x="310" y="596" width="380" height="38" rx="6" fill="#FFB300" class="ink-line" />
+    <!-- Handle Cutout -->
+    <rect x="440" y="608" width="120" height="14" rx="4" fill="#2B2D42" class="ink-line-sm" />
+    <!-- Edge Accent -->
+    <line x1="320" y1="602" x2="680" y2="602" stroke="#FFE082" stroke-width="2.5" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 4. RECESSED CHAMBER CAVITY                 -->
+  <!-- ========================================== -->
+  <g id="print-chamber">
+    <!-- Outer Heavy Bezel / Frame -->
+    <polygon points="
+      160,110 680,110
+      705,135 705,550
+      680,575 160,575
+      135,550 135,135
+    " fill="#2B2D42" class="ink-line" />
+
+    <!-- Inner Cavity -->
+    <polygon points="
+      175,125 665,125
+      690,150 690,535
+      665,560 175,560
+      150,535 150,150
+    " fill="url(#chamberInterior)" class="ink-line-sm" />
+
+    <!-- Interior Structural Ribs / Perspective Back Wall -->
+    <polygon points="210,170 630,170 630,500 210,500" fill="#131722" />
+    <line x1="150" y1="150" x2="210" y2="170" stroke="#0D1017" stroke-width="2.5" />
+    <line x1="690" y1="150" x2="630" y2="170" stroke="#0D1017" stroke-width="2.5" />
+    <line x1="150" y1="535" x2="210" y2="500" stroke="#0D1017" stroke-width="2.5" />
+    <line x1="690" y1="535" x2="630" y2="500" stroke="#0D1017" stroke-width="2.5" />
+
+    <!-- Amber Work Light - Ceiling Strip -->
+    <rect x="360" y="132" width="160" height="16" rx="4" fill="url(#amberLamp)" class="ink-line-xs" />
+    <!-- Amber Work Light - Left Wall Vertical Strip -->
+    <rect x="162" y="260" width="14" height="110" rx="4" fill="url(#amberLamp)" class="ink-line-xs" />
+
+    <!-- Dual Horizontal Gantry Rails -->
+    <rect x="160" y="240" width="520" height="14" rx="4" fill="url(#metalRail)" class="ink-line-xs" />
+    <rect x="160" y="262" width="520" height="14" rx="4" fill="url(#metalRail)" class="ink-line-xs" />
+
+    <!-- Left & Right Rail End Brackets -->
+    <rect x="155" y="234" width="22" height="48" rx="4" fill="#475569" class="ink-line-sm" />
+    <circle cx="166" cy="244" r="2.5" fill="#1E293B" />
+    <circle cx="166" cy="272" r="2.5" fill="#1E293B" />
+
+    <rect x="663" y="234" width="22" height="48" rx="4" fill="#475569" class="ink-line-sm" />
+    <circle cx="674" cy="244" r="2.5" fill="#1E293B" />
+    <circle cx="674" cy="272" r="2.5" fill="#1E293B" />
+
+    <!-- Heated Print Bed Assembly -->
+    <!-- Bed Supports / Z-Columns -->
+    <rect x="250" y="495" width="30" height="36" fill="#334155" class="ink-line-sm" />
+    <rect x="560" y="495" width="30" height="36" fill="#334155" class="ink-line-sm" />
+    <!-- Heated Bed Surface Slab -->
+    <polygon points="195,492 645,492 630,465 210,465" fill="#475569" class="ink-line" />
+    <rect x="195" y="492" width="450" height="12" rx="2" fill="#334155" class="ink-line-sm" />
+    <line x1="200" y1="478" x2="635" y2="478" stroke="#64748B" stroke-width="1.5" />
+
+    <!-- ========================================== -->
+    <!-- 5. WORKING TOOLHEAD & WORKPIECE            -->
+    <!-- ========================================== -->
+    <!-- Lowered Extruder Toolhead Carriage -->
+    <g id="extruder-assembly">
+      <!-- Upper Stepper Cap -->
+      <polygon points="385,215 455,215 450,234 390,234" fill="#64748B" class="ink-line-sm" />
+      <!-- Carriage Main Box -->
+      <rect x="375" y="234" width="90" height="74" rx="8" fill="#F1F5F9" class="ink-line" />
+      <!-- Front Heat Sink Fins -->
+      <line x1="410" y1="248" x2="410" y2="268" stroke="#1E293B" stroke-width="3.5" stroke-linecap="round" />
+      <line x1="420" y1="248" x2="420" y2="268" stroke="#1E293B" stroke-width="3.5" stroke-linecap="round" />
+      <line x1="430" y1="248" x2="430" y2="268" stroke="#1E293B" stroke-width="3.5" stroke-linecap="round" />
+      <!-- Extruder Heat Block -->
+      <polygon points="398,308 442,308 434,324 406,324" fill="#FF9100" class="ink-line-sm" />
+      <!-- Brass Nozzle -->
+      <polygon points="414,324 426,324 420,336" fill="#FFC107" class="ink-line-xs" />
+    </g>
+
+    <!-- Glowing Extrusion Beam / Laser Connection -->
+    <polygon points="418,336 422,336 425,438 415,438" fill="url(#laserBeam)" />
+    <!-- Bright Contact Sparkle -->
+    <circle cx="420" cy="438" r="6" fill="#FFF9C4" />
+    <circle cx="420" cy="438" r="10" fill="#FFD54F" opacity="0.6" />
+
+    <!-- Workpiece: Glowing Golden Wrench on Print Bed -->
+    <g id="golden-wrench">
+      <!-- Wrench Body Path (Handle + Open Jaw) -->
+      <path d="
+        M 345,446
+        C 335,446 325,452 325,462
+        C 325,472 335,478 345,478
+        L 460,478
+        C 470,478 478,484 485,488
+        L 512,488
+        C 515,483 518,474 515,468
+        C 500,468 494,458 502,448
+        C 506,442 516,438 522,440
+        L 498,426
+        C 488,432 478,446 460,446
+        Z
+      " fill="url(#wrenchGlow)" class="ink-line" stroke="#FF6D00" stroke-width="3.5" />
+
+      <!-- Wrench Handle Bolt Hole -->
+      <circle cx="348" cy="462" r="6.5" fill="#334155" stroke="#FF8F00" stroke-width="2" />
+
+      <!-- Core Specular Highlight Stripe -->
+      <path d="M 360,453 L 455,453" stroke="#FFF9C4" stroke-width="3" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 6. FRONT GLASS VIEWPORT & GLARE            -->
+  <!-- ========================================== -->
+  <g id="glass-viewport" pointer-events="none">
+    <!-- Diagonal Glass Glare Reflection -->
+    <polygon points="175,125 360,125 180,480 150,480" fill="url(#glassGlare)" />
+    <polygon points="420,125 540,125 290,560 210,560" fill="url(#glassGlare)" />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 7. TACTICAL OLED HUD SCREEN (RIGHT PANEL)  -->
+  <!-- ========================================== -->
+  <g id="hud-display">
+    <!-- Bezel Frame -->
+    <rect x="725" y="110" width="170" height="465" rx="10" fill="#1E293B" class="ink-line" />
+    <!-- Screen Surface -->
+    <rect x="735" y="120" width="150" height="445" rx="6" fill="url(#hudBg)" class="ink-line-sm" stroke="#00E5FF" stroke-width="2.5" />
+
+    <!-- Corner Sci-Fi Framing Markers -->
+    <path d="M 742,135 L 742,127 L 752,127" fill="none" stroke="#00E5FF" stroke-width="2" />
+    <path d="M 878,135 L 878,127 L 868,127" fill="none" stroke="#00E5FF" stroke-width="2" />
+    <path d="M 742,548 L 742,556 L 752,556" fill="none" stroke="#00E5FF" stroke-width="2" />
+    <path d="M 878,548 L 878,556 L 868,556" fill="none" stroke="#00E5FF" stroke-width="2" />
+
+    <!-- Wireframe Isometric 3D Cube Icon -->
+    <g id="isometric-cube" transform="translate(810, 205)">
+      <!-- Top Face -->
+      <polygon points="0,-42 36,-21 0,0 -36,-21" fill="#00E5FF" fill-opacity="0.25" stroke="#00E5FF" stroke-width="2.5" stroke-linejoin="round" />
+      <!-- Left Face -->
+      <polygon points="-36,-21 0,0 0,42 -36,21" fill="#00E5FF" fill-opacity="0.12" stroke="#00E5FF" stroke-width="2.5" stroke-linejoin="round" />
+      <!-- Right Face -->
+      <polygon points="0,0 36,-21 36,21 0,42" fill="#00E5FF" fill-opacity="0.18" stroke="#00E5FF" stroke-width="2.5" stroke-linejoin="round" />
+      <!-- Inner Vertex Accent Dots -->
+      <circle cx="0" cy="-21" r="2.5" fill="#FFFFFF" />
+      <circle cx="-18" cy="10" r="2.5" fill="#FFFFFF" />
+      <circle cx="18" cy="10" r="2.5" fill="#FFFFFF" />
+    </g>
+
+    <!-- HUD Status Text: WORKING -->
+    <text x="810" y="295" font-family="monospace, sans-serif" font-weight="900" font-size="16" fill="#FFB300" text-anchor="middle" letter-spacing="2">WORKING</text>
+    <text x="810" y="318" font-family="monospace, sans-serif" font-weight="700" font-size="12" fill="#00E5FF" text-anchor="middle" letter-spacing="1">TOOL // 67%</text>
+
+    <!-- Telemetry Progress Bars -->
+    <!-- Bar 1 (Progress 90%) -->
+    <g transform="translate(750, 350)">
+      <rect x="0" y="0" width="120" height="14" rx="3" fill="#132338" stroke="#00E5FF" stroke-width="1.2" />
+      <rect x="2" y="2" width="106" height="10" rx="2" fill="#00E5FF" />
+    </g>
+    <!-- Bar 2 (Progress 72%) -->
+    <g transform="translate(750, 375)">
+      <rect x="0" y="0" width="120" height="14" rx="3" fill="#132338" stroke="#00E5FF" stroke-width="1.2" />
+      <rect x="2" y="2" width="84" height="10" rx="2" fill="#00E5FF" />
+    </g>
+    <!-- Bar 3 (Progress 55%) -->
+    <g transform="translate(750, 400)">
+      <rect x="0" y="0" width="120" height="14" rx="3" fill="#132338" stroke="#00E5FF" stroke-width="1.2" />
+      <rect x="2" y="2" width="65" height="10" rx="2" fill="#00E5FF" />
+    </g>
+    <!-- Bar 4 (Progress 80%) -->
+    <g transform="translate(750, 425)">
+      <rect x="0" y="0" width="120" height="14" rx="3" fill="#132338" stroke="#00E5FF" stroke-width="1.2" />
+      <rect x="2" y="2" width="94" height="10" rx="2" fill="#00E5FF" />
+    </g>
+
+    <!-- Lower Diagnostic Matrix Indicators -->
+    <g transform="translate(750, 470)" fill="#00E5FF">
+      <rect x="0" y="0" width="18" height="6" rx="1" opacity="0.8" />
+      <rect x="24" y="0" width="18" height="6" rx="1" opacity="0.8" />
+      <rect x="48" y="0" width="18" height="6" rx="1" opacity="0.8" />
+      <rect x="72" y="0" width="18" height="6" rx="1" opacity="0.4" />
+      <rect x="96" y="0" width="18" height="6" rx="1" opacity="0.4" />
+
+      <rect x="0" y="12" width="28" height="6" rx="1" opacity="0.9" />
+      <rect x="34" y="12" width="28" height="6" rx="1" opacity="0.6" />
+      <rect x="68" y="12" width="46" height="6" rx="1" opacity="0.3" />
+    </g>
+
+    <!-- Emergency Manual Abort Button (Bottom of Screen) -->
+    <rect x="760" y="515" width="100" height="24" rx="4" fill="#FF5722" class="ink-line-xs" />
+    <text x="810" y="531" font-family="sans-serif" font-weight="900" font-size="10" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">ABORT</text>
+  </g>
+</svg>

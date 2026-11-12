@@ -1,0 +1,105 @@
+{
+  "assetId": "fabricator_3d",
+  "profileId": "wall-right-inward",
+  "version": "2.0.0",
+  "timestamp": "2026-11-12T07:30:38.555073+00:00",
+  "stateList": [
+    "idle",
+    "working",
+    "complete (placeholder)",
+    "damaged (placeholder)"
+  ],
+  "projection": "cabinet 2.5D orthographic",
+  "camera": {
+    "type": "ORTHO",
+    "orthoScale": 4.4,
+    "pitchDeg": 12.0,
+    "yawDeg": "TBD",
+    "rollDeg": 0.0,
+    "lightRigVersion": "1.0.0"
+  },
+  "canvasSize": {
+    "width": 1000,
+    "height": 800,
+    "aspectRatio": "5:4 (Asset Canvas) / 4:3 (Cabin Stage Integration)"
+  },
+  "spatialMount": {
+    "anchor": "bottom-center",
+    "mountPoint": "TBD",
+    "baseLine": "TBD",
+    "runtimeSlot": "z-index: 20",
+    "cabinLayer": "Layer 3 (Functional Stations & Back Row)"
+  },
+  "collections": [
+    "00_CHASSIS_STATIC",
+    "10_DOOR_STATIC",
+    "20_MECHANICAL_STATIC",
+    "30_STATE_IDLE",
+    "31_STATE_WORKING",
+    "32_STATE_COMPLETE",
+    "33_STATE_DAMAGED",
+    "40_HUD_FRAME",
+    "41_HUD_RUNTIME_PLACEHOLDER",
+    "50_DECALS_AND_WEAR",
+    "90_RENDER_HELPERS"
+  ],
+  "occlusion": {
+    "behindWall": [
+      "Chassis_RearWallMount",
+      "Chassis_CableConduit_Orange",
+      "Chassis_CableConduit_Yellow"
+    ],
+    "inFrontOfWall": [
+      "Chassis_Shell",
+      "Door_TintedAcrylic",
+      "Door_SoftGasket",
+      "HUD_ScreenBezel",
+      "Mech_ChamberVoid"
+    ]
+  },
+  "passes": {
+    "composite": {
+      "format": "WEBP",
+      "status": "VERIFIED_PRODUCTION"
+    },
+    "alpha": {
+      "format": "WEBP",
+      "status": "VERIFIED_PRODUCTION"
+    },
+    "depth": {
+      "format": "WEBP",
+      "status": "VERIFIED_PRODUCTION"
+    },
+    "emissive": {
+      "format": "WEBP",
+      "status": "VERIFIED_PRODUCTION"
+    },
+    "occlusion": {
+      "format": "WEBP",
+      "status": "VERIFIED_PRODUCTION"
+    },
+    "outline": {
+      "format": "WEBP",
+      "status": "VERIFIED_PRODUCTION"
+    }
+  },
+  "outputFiles": {
+    "idle": {
+      "composite": "fabricator_3d_wall_right_idle_composite.webp",
+      "alpha": "fabricator_3d_wall_right_idle_alpha.webp",
+      "depth": "fabricator_3d_wall_right_idle_depth.webp",
+      "occlusion": "fabricator_3d_wall_right_idle_occlusion.webp",
+      "emissive": "fabricator_3d_wall_right_idle_emissive.webp",
+      "outline": "fabricator_3d_wall_right_idle_outline.webp"
+    },
+    "working": {
+      "composite": "fabricator_3d_wall_right_working_composite.webp",
+      "alpha": "fabricator_3d_wall_right_working_alpha.webp",
+      "depth": "fabricator_3d_wall_right_working_depth.webp",
+      "occlusion": "fabricator_3d_wall_right_working_occlusion.webp",
+      "emissive": "fabricator_3d_wall_right_working_emissive.webp",
+      "outline": "fabricator_3d_wall_right_working_outline.webp"
+    }
+  },
+  "validationStatus": "VALIDATED"
+}

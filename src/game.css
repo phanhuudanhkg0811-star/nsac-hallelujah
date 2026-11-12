@@ -1,0 +1,1081 @@
+/* The room, sprites and hit targets share one original 3840 × 2880 space. */
+.game-viewport { height: 100dvh; width: 100%; display: grid; place-items: center; overflow: hidden; isolation: isolate; background: radial-gradient(ellipse at center, #182332 0, #050811 75%); color: #e9e6d9; }
+.game-viewport::before { content: ''; position: absolute; inset: 0; z-index: -1; opacity: .45; background-image: radial-gradient(circle, #d8d8c8 .7px, transparent 1px), radial-gradient(circle, #a4b8c7 .6px, transparent 1px); background-size: 137px 169px, 251px 213px; background-position: 19px 32px, 87px 111px; }
+.cabin-stage { position: relative; width: min(100vw, calc(100dvh * 4 / 3), 1440px); aspect-ratio: 4 / 3; flex: none; overflow: hidden; container-type: inline-size; box-shadow: 0 0 90px 35px #0009; user-select: none; animation: cabin-arrival .5s ease-out; }
+.cabin-shell { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; z-index: 10; pointer-events: none; }
+.cabin-porthole { position: absolute; left: 42.2%; top: 29.2%; width: 14.2%; height: 18.8%; border-radius: 50%; overflow: hidden; z-index: 5; }
+.cabin-porthole img { width: 100%; height: 100%; object-fit: cover; }
+.cabin-hotspot { position: absolute; z-index: 20; background: none; border: 0; cursor: pointer; transition: transform .18s ease; }
+.cabin-hotspot > img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; transition: filter .18s ease; }
+.cabin-hotspot:hover, .cabin-hotspot:focus-visible { transform: scale(1.035); }
+.cabin-hotspot:hover > img, .cabin-hotspot:focus-visible > img, .cabin-crew-person:hover > img { filter: brightness(1.12) drop-shadow(0 0 5px #efd49c); }
+.cabin-hotspot:active { transform: scale(.985); }
+.cabin-tooltip { position: absolute; left: 50%; bottom: 3%; transform: translateX(-50%); padding: .35em .65em; min-width: max-content; max-width: 13rem; background: #141a20f5; border: 1px solid #b59c64; border-radius: 3px; color: #fff0c8; font: 600 clamp(9px, 1.35cqw, 15px)/1.4 'Segoe UI', sans-serif; pointer-events: none; opacity: 0; transition: opacity .18s; z-index: 100; }
+.cabin-tooltip small { display: block; font-size: .8em; color: #c6b78e; }
+.cabin-hotspot:hover .cabin-tooltip, .cabin-hotspot:focus-visible .cabin-tooltip, .cabin-crew-person:hover .cabin-tooltip, .cabin-crew-person:focus-visible .cabin-tooltip, .show-hotspot-labels .cabin-tooltip { opacity: 1; }
+.cabin-hotspot:focus-visible, .cabin-crew-person:focus-visible { outline: 2px solid #ffe3a1; outline-offset: 3px; }
+.cabin-crew-layer { position: absolute; inset: 0; pointer-events: none; z-index: auto; }
+.cabin-crew-person { position: absolute; pointer-events: auto; cursor: pointer; }
+.cabin-crew-person > img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; transition: filter .18s, transform .18s; }
+.cabin-away { position: relative; margin-bottom: 30%; padding: .4em; background: #16202ce8; border: 1px solid #d3ba81; text-align: center; font-size: clamp(8px, 1.3cqw, 14px); }
+.cabin-telemetry { position: absolute; z-index: 45; top: 2%; inset-inline: 4%; display: flex; align-items: center; justify-content: space-between; gap: 2%; padding: 1.1% 2%; background: #111923e8; border: 1px solid #9a906d80; border-radius: 4px; box-shadow: 0 3px 10px #0004; }
+.cabin-mission-id { display: flex; flex-direction: column; min-width: 15%; }
+.cabin-mission-id strong { font: 700 clamp(11px, 2cqw, 24px)/1.2 'Segoe UI', sans-serif; letter-spacing: .18em; color: #ead8a5; }
+.cabin-mission-id span { font-size: clamp(7px, 1cqw, 12px); color: #b3b6b5; }
+.cabin-telemetry dl { display: flex; gap: 3cqw; }
+.cabin-telemetry dt { font-size: clamp(8px, 1.15cqw, 14px); color: #b8bcb8; }
+.cabin-telemetry dd { font: 600 clamp(11px, 1.9cqw, 23px)/1.4 Consolas, monospace; color: #faf3de; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cabin-telemetry dd small { font: 400 .65em 'Segoe UI', sans-serif; color: #b7b7a8; margin-left: .3em; }
+.cabin-footer { position: absolute; inset-inline: 2%; bottom: 1%; z-index: 45; display: flex; align-items: center; justify-content: space-between; font-size: clamp(9px, 1.15cqw, 14px); }
+.cabin-footer button { padding: .5em .8em; background: #151c24e8; border: 1px solid #9c8e64; border-radius: 3px; color: #f5e6bb; }
+.cabin-footer p { color: #f6e7bc; text-shadow: 0 1px 4px #000; font-size: .9em; }
+.cabin-footer button:hover { background: #3a3d31; }
+
+/* ==========================================================================
+   AUTHENTIC DIEGETIC POPUPS & RETRO SCI-FI UI CHASSIS (60 Parsecs! Parity)
+   ========================================================================== */
+
+.mission-dialog {
+  margin: auto;
+  width: min(840px, calc(100vw - 24px));
+  max-height: calc(100dvh - 36px);
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #e9e5d6;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.85);
+  overflow: visible;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.mission-dialog::backdrop {
+  background: rgba(3, 7, 12, 0.82);
+  backdrop-filter: blur(4px);
+}
+
+.mission-dialog-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #483d28, 0 20px 60px #000c;
+  background: #1b2123;
+}
+
+/* Starlog / Event Modal CRT Monitor Theme */
+.mission-dialog--starlog .mission-dialog-frame {
+  background: #141b18;
+  border: 4px solid #36443c;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9), 0 0 0 2px #1f2723;
+}
+.mission-dialog--starlog .mission-dialog-header {
+  background: linear-gradient(180deg, #1f2a24 0%, #151d19 100%);
+  border-bottom: 2px solid #3d5244;
+}
+
+/* Clipboard / End of Day Modal Theme */
+.mission-dialog--end .mission-dialog-frame {
+  background: #e5deb8;
+  color: #24221a;
+  border: 6px solid #45331e;
+  border-radius: 8px;
+  box-shadow: inset 0 0 20px rgba(78, 55, 27, 0.25), 0 25px 80px rgba(0, 0, 0, 0.9);
+}
+.mission-dialog--end .mission-dialog-header {
+  background: #382c1f;
+  color: #faecc5;
+  border-bottom: 3px solid #8f7243;
+}
+
+/* Metallic Clipboard Clamp at Top */
+.clipboard-metal-clamp {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 28px;
+  background: linear-gradient(180deg, #d2d2d2 0%, #888888 60%, #444444 100%);
+  border: 2px solid #222;
+  border-radius: 4px 4px 6px 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clamp-bracket {
+  width: 90px;
+  height: 8px;
+  background: #555;
+  border-radius: 2px;
+}
+
+/* Crafting & System Terminal Theme */
+.mission-dialog--crafting .mission-dialog-frame {
+  background: #12191f;
+  border: 4px solid #283e4a;
+  box-shadow: inset 0 0 40px rgba(5, 15, 25, 0.8);
+}
+.mission-dialog--crafting .mission-dialog-header {
+  background: linear-gradient(180deg, #1b2933 0%, #101a20 100%);
+  border-bottom: 2px solid #3c6175;
+}
+
+/* Expedition Navigation Terminal Theme */
+.mission-dialog--expedition .mission-dialog-frame {
+  background: #111a19;
+  border: 4px solid #1f3f38;
+}
+.mission-dialog--expedition .mission-dialog-header {
+  background: linear-gradient(180deg, #182c27 0%, #0d1a17 100%);
+  border-bottom: 2px solid #2d5e53;
+}
+
+/* Character Sheet Dossier Theme */
+.mission-dialog--character .mission-dialog-frame {
+  background: #252b2c;
+  border: 3px solid #4a5452;
+}
+
+.mission-dialog-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  background: #1e2528;
+  color: #fff2d4;
+  border-bottom: 2px solid #73623c;
+}
+.mission-dialog-art-wrap {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  padding: 3px;
+}
+.mission-dialog-art {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.mission-dialog-titles {
+  flex: 1;
+  min-width: 0;
+}
+.mission-dialog-eyebrow {
+  font: 700 10px/1.3 Consolas, monospace;
+  letter-spacing: 0.16em;
+  color: #baa879;
+  text-transform: uppercase;
+  margin: 0 0 2px 0;
+}
+.mission-dialog-title {
+  font-size: clamp(17px, 2.5vw, 22px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.mission-close-btn {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: #63221b;
+  border: 1px solid #8e382e;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+  flex: none;
+}
+.mission-close-btn:hover {
+  background: #8b2f25;
+  transform: scale(1.06);
+}
+.mission-close-btn:active {
+  transform: scale(0.95);
+}
+
+.mission-dialog-body {
+  padding: 22px 24px;
+  max-height: calc(100dvh - 120px);
+  overflow-y: auto;
+  line-height: 1.55;
+}
+.mission-dialog-body h3 { font-weight: 650; font-size: 21px; line-height: 1.35; margin-bottom: 14px; }
+.mission-dialog-body h4 { font-weight: 650; margin: 20px 0 8px; }
+.mission-kicker { font: 600 11px/1.5 Consolas, monospace; letter-spacing: .14em; text-transform: uppercase; color: #77704e; margin-bottom: 12px; }
+.mission-note { color: #66654f; font-size: 13px; line-height: 1.6; margin: 10px 0 16px; }
+.mission-button { display: inline-flex; justify-content: center; align-items: center; min-height: 44px; padding: 10px 17px; border: 1px solid #424c3a; border-radius: 4px; background: #35473c; color: #fff6dc; font-weight: 600; font-size: 14px; transition: background .15s, transform .15s; }
+.mission-button:hover { background: #4a604f; }
+.mission-button:active { transform: translateY(1px); }
+.mission-dialog button:disabled, .mission-dialog input:disabled { opacity: .45; cursor: not-allowed; }
+.mission-dialog :is(button, input, select):focus-visible, .night-cutscene button:focus-visible, .cabin-footer button:focus-visible { outline: 3px solid #b77a24; outline-offset: 3px; }
+.mission-tabs { display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid #4a5a52; margin-bottom: 20px; padding-bottom: 10px; }
+.mission-tabs button { border-radius: 4px; padding: 8px 14px; border: 1px solid #3d4a44; color: #9ab0a6; font-size: 13px; background: #161e1b; cursor: pointer; transition: all .15s; }
+.mission-tabs button:hover { background: #23302b; color: #fff; }
+.mission-tabs button[aria-pressed=true] { color: #c8fae3; border-color: #559174; background: #2a3d35; font-weight: 650; }
+/* ==========================================================================
+   3. STARLOG / EVENTS CRT SCREEN & PUNCHCARDS (EventsCard.webp)
+   ========================================================================== */
+
+.crt-terminal-screen {
+  position: relative;
+  background: #09130d;
+  border: 2px solid #233b2a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  color: #79f795;
+  font-family: Consolas, monospace;
+  overflow: hidden;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.95), 0 0 15px rgba(45, 120, 60, 0.2);
+}
+.crt-terminal-scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.25) 0px,
+    rgba(0, 0, 0, 0.25) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+.crt-terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #9fe6a9;
+  border-bottom: 1px dashed #244b2f;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.crt-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #55ff77;
+  box-shadow: 0 0 8px #55ff77;
+  animation: crt-beacon 1.4s infinite;
+}
+@keyframes crt-beacon {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+.crt-sol-badge {
+  margin-left: auto;
+  background: #14331d;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #a5ffb4;
+  font-weight: bold;
+}
+.crt-event-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #c9ffd2;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+.crt-prompt-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #8ceaa4;
+  white-space: pre-line;
+}
+
+/* Punchcards Grid */
+.events-cards-section {
+  margin-top: 20px;
+}
+.events-cards-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #a2ab9b;
+  margin-bottom: 14px;
+  font-family: Consolas, monospace;
+}
+.events-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.events-choice-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 160px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.2s;
+  perspective: 600px;
+}
+.events-card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.45));
+}
+.events-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #3b2f1e;
+}
+.events-card-stamp {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #8e3020;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #8e3020;
+  font: 800 16px Consolas, monospace;
+  background: rgba(220, 80, 50, 0.12);
+  margin-bottom: 8px;
+}
+.events-card-text {
+  font: 600 13px/1.45 'Segoe UI', sans-serif;
+  flex: 1;
+  color: #332717;
+}
+.events-card-hint {
+  display: block;
+  font: 700 9px/1.2 Consolas, monospace;
+  color: #7d5930;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+.events-choice-card:hover {
+  transform: translateY(-5px) rotate(-1deg) scale(1.02);
+}
+.events-choice-card:hover .events-card-hint {
+  opacity: 1;
+  color: #9c2e1f;
+}
+.events-choice-card:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Starlog Outcome Paper */
+.starlog-outcome-paper {
+  background: #ded7b8;
+  color: #342d1f;
+  border-left: 4px solid #587b4b;
+  padding: 14px 18px;
+  border-radius: 4px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+.mission-button-terminal {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: #2b4533;
+  color: #bbf7c8;
+  border: 1px solid #487255;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.mission-button-terminal:hover {
+  background: #395c44;
+  box-shadow: 0 0 12px rgba(80, 200, 120, 0.3);
+}
+
+/* ==========================================================================
+   4. RATIONING CLIPBOARD & RUBBER STAMP
+   ========================================================================== */
+
+.end-day-clipboard-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.clipboard-paper-note {
+  background: #f7f3da;
+  border: 1px dashed #9d8d67;
+  padding: 12px 16px;
+  border-radius: 4px;
+  color: #3f3622;
+}
+.stamp-confidential {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 2px solid #a33827;
+  color: #a33827;
+  font: 800 11px Consolas, monospace;
+  letter-spacing: 0.16em;
+  border-radius: 3px;
+  transform: rotate(-1deg);
+  margin-bottom: 6px;
+}
+.note-text {
+  font-size: 13px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.clipboard-section {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid #c8be9d;
+  border-radius: 6px;
+  padding: 16px;
+}
+.section-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #a79774;
+  padding-bottom: 6px;
+}
+.section-number {
+  font: 800 14px Consolas, monospace;
+  background: #3a2e1d;
+  color: #f7edd4;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+.section-heading {
+  font-size: 15px;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+  margin: 0;
+  color: #2b2315;
+}
+
+.rationing-summary-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #4a3f2b;
+}
+
+.rationing-crew-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rationing-crew-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 14px;
+  background: #fdfbf2;
+  border: 1px solid #d4c8a8;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+.crew-polaroid {
+  position: relative;
+  width: 52px;
+  height: 60px;
+  background: #fff;
+  padding: 3px 3px 10px 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg);
+  flex: none;
+}
+.polaroid-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #ccc;
+}
+.dead-tag {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font: 800 8px Consolas, monospace;
+  color: #900;
+}
+.crew-ration-info {
+  flex: 1;
+  min-width: 0;
+}
+.crew-name {
+  display: block;
+  font-size: 14px;
+  color: #231c12;
+}
+.crew-status-desc {
+  display: block;
+  font-size: 11px;
+  color: #685b40;
+  margin-bottom: 4px;
+}
+.hunger-gauge-wrap {
+  width: 100%;
+  max-width: 220px;
+}
+.gauge-label {
+  font: 600 10px Consolas, monospace;
+  color: #554832;
+}
+.gauge-track {
+  height: 6px;
+  background: #ddd3b6;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 2px;
+}
+.gauge-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.crew-ration-actions {
+  display: flex;
+  gap: 8px;
+}
+.action-toggle {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid #c2b390;
+  background: #f4eed9;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s;
+}
+.action-toggle:hover {
+  background: #e9e0c3;
+}
+.action-toggle.active {
+  background: #d4e3cb;
+  border-color: #618751;
+  color: #26421c;
+}
+.action-toggle input {
+  margin-right: 6px;
+  accent-color: #4a7536;
+}
+
+/* Rubber Stamp Approve Button */
+.end-day-confirm-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #322616;
+  border-radius: 8px;
+  color: #faecd0;
+}
+.sol-badge-footer span {
+  display: block;
+  font: 600 10px Consolas, monospace;
+  letter-spacing: 0.14em;
+  color: #b7a47d;
+}
+.sol-badge-footer strong {
+  font: 800 24px Consolas, monospace;
+  color: #ffd777;
+}
+
+.approved-rubber-stamp-btn {
+  border: 3px solid #b73224;
+  border-radius: 6px;
+  background: #992417;
+  padding: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.15s, filter 0.15s;
+}
+.approved-rubber-stamp-btn:hover:not(:disabled) {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+.approved-rubber-stamp-btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+.approved-rubber-stamp-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.stamp-inner {
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  padding: 8px 18px;
+  border-radius: 3px;
+  font: 800 14px Consolas, monospace;
+  letter-spacing: 0.08em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+/* ==========================================================================
+   5. CADET DOSSIER (CharacterSheetModal)
+   ========================================================================== */
+
+.character-dossier-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.dossier-tabs {
+  display: flex;
+  gap: 6px;
+  border-bottom: 2px solid #4a5452;
+  padding-bottom: 8px;
+}
+.dossier-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #1b2123;
+  border: 1px solid #3c4644;
+  border-radius: 4px;
+  color: #a4b0ad;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.dossier-tab-btn:hover {
+  background: #283335;
+  color: #fff;
+}
+.dossier-tab-btn.active {
+  background: #394a46;
+  border-color: #5d7e75;
+  color: #c9ede2;
+  font-weight: 700;
+}
+.tab-num {
+  font: 700 10px Consolas, monospace;
+  color: #728c85;
+}
+
+.dossier-card {
+  background: #1e2628;
+  border: 1px solid #384547;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.dossier-header-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.cadet-photo-wrapper {
+  position: relative;
+  width: 90px;
+  height: 105px;
+  background: #fff;
+  padding: 4px 4px 14px 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transform: rotate(-2deg);
+  flex: none;
+}
+.cadet-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #333;
+}
+.paperclip-graphic {
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  width: 14px;
+  height: 28px;
+  border: 3px solid #8e9a98;
+  border-radius: 8px 8px 0 0;
+  border-bottom: none;
+}
+.cadet-title-col {
+  flex: 1;
+}
+.dossier-kicker {
+  font: 700 10px Consolas, monospace;
+  letter-spacing: 0.16em;
+  color: #8fa69e;
+  margin-bottom: 4px;
+}
+.cadet-full-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: #e6edea;
+  margin: 0 0 6px 0;
+}
+.cadet-role-badge {
+  font: 600 12px Consolas, monospace;
+  color: #8edec7;
+  margin: 0;
+}
+
+.dossier-subheading {
+  font: 700 12px Consolas, monospace;
+  letter-spacing: 0.12em;
+  color: #9fb3ad;
+  border-bottom: 1px solid #303c3d;
+  padding-bottom: 6px;
+  margin: 0 0 12px 0;
+}
+.dossier-gauges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+.dossier-gauge-card {
+  background: #151b1c;
+  border: 1px solid #283335;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+.gauge-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.gauge-title {
+  font-size: 12px;
+  color: #9cb1ac;
+}
+.gauge-val {
+  font: 700 13px Consolas, monospace;
+}
+.gauge-bar-track {
+  height: 6px;
+  background: #252f31;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.gauge-bar-fill {
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.dossier-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.skill-badge-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #171e20;
+  border: 1px solid #2a3739;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+.skill-badge-info strong {
+  display: block;
+  font-size: 13px;
+  color: #dce5e2;
+}
+.skill-badge-info span {
+  display: block;
+  font: 600 11px Consolas, monospace;
+  color: #80cdb6;
+}
+.skill-badge-info small {
+  display: block;
+  font-size: 10px;
+  color: #6a7f79;
+}
+
+/* ==========================================================================
+   6. CRAFTING & EXPEDITION TERMINALS
+   ========================================================================== */
+
+.crafting-terminal-sheet, .expedition-terminal-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.crafting-materials-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background: #0d151a;
+  border: 1px solid #233540;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+.material-meter-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.meter-info span {
+  display: block;
+  font: 700 10px Consolas, monospace;
+  color: #728c9b;
+}
+.meter-info strong {
+  font: 800 18px Consolas, monospace;
+  color: #aee0ff;
+}
+
+.crafting-ops-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.crafting-op-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px;
+  background: #16222b;
+  border: 1px solid #273e4e;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #cfe1ed;
+}
+.crafting-op-card:hover {
+  background: #1f3240;
+  border-color: #406c88;
+  transform: translateY(-2px);
+}
+.op-label {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.op-hint {
+  font: 600 10px Consolas, monospace;
+  color: #6c8a9e;
+  margin-top: 4px;
+}
+
+/* Expedition Radar Map */
+.map-radar-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.radar-sweep-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #4effa0, transparent);
+  box-shadow: 0 0 10px #4effa0;
+  animation: radar-sweep 3s linear infinite;
+}
+@keyframes radar-sweep {
+  0% { left: 0%; }
+  100% { left: 100%; }
+}
+.radar-coords-tag {
+  position: absolute;
+  bottom: 6px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: space-between;
+  font: 700 9px Consolas, monospace;
+  color: #4effa0;
+  text-shadow: 0 0 4px #000;
+}
+
+.expedition-planning-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.config-label {
+  display: block;
+  font: 700 11px Consolas, monospace;
+  color: #79a89c;
+  margin-bottom: 6px;
+}
+.dest-select-input {
+  width: 100%;
+  background: #0d1715;
+  border: 1px solid #26473f;
+  border-radius: 4px;
+  padding: 8px 10px;
+  color: #d6ebe5;
+  font-size: 12px;
+}
+.dest-preview-card {
+  margin-top: 10px;
+  background: #13221e;
+  border: 1px solid #233f38;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.dest-artwork {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+}
+.dest-info {
+  padding: 10px;
+  font-size: 12px;
+}
+.dest-info strong {
+  display: block;
+  color: #7af2d3;
+  margin-bottom: 4px;
+}
+.dest-info p {
+  color: #9cb8b0;
+  margin: 0 0 6px 0;
+  font-size: 11px;
+}
+.dest-time-tag {
+  font: 600 11px Consolas, monospace;
+  color: #ffd077;
+}
+
+.crew-radio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.crew-radio-pill {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: #111e1a;
+  border: 1px solid #223f36;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #c7ded7;
+}
+.crew-radio-pill.selected {
+  background: #1d3b32;
+  border-color: #3fa184;
+  color: #a7f7df;
+  font-weight: 700;
+}
+.crew-radio-pill input {
+  margin-right: 8px;
+  accent-color: #3fa184;
+}
+
+.loadout-items-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.item-slot-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px;
+  background: #0f1c19;
+  border: 1px solid #1f3d35;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+  color: #9ab8b0;
+  transition: all 0.15s;
+}
+.item-slot-btn:hover {
+  background: #1c362f;
+}
+.item-slot-btn.selected {
+  background: #254a3e;
+  border-color: #55cba7;
+  color: #e0fcf3;
+  box-shadow: 0 0 8px rgba(85, 203, 167, 0.4);
+}
+.launch-expedition-btn {
+  width: 100%;
+  padding: 3px;
+  background: #9b5a19;
+  border: 2px solid #e28a2a;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.15s;
+}
+.launch-expedition-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+.launch-btn-inner {
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 4px;
+  font: 800 13px Consolas, monospace;
+  letter-spacing: 0.08em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   7. TOAST & NOTICES
+   ========================================================================== */
+
+.mission-toast {
+  position: fixed;
+  z-index: 60;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(580px, calc(100% - 32px));
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  background: #172a22f8;
+  border: 2px solid #55a87a;
+  border-radius: 6px;
+  color: #d8f5e3;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  font: 600 14px/1.4 Consolas, monospace;
+}
+.mission-toast button {
+  font-size: 22px;
+  color: #9fe0be;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.night-cutscene { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 32px 24px; border: 0; background: #000; color: #e4e5d8; overflow: auto; }
+.night-cutscene::backdrop { background: #000; }.night-content { max-width: 680px; min-height: 100%; margin: auto; display: flex; flex-direction: column; justify-content: center; }.night-content > .mission-kicker { color: #a5b4a1; }.night-content h2 { font-size: clamp(36px, 6vw, 62px); font-weight: 600; line-height: 1.05; letter-spacing: -.04em; margin: 12px 0 30px; }.night-content h2 span { display: block; color: #949b90; font-weight: 400; }.night-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; border-block: 1px solid #3b4438; padding: 18px 0; }.night-stats dt { color: #a4ab9f; font-size: 12px; }.night-stats dd { font: 500 clamp(20px, 4vw, 32px)/1.6 Consolas, monospace; color: #d8deb4; }.night-stats small { font: 12px 'Segoe UI', sans-serif; margin-left: 6px; color: #909985; }.night-caption { color: #888f81; font-size: 11px; padding-top: 8px; }.night-brief { margin: 30px 0; padding-left: 20px; border-left: 2px solid #9ea67c; }.night-brief .mission-kicker { color: #c5ce9b; margin-bottom: 8px; }.night-brief h3 { font-size: 20px; margin-bottom: 14px; font-weight: 500; }.night-typewriter { min-height: 100px; line-height: 1.8; color: #c5cbbd; font-size: 15px; }.night-brief small { display: block; margin-top: 15px; color: #909985; font-size: 11px; }.typewriter-cursor { display: inline-block; height: 1em; width: .4em; margin-left: 3px; background: #c5ce9b; animation: terminal-beacon 1s infinite; }.night-actions { display: flex; justify-content: end; align-items: center; gap: 22px; }.night-skip { font-size: 12px; color: #a6ac9b; }.night-summary { color: #c6cead; }
+@keyframes terminal-beacon { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+@keyframes cabin-arrival { from { opacity: .2; } to { opacity: 1; } }
+@media (max-width: 600px) { .mission-dialog-body { padding: 18px; }.mission-dialog-header { padding: 14px 16px; gap: 10px; }.mission-dialog-header > img { width: 34px; height: 34px; }.mission-dialog-header p { font-size: 9px; }.cabin-footer p { display: none; }.rationing-row { gap: 8px; grid-template-columns: 32px 1fr auto auto; }.rationing-row label { font-size: 11px; }.rationing-row img { width: 30px; }.end-day-confirm { flex-direction: column; align-items: stretch; gap: 12px; }.night-cutscene { padding: 24px 20px; }.night-stats { gap: 10px; }.night-actions { flex-wrap: wrap; }.night-content h2 { margin-bottom: 20px; }.night-brief { margin: 20px 0; }.cabin-telemetry { inset-inline: 2%; }.cabin-telemetry dl { gap: 2cqw; } }
+@media (prefers-reduced-motion: reduce) { .cabin-stage, .cabin-terminal-unread::after, .typewriter-cursor { animation: none; }.cabin-hotspot, .cabin-hotspot > img, .cabin-crew-person > img { transition: none; } }

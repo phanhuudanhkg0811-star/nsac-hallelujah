@@ -1,0 +1,446 @@
+{
+  "April": {
+    "slot0": {
+      "normal": {
+        "left": 17.591,
+        "top": 46.049,
+        "width": 16.224,
+        "height": 36.885,
+        "flipX": true,
+        "zIndex": 61
+      },
+      "dead": {
+        "left": 14.391,
+        "top": 47.715,
+        "width": 25.297,
+        "height": 34.854,
+        "flipX": true,
+        "zIndex": 61
+      }
+    },
+    "slot1": {
+      "normal": {
+        "left": 65.638,
+        "top": 46.014,
+        "width": 16.224,
+        "height": 36.885,
+        "flipX": false,
+        "zIndex": 61
+      },
+      "dead": {
+        "left": 59.766,
+        "top": 47.681,
+        "width": 25.297,
+        "height": 34.854,
+        "flipX": false,
+        "zIndex": 61
+      }
+    },
+    "slot2": {
+      "normal": {
+        "left": 32.406,
+        "top": 43.568,
+        "width": 10.221,
+        "height": 23.238,
+        "flipX": true,
+        "zIndex": 36
+      },
+      "dead": {
+        "left": 30.39,
+        "top": 44.618,
+        "width": 15.937,
+        "height": 21.958,
+        "flipX": true,
+        "zIndex": 36
+      }
+    },
+    "slot3": {
+      "normal": {
+        "left": 56.643,
+        "top": 43.464,
+        "width": 10.221,
+        "height": 23.238,
+        "flipX": false,
+        "zIndex": 36
+      },
+      "dead": {
+        "left": 52.944,
+        "top": 44.514,
+        "width": 15.937,
+        "height": 21.958,
+        "flipX": false,
+        "zIndex": 36
+      }
+    }
+  },
+  "Baby": {
+    "slot0": {
+      "normal": {
+        "left": 16.984,
+        "top": 41.476,
+        "width": 20.495,
+        "height": 40.722,
+        "flipX": true,
+        "zIndex": 61
+      },
+      "dead": {
+        "left": 12.029,
+        "top": 43.934,
+        "width": 26.589,
+        "height": 39.028,
+        "flipX": true,
+        "zIndex": 61
+      }
+    },
+    "slot1": {
+      "normal": {
+        "left": 61.974,
+        "top": 41.441,
+        "width": 20.495,
+        "height": 40.722,
+        "flipX": false,
+        "zIndex": 61
+      },
+      "dead": {
+        "left": 60.836,
+        "top": 43.899,
+        "width": 26.589,
+        "height": 39.028,
+        "flipX": false,
+        "zIndex": 61
+      }
+    },
+    "slot2": {
+      "normal": {
+        "left": 32.024,
+        "top": 40.687,
+        "width": 12.912,
+        "height": 25.655,
+        "flipX": true,
+        "zIndex": 36
+      },
+      "dead": {
+        "left": 28.902,
+        "top": 42.236,
+        "width": 16.751,
+        "height": 24.587,
+        "flipX": true,
+        "zIndex": 36
+      }
+    },
+    "slot3": {
+      "normal": {
+        "left": 54.335,
+        "top": 40.583,
+        "width": 12.912,
+        "height": 25.655,
+        "flipX": false,
+        "zIndex": 36
+      },
+      "dead": {
+        "left": 53.618,
+        "top": 42.132,
+        "width": 16.751,
+        "height": 24.587,
+        "flipX": false,
+        "zIndex": 36
+      }
+    }
+  },
+  "DeeDee": {
+    "slot0": {
+      "normal": {
+        "left": 20.078,
+        "top": 42.799,
+        "width": 17.24,
+        "height": 39.58,
+        "flipX": true,
+        "zIndex": 61
+      },
+      "dead": {
+        "left": 13.146,
+        "top": 45.247,
+        "width": 25.513,
+        "height": 37.67,
+        "flipX": true,
+        "zIndex": 61
+      }
+    },
+    "slot1": {
+      "normal": {
+        "left": 62.135,
+        "top": 42.764,
+        "width": 17.24,
+        "height": 39.58,
+        "flipX": false,
+        "zIndex": 61
+      },
+      "dead": {
+        "left": 60.794,
+        "top": 45.212,
+        "width": 25.513,
+        "height": 37.67,
+        "flipX": false,
+        "zIndex": 61
+      }
+    },
+    "slot2": {
+      "normal": {
+        "left": 33.973,
+        "top": 41.52,
+        "width": 10.861,
+        "height": 24.935,
+        "flipX": true,
+        "zIndex": 36
+      },
+      "dead": {
+        "left": 29.606,
+        "top": 43.063,
+        "width": 16.073,
+        "height": 23.732,
+        "flipX": true,
+        "zIndex": 36
+      }
+    },
+    "slot3": {
+      "normal": {
+        "left": 54.437,
+        "top": 41.416,
+        "width": 10.861,
+        "height": 24.935,
+        "flipX": false,
+        "zIndex": 36
+      },
+      "dead": {
+        "left": 53.592,
+        "top": 42.958,
+        "width": 16.073,
+        "height": 23.732,
+        "flipX": false,
+        "zIndex": 36
+      }
+    }
+  },
+  "Emmet": {
+    "slot0": {
+      "normal": {
+        "left": 19.141,
+        "top": 37.726,
+        "width": 19.219,
+        "height": 47.188,
+        "flipX": true,
+        "zIndex": 61
+      },
+      "dead": {
+        "left": 10.628,
+        "top": 42.392,
+        "width": 28.747,
+        "height": 43.424,
+        "flipX": true,
+        "zIndex": 61
+      }
+    },
+    "slot1": {
+      "normal": {
+        "left": 61.094,
+        "top": 37.691,
+        "width": 19.219,
+        "height": 47.188,
+        "flipX": false,
+        "zIndex": 61
+      },
+      "dead": {
+        "left": 60.078,
+        "top": 42.358,
+        "width": 28.747,
+        "height": 43.424,
+        "flipX": false,
+        "zIndex": 61
+      }
+    },
+    "slot2": {
+      "normal": {
+        "left": 33.383,
+        "top": 38.324,
+        "width": 12.108,
+        "height": 29.728,
+        "flipX": true,
+        "zIndex": 36
+      },
+      "dead": {
+        "left": 28.019,
+        "top": 41.264,
+        "width": 18.111,
+        "height": 27.357,
+        "flipX": true,
+        "zIndex": 36
+      }
+    },
+    "slot3": {
+      "normal": {
+        "left": 53.78,
+        "top": 38.22,
+        "width": 12.108,
+        "height": 29.728,
+        "flipX": false,
+        "zIndex": 36
+      },
+      "dead": {
+        "left": 53.141,
+        "top": 41.16,
+        "width": 18.111,
+        "height": 27.357,
+        "flipX": false,
+        "zIndex": 36
+      }
+    }
+  },
+  "Maegan": {
+    "slot0": {
+      "normal": {
+        "left": 19.232,
+        "top": 45.705,
+        "width": 15.339,
+        "height": 36.639,
+        "flipX": true,
+        "zIndex": 61
+      },
+      "dead": {
+        "left": 14.026,
+        "top": 51.056,
+        "width": 20.076,
+        "height": 32.069,
+        "flipX": true,
+        "zIndex": 61
+      }
+    },
+    "slot1": {
+      "normal": {
+        "left": 64.883,
+        "top": 45.67,
+        "width": 15.339,
+        "height": 36.639,
+        "flipX": false,
+        "zIndex": 61
+      },
+      "dead": {
+        "left": 65.352,
+        "top": 51.021,
+        "width": 20.076,
+        "height": 32.069,
+        "flipX": false,
+        "zIndex": 61
+      }
+    },
+    "slot2": {
+      "normal": {
+        "left": 33.44,
+        "top": 43.351,
+        "width": 9.663,
+        "height": 23.082,
+        "flipX": true,
+        "zIndex": 36
+      },
+      "dead": {
+        "left": 30.16,
+        "top": 46.722,
+        "width": 12.648,
+        "height": 20.204,
+        "flipX": true,
+        "zIndex": 36
+      }
+    },
+    "slot3": {
+      "normal": {
+        "left": 56.168,
+        "top": 43.247,
+        "width": 9.663,
+        "height": 23.082,
+        "flipX": false,
+        "zIndex": 36
+      },
+      "dead": {
+        "left": 56.463,
+        "top": 46.618,
+        "width": 12.648,
+        "height": 20.204,
+        "flipX": false,
+        "zIndex": 36
+      }
+    }
+  },
+  "Tom": {
+    "slot0": {
+      "normal": {
+        "left": 18.534,
+        "top": 43.007,
+        "width": 21.589,
+        "height": 38.208,
+        "flipX": true,
+        "zIndex": 61
+      },
+      "dead": {
+        "left": 14.698,
+        "top": 44.292,
+        "width": 23.948,
+        "height": 38.486,
+        "flipX": true,
+        "zIndex": 61
+      }
+    },
+    "slot1": {
+      "normal": {
+        "left": 59.331,
+        "top": 42.972,
+        "width": 21.589,
+        "height": 38.208,
+        "flipX": false,
+        "zIndex": 61
+      },
+      "dead": {
+        "left": 60.807,
+        "top": 44.257,
+        "width": 23.948,
+        "height": 38.486,
+        "flipX": false,
+        "zIndex": 61
+      }
+    },
+    "slot2": {
+      "normal": {
+        "left": 33,
+        "top": 41.652,
+        "width": 13.601,
+        "height": 24.071,
+        "flipX": true,
+        "zIndex": 36
+      },
+      "dead": {
+        "left": 30.584,
+        "top": 42.461,
+        "width": 15.087,
+        "height": 24.246,
+        "flipX": true,
+        "zIndex": 36
+      }
+    },
+    "slot3": {
+      "normal": {
+        "left": 52.67,
+        "top": 41.547,
+        "width": 13.601,
+        "height": 24.071,
+        "flipX": false,
+        "zIndex": 36
+      },
+      "dead": {
+        "left": 53.6,
+        "top": 42.357,
+        "width": 15.087,
+        "height": 24.246,
+        "flipX": false,
+        "zIndex": 36
+      }
+    }
+  }
+}
