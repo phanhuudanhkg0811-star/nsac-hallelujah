@@ -1,25 +1,34 @@
-# Logs
-logs
+# Dependencies & Build Output
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Legacy 60 Parsecs / Pipeline Archive (excluded from git repo)
+archive/legacy-public-assets/
+archive/legacy-src/
+archive/pipeline/
+archive/reference-game/
+
+# Local AI / Tooling Cache
+.agent/
+.agents/
+.aws/
+.codex/
+
+# Logs, OS & Editor Temp Files
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+.DS_Store
+Thumbs.db
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
+.idea/
+*.swp
+*.swo
+.env
+.env.*
+!.env.example
