@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import '../hail.css';
 import { useGameStore } from '../store/gameStore.ts';
-import { playSfx, startAmbient } from '../audio/sfx.ts';
+import { playSfx, startMusic } from '../audio/sfx.ts';
 import type { SystemId } from '../types/index.ts';
 import {
   HAIL_ENV,
@@ -157,7 +157,7 @@ export function HailGameViewport() {
   }, [notice]);
 
   useEffect(() => {
-    window.addEventListener('pointerdown', () => startAmbient(), { once: true });
+    window.addEventListener('pointerdown', () => startMusic(), { once: true });
   }, []);
 
   const closeFocus = useCallback(() => {

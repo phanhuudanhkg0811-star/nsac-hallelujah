@@ -29,15 +29,15 @@ export function playSfx(name: SfxName, volume = 0.6): void {
   void voice.play().catch(() => {});
 }
 
-let ambient: HTMLAudioElement | null = null;
+let music: HTMLAudioElement | null = null;
 
-/** Starts the cockpit hum loop; browsers only allow it after a user gesture. */
-export function startAmbient(volume = 0.25): void {
-  if (ambient || typeof Audio === 'undefined') return;
-  ambient = new Audio(audioUrl('PH_AMB_COCKPIT_LOOP_V01'));
-  ambient.loop = true;
-  ambient.volume = volume;
-  void ambient.play().catch(() => {
-    ambient = null; // blocked by autoplay policy, retry on the next gesture
+/** Starts the looping background music; browsers only allow it after a user gesture. */
+export function startMusic(volume = 0.35): void {
+  if (music || typeof Audio === 'undefined') return;
+  music = new Audio(audioUrl('PH_MUS_LUNAR_BASE_LOOP_V01'));
+  music.loop = true;
+  music.volume = volume;
+  void music.play().catch(() => {
+    music = null; // blocked by autoplay policy, retry on the next gesture
   });
 }
