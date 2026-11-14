@@ -1,9 +1,26 @@
 /* ==========================================================================
    PROJECT HAIL — HUMAN FRONTIER 2050+ (16:9 Layered Cockpit & UI Theme)
-   Palette: Ceramic #E7E6DF | Titanium #C7CBC8 | Alloy #929B9D |
-            Graphite #59666D | Deep Slate #303B43 | Space #263746 |
-            O2 #75A9A5 | Water #6E91B1 | Energy #D7B66C | Safety #C57D59 | Life #91A978
+   Locked Golden Reference Palette (COLOR_SYSTEM.md):
+     Neutrals: Ceramic #E7E6DF | Titanium #C7CBC8 | Alloy #929B9D |
+               Graphite #59666D | Deep Slate #303B43 | Space #263746
+     Accents:  Oxygen #75A9A5 | Water #6E91B1 | Energy #D7B66C |
+               Safety #C57D59 | Life #91A978
    ========================================================================== */
+
+:root {
+  --ph-ceramic: #E7E6DF;
+  --ph-titanium: #C7CBC8;
+  --ph-alloy: #929B9D;
+  --ph-graphite: #59666D;
+  --ph-deep-slate: #303B43;
+  --ph-space: #263746;
+  --ph-ink: #232B31;
+  --ph-oxygen: #75A9A5;
+  --ph-water: #6E91B1;
+  --ph-energy: #D7B66C;
+  --ph-safety: #C57D59;
+  --ph-life: #91A978;
+}
 
 .hail-viewport {
   height: 100dvh;
@@ -66,13 +83,13 @@
 }
 
 .hail-camera-rig.is-focus-crew-left {
-  transform-origin: 34% 55%;
-  transform: translate(4%, -2%) scale(1.18);
+  transform-origin: 26% 58%;
+  transform: translate(5%, -2%) scale(1.18);
 }
 
 .hail-camera-rig.is-focus-crew-right {
-  transform-origin: 66% 55%;
-  transform: translate(-4%, -2%) scale(1.18);
+  transform-origin: 74% 58%;
+  transform: translate(-5%, -2%) scale(1.18);
 }
 
 /* L00 + L01 Exterior Viewport Aperture locked strictly to 41 / 15 / 18 / 30 (5.4% area <= 8%) */
@@ -95,14 +112,16 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.08);
+  transform: translateY(18%) scale(1.22);
 }
 
 .hail-l01-lunar {
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
+  top: 14%;
   width: 100%;
-  height: 100%;
+  height: 86%;
   object-fit: cover;
   object-position: center bottom;
 }
@@ -143,48 +162,21 @@
 }
 
 /* ==========================================================================
-   L03: 4 MAIN STATIONS (Side Wall & Floor Bays with Grounding + Focus Hierarchy)
+   L03: 4 CORNER BAYS — WALL-RACK CONSOLIDATION (HUMAN FRONTIER 2050+)
+   UL: Food & Aid Rack | LL: 3D Fabricator | UR: CAPCOM | LR: Inventory & Sample Rack
    ========================================================================== */
 .hail-station {
   position: absolute;
   box-sizing: border-box;
   display: block;
   z-index: 16;
+  overflow: visible;
   background: transparent;
   border: 1px solid transparent;
   border-radius: 0.5cqi;
   padding: 0;
   cursor: pointer;
   transition: transform 0.18s ease, filter 0.18s ease, border-color 0.18s ease;
-}
-
-/* Exact bay placements aligned to PH_ENV_COCKPIT_SHELL_BASE_V01 & concept specs */
-.hail-station[data-slot='left-wall'] .hail-sprite-contain {
-  left: 36%;
-  top: 20%;
-  width: 61.5%;
-  height: 76%;
-}
-
-.hail-station[data-slot='left-floor'] .hail-sprite-contain {
-  left: 10.5%;
-  top: 9%;
-  width: 80%;
-  height: 73.2%;
-}
-
-.hail-station[data-slot='right-wall'] .hail-sprite-contain {
-  left: 5%;
-  top: 10%;
-  width: 84%;
-  height: 86%;
-}
-
-.hail-station[data-slot='right-floor'] .hail-sprite-contain {
-  left: 6%;
-  top: 6%;
-  width: 86.5%;
-  height: 76.2%;
 }
 
 .hail-station--wall {
@@ -195,87 +187,355 @@
   z-index: 18;
 }
 
-.hail-station--floor::after {
-  content: '';
-  position: absolute;
-  left: 12%;
-  right: 12%;
-  bottom: 16%;
-  height: 8%;
-  border-radius: 50%;
-  background: radial-gradient(ellipse at center, rgba(12, 18, 24, 0.56) 0%, rgba(12, 18, 24, 0) 72%);
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* De-emphasize peripheral stations when not the primary focus */
+/* Subordinate contrast when not the primary focus (ART_BIBLE + LIGHTING_GUIDE) */
 .hail-station.is-deemphasized .hail-sprite-contain {
   opacity: 1;
-  filter: none;
+  filter: saturate(0.92) brightness(0.96);
 }
 
 .hail-station.is-primary-focus .hail-sprite-contain {
-  filter: drop-shadow(0 0 0.7cqi rgba(215, 182, 108, 0.55));
+  filter: drop-shadow(0 0 0.7cqi rgba(215, 182, 108, 0.52));
 }
 
 .hail-station:hover,
 .hail-station:focus-visible {
   border-color: rgba(117, 169, 165, 0.72);
   background-color: rgba(117, 169, 165, 0.08);
+  outline: none;
 }
 
 .hail-station:hover .hail-sprite-contain,
 .hail-station:focus-visible .hail-sprite-contain {
   opacity: 1;
-  filter: saturate(1) brightness(1) drop-shadow(0 0 0.7cqi rgba(117, 169, 165, 0.6));
+  filter: saturate(1) brightness(1.02) drop-shadow(0 0 0.7cqi rgba(117, 169, 165, 0.58));
 }
 
-/* Shell-fitted locker patches at 23.5/17/16/24.5 and 60.5/17/16/24.5. */
-.hail-locker {
+/* Exact 8-vertex Cockpit Shell cavity lock for UR & LL equipment sprites */
+.hail-station[data-slot='right-wall'] .hail-sprite-contain,
+.hail-station[data-slot='right-wall'] .hail-fx-overlay {
+  clip-path: polygon(82.5% 0.4%, 99.6% 25.9%, 99.6% 88.3%, 85.9% 99.2%, 7.5% 99.2%, 0.8% 91.7%, 0.8% 30.1%, 7.5% 22.9%);
+}
+
+.hail-station[data-slot='left-floor'] .hail-sprite-contain,
+.hail-station[data-slot='left-floor'] .hail-fx-overlay {
+  clip-path: polygon(5.5% 0.4%, 89.7% 0.4%, 99.2% 8.7%, 99.2% 71.5%, 97.4% 78.9%, 7.6% 99.2%, 0.4% 92.6%, 0.4% 7.0%);
+}
+
+/* CSS-First 2.5D Wall Racks inside UL & LR Shell Bays */
+.hail-bay-rack {
   position: absolute;
-  top: 17%;
-  width: 16%;
-  height: 24.5%;
   z-index: 17;
+  box-sizing: border-box;
   pointer-events: none;
 }
 
-.hail-locker--left { left: 23.5%; }
-.hail-locker--right { left: 60.5%; }
+.hail-bay-rack--ul {
+  left: 3.0502%;
+  top: 14.9841%;
+  width: 15.9091%;
+  height: 31.4559%;
+  clip-path: polygon(17.5% 0.4%, 92.5% 22.9%, 99.2% 30.1%, 99.2% 91.7%, 92.5% 99.2%, 14.1% 99.2%, 0.4% 88.3%, 0.4% 25.9%);
+  perspective: 25cqi;
+  perspective-origin: 165% 94%;
+}
 
-.hail-locker-chassis,
-.hail-locker-door {
-  position: absolute;
-  inset: 0;
+.hail-bay-rack--lr {
+  left: 80.9809%;
+  top: 53.56%;
+  width: 16.2081%;
+  height: 31.1371%;
+  z-index: 18;
+  clip-path: polygon(10.3% 0.4%, 94.5% 0.4%, 99.6% 7.0%, 99.6% 92.6%, 92.4% 99.2%, 2.6% 78.9%, 0.8% 71.5%, 0.8% 8.7%);
+  perspective: 27cqi;
+  perspective-origin: -65% 5%;
+}
+
+.hail-bay-rack-shell {
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.28cqi;
+  background: linear-gradient(180deg, var(--ph-ceramic) 0%, var(--ph-titanium) 55%, var(--ph-alloy) 100%);
+  border: 1.5px solid var(--ph-ink);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.42),
+    inset 0 -3px 0 rgba(48, 59, 67, 0.45);
 }
 
-.hail-locker-chassis { object-fit: contain; }
-.hail-locker-door { object-fit: contain; z-index: 3; }
+/* Unified Cockpit Perspective Grid projection: UL (+18.4 -> +9.2 -> 0 deg), LR (0 -> +4.6 -> +9.2 -> +13.8 deg) */
+.hail-bay-rack--ul .hail-bay-rack-shell {
+  padding: 5.5% 7.5% 6.5% 8.5%;
+  transform-origin: 6% 94%;
+  transform: rotateY(23deg) scaleX(1.08);
+}
 
-.hail-locker-item {
-  position: absolute;
-  z-index: 2;
+.hail-bay-rack--lr .hail-bay-rack-shell {
+  padding: 5.5% 7.5% 6.5% 7.5%;
+  transform-origin: 94% 5%;
+  transform: rotateY(-22deg) scaleX(1.07);
+}
+
+.hail-rack-header {
+  height: 10%;
+  min-height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.36cqi;
+  border-radius: 0.22cqi;
+  background: var(--ph-graphite);
+  border: 1px solid var(--ph-ink);
+  box-shadow: inset 0 2px 4px rgba(15, 22, 28, 0.48);
+}
+
+.hail-rack-header-stripe {
+  flex: 1;
+  height: 44%;
+  border-radius: 0.14cqi;
+  border: 1px solid rgba(35, 43, 49, 0.65);
+}
+
+.hail-bay-rack--ul .hail-rack-header-stripe {
+  background: linear-gradient(180deg, #A2B98B 0%, var(--ph-life) 100%);
+}
+
+.hail-bay-rack--lr .hail-rack-header-stripe {
+  background: linear-gradient(180deg, #E2C47F 0%, var(--ph-energy) 100%);
+}
+
+.hail-rack-header-rivet {
+  width: 0.3cqi;
+  height: 0.3cqi;
+  margin-left: 0.3cqi;
+  border-radius: 50%;
+  background: var(--ph-titanium);
+  border: 1px solid var(--ph-ink);
+}
+
+.hail-rack-grid {
+  flex: 1;
+  display: grid;
+  gap: 0.32cqi;
+  padding: 0.28cqi;
+  border-radius: 0.3cqi;
+  background: var(--ph-graphite);
+  border: 1.2px solid var(--ph-ink);
+  box-shadow: inset 0 3px 6px rgba(15, 22, 28, 0.55);
+}
+
+.hail-rack-grid--2x2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.hail-rack-grid--3x3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 0.24cqi;
+  padding: 0.24cqi;
+}
+
+.hail-rack-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8%;
+  box-sizing: border-box;
+  border-radius: 0.22cqi;
+  background: linear-gradient(180deg, #242D34 0%, var(--ph-deep-slate) 68%, #3B4750 100%);
+  border: 1px solid var(--ph-ink);
+  box-shadow:
+    inset 0 6px 12px rgba(12, 17, 22, 0.72),
+    inset 2px 0 6px rgba(12, 17, 22, 0.42),
+    inset -2px 0 6px rgba(12, 17, 22, 0.38),
+    inset 0 -2px 0 rgba(231, 230, 223, 0.14);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hail-rack-cell.is-sample-slot {
+  background: linear-gradient(180deg, #222B33 0%, #2C3842 68%, #374652 100%);
+}
+
+button.hail-rack-cell {
+  cursor: pointer;
+  pointer-events: auto;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+}
+
+button.hail-rack-cell:hover,
+button.hail-rack-cell:focus-visible {
+  border-color: var(--ph-oxygen);
+  box-shadow:
+    inset 0 6px 12px rgba(12, 17, 22, 0.72),
+    inset 0 0 0 1px rgba(117, 169, 165, 0.65),
+    0 0 0.5cqi rgba(117, 169, 165, 0.45);
+  outline: none;
+}
+
+.hail-rack-item {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   object-position: center bottom;
-  width: 19%;
-  height: 29%;
-  filter: drop-shadow(0 0.25cqi 0.2cqi rgba(10, 15, 20, 0.55));
+  pointer-events: none;
+  filter: drop-shadow(0 3px 4px rgba(12, 17, 22, 0.55));
+  transition: transform 0.16s ease, opacity 0.2s ease;
 }
 
-/* Anchored by exact inner shelf floors measured on 307x265 locker asset */
-.hail-locker-item.is-top-1 { left: 14%; bottom: 51.2%; }
-.hail-locker-item.is-top-2 { left: 40.5%; bottom: 51.2%; }
-.hail-locker-item.is-top-3 { left: 67%; bottom: 51.2%; }
-.hail-locker-item.is-bottom-1 { left: 14%; bottom: 11.0%; }
-.hail-locker-item.is-bottom-2 { left: 40.5%; bottom: 11.0%; }
-.hail-locker-item.is-bottom-3 { left: 67%; bottom: 11.0%; }
+button.hail-rack-cell:hover .hail-rack-item,
+button.hail-rack-cell:focus-visible .hail-rack-item {
+  transform: scale(1.05);
+}
+
+.hail-rack-item.is-empty-slot {
+  opacity: 0;
+}
+
+.hail-rack-cell-tag {
+  position: absolute;
+  left: 50%;
+  bottom: 3%;
+  transform: translateX(-50%);
+  padding: 0.06cqi 0.3cqi;
+  border-radius: 0.18cqi;
+  background: rgba(38, 55, 70, 0.94);
+  border: 1px solid var(--ph-oxygen);
+  color: var(--ph-ceramic);
+  font-size: clamp(7px, 0.62cqi, 9.5px);
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+button.hail-rack-cell:hover .hail-rack-cell-tag,
+button.hail-rack-cell:focus-visible .hail-rack-cell-tag {
+  opacity: 1;
+}
+
+/* CSS-First LL 3D Fabricator Bay (exact 8-vertex cavity lock before Step 2 art) */
+.hail-fabricator-shell {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 6% 7.5% 22% 7.5%;
+  clip-path: polygon(5.5% 0.4%, 89.7% 0.4%, 99.2% 8.7%, 99.2% 71.5%, 97.4% 78.9%, 7.6% 99.2%, 0.4% 92.6%, 0.4% 7.0%);
+  display: grid;
+  grid-template-columns: 1.35fr 0.75fr;
+  grid-template-rows: auto 1fr;
+  gap: 0.34cqi;
+  background: linear-gradient(180deg, var(--ph-ceramic) 0%, var(--ph-titanium) 58%, var(--ph-alloy) 100%);
+  border: 1.5px solid var(--ph-ink);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -3px 0 rgba(48, 59, 67, 0.48);
+}
+
+.hail-fabricator-top {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.22cqi 0.45cqi;
+  border-radius: 0.24cqi;
+  background: var(--ph-graphite);
+  border: 1px solid var(--ph-ink);
+  color: var(--ph-ceramic);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(7px, 0.66cqi, 10px);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.hail-fabricator-led {
+  width: 0.45cqi;
+  height: 0.45cqi;
+  border-radius: 50%;
+  background: var(--ph-oxygen);
+  border: 1px solid var(--ph-ink);
+}
+
+.hail-fabricator-chamber {
+  position: relative;
+  border-radius: 0.28cqi;
+  background: linear-gradient(180deg, #222B32 0%, var(--ph-deep-slate) 72%, #3B4750 100%);
+  border: 1.4px solid var(--ph-ink);
+  box-shadow:
+    inset 0 8px 16px rgba(10, 15, 20, 0.78),
+    inset 0 -2px 0 rgba(231, 230, 223, 0.16);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8%;
+}
+
+.hail-fabricator-gantry {
+  height: 14%;
+  border-radius: 0.16cqi;
+  background: linear-gradient(90deg, var(--ph-alloy), var(--ph-titanium), var(--ph-alloy));
+  border: 1px solid var(--ph-ink);
+  position: relative;
+}
+
+.hail-fabricator-gantry::after {
+  content: '';
+  position: absolute;
+  left: 38%;
+  top: 75%;
+  width: 24%;
+  height: 130%;
+  border-radius: 0.16cqi;
+  background: var(--ph-safety);
+  border: 1px solid var(--ph-ink);
+}
+
+.hail-fabricator-bed {
+  height: 14%;
+  border-radius: 0.16cqi;
+  background: var(--ph-graphite);
+  border: 1px solid var(--ph-ink);
+  box-shadow: inset 0 1px 0 rgba(231, 230, 223, 0.25);
+}
+
+.hail-fabricator-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.32cqi;
+}
+
+.hail-fabricator-screen {
+  flex: 1;
+  border-radius: 0.24cqi;
+  background: var(--ph-deep-slate);
+  border: 1.2px solid var(--ph-ink);
+  box-shadow: inset 0 2px 6px rgba(10, 15, 20, 0.72);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--ph-oxygen);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(7px, 0.6cqi, 9px);
+  line-height: 1.2;
+}
+
+.hail-fabricator-handle {
+  height: 22%;
+  border-radius: 0.22cqi;
+  background: var(--ph-safety);
+  border: 1.2px solid var(--ph-ink);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
 
 .hail-state-badge {
   position: absolute;
-  top: 10%;
-  right: 10%;
+  top: 13%;
+  right: 12%;
   width: clamp(13px, 1.4cqw, 20px);
   height: clamp(13px, 1.4cqw, 20px);
   pointer-events: none;
@@ -331,18 +591,18 @@
 }
 
 .hail-crew-member.is-foreground {
-  z-index: 28;
+  z-index: 35;
 }
 
 .hail-crew-member::after {
   content: '';
   position: absolute;
-  left: 14%;
-  right: 14%;
-  bottom: 0;
-  height: 7%;
+  left: 16%;
+  right: 16%;
+  bottom: 0.2%;
+  height: 5%;
   border-radius: 50%;
-  background: radial-gradient(ellipse at center, rgba(10, 15, 20, 0.65) 0%, rgba(10, 15, 20, 0) 74%);
+  background: radial-gradient(ellipse at center, rgba(10, 15, 20, 0.58) 0%, rgba(10, 15, 20, 0) 74%);
   pointer-events: none;
   z-index: -1;
 }
@@ -399,7 +659,7 @@
   color: #D7B66C;
 }
 
-/* Central Decision Console (28 / 35.6 / 44 / 58.2) — foreground priority above crew */
+/* Central Decision Console (27 / 54.8 / 46 / 37.9) — foreground centerpiece between FG crew */
 .hail-decision-console {
   position: absolute;
   z-index: 32;
@@ -409,12 +669,12 @@
 .hail-decision-console::after {
   content: '';
   position: absolute;
-  left: 8%;
-  right: 8%;
-  bottom: -1%;
-  height: 9%;
+  left: 6%;
+  right: 6%;
+  bottom: -1.5%;
+  height: 6%;
   border-radius: 50%;
-  background: radial-gradient(ellipse at center, rgba(10, 15, 20, 0.72) 0%, rgba(10, 15, 20, 0) 74%);
+  background: radial-gradient(ellipse at center, rgba(10, 15, 20, 0.52) 0%, rgba(10, 15, 20, 0) 74%);
   pointer-events: none;
   z-index: -1;
 }
@@ -427,7 +687,7 @@
   pointer-events: none;
 }
 
-/* Exact bezel-locked live micro-displays measured on PH_EQP_CONSOLE_DESK_BASE_V01 (538x400) */
+/* Exact bezel-locked live micro-displays measured on PH_EQP_CONSOLE_DESK_BASE_V02 (1266x659) */
 .hail-console-screens {
   position: absolute;
   inset: 0;
@@ -454,27 +714,27 @@
 }
 
 .hail-console-screen:first-child {
-  left: 13.4%;
-  top: 44.5%;
-  width: 20.4%;
-  height: 16.2%;
-  clip-path: polygon(12% 0, 100% 0, 92% 100%, 0 100%);
+  left: 13.55%;
+  top: 6.07%;
+  width: 22.87%;
+  height: 32.47%;
+  clip-path: polygon(9% 0, 100% 0, 96% 100%, 0 100%);
 }
 
 .hail-console-screen:nth-child(2) {
-  left: 36.8%;
-  top: 44.2%;
-  width: 26.2%;
-  height: 16.8%;
-  clip-path: polygon(3% 0, 97% 0, 94% 100%, 6% 100%);
+  left: 37.61%;
+  top: 6.07%;
+  width: 24.63%;
+  height: 32.47%;
+  clip-path: polygon(2% 0, 98% 0, 96% 100%, 4% 100%);
 }
 
 .hail-console-screen:last-child {
-  left: 66.0%;
-  top: 44.5%;
-  width: 20.3%;
-  height: 16.2%;
-  clip-path: polygon(0 0, 88% 0, 100% 100%, 8% 100%);
+  left: 63.44%;
+  top: 6.07%;
+  width: 22.87%;
+  height: 32.47%;
+  clip-path: polygon(0 0, 91% 0, 100% 100%, 4% 100%);
 }
 
 .hail-console-screen:hover,

@@ -23,18 +23,21 @@ export const HAIL_FX = {
 } as const;
 
 export const HAIL_EQUIPMENT = {
-  oxygenBase: hailUrl('equipment/PH_EQP_OXYGEN_GENERATOR_BASE_V01.webp'),
+  oxygenBase: hailUrl('equipment/PH_EQP_OXYGEN_GENERATOR_BASE_V12.webp'),
   oxygenDegraded: hailUrl('equipment/PH_EQP_OXYGEN_GENERATOR_DEGRADED_V01.webp'),
   oxygenBroken: hailUrl('equipment/PH_EQP_OXYGEN_GENERATOR_BROKEN_V01.webp'),
-  waterBase: hailUrl('equipment/PH_EQP_WATER_RECYCLER_BASE_V01.webp'),
+  waterBase: hailUrl('equipment/PH_EQP_WATER_RECYCLER_BASE_V12.webp'),
   waterBroken: hailUrl('equipment/PH_EQP_WATER_RECYCLER_BROKEN_V01.webp'),
-  powerBase: hailUrl('equipment/PH_EQP_POWER_MODULE_BASE_V01.webp'),
+  powerBase: hailUrl('equipment/PH_EQP_POWER_MODULE_BASE_V12.webp'),
   powerBroken: hailUrl('equipment/PH_EQP_POWER_MODULE_BROKEN_V01.webp'),
-  comms: hailUrl('equipment/PH_EQP_COMMS_TERMINAL_BASE_V01.webp'),
+  comms: hailUrl('equipment/PH_EQP_COMMS_TERMINAL_BASE_V03.webp'),
+  fabricatorIdle: hailUrl('equipment/PH_EQP_FABRICATOR_IDLE_V02.webp'),
+  fabricatorWorking: hailUrl('equipment/PH_EQP_FABRICATOR_WORKING_V02.webp'),
+  fabricatorDamaged: hailUrl('equipment/PH_EQP_FABRICATOR_DAMAGED_V02.webp'),
   medical: hailUrl('equipment/PH_EQP_MEDICAL_STATION_BASE_V01.webp'),
   robotStation: hailUrl('equipment/PH_EQP_ROBOT_STATION_BASE_V01.webp'),
   endDayConsole: hailUrl('equipment/PH_EQP_ENDDAY_CONSOLE_BASE_V01.webp'),
-  consoleDesk: hailUrl('equipment/PH_EQP_CONSOLE_DESK_BASE_V01.webp'),
+  consoleDesk: hailUrl('equipment/PH_EQP_CONSOLE_DESK_BASE_V02.webp'),
   lockerLeftOpen: hailUrl('equipment/PH_EQP_LOCKER_LEFT_OPEN_V01.webp'),
   lockerRightOpen: hailUrl('equipment/PH_EQP_LOCKER_RIGHT_OPEN_V01.webp'),
   lockerDoorLeftTop: hailUrl('equipment/PH_EQP_LOCKER_DOOR_LEFT_TOP_V01.webp'),
@@ -61,6 +64,9 @@ export const HAIL_INVENTORY = {
   oxygenCell: hailUrl('inventory/PH_ITEM_OXYGEN_CELL_BASE_V01.webp'),
   lunarSample: hailUrl('inventory/PH_ITEM_LUNAR_SAMPLE_BASE_V01.webp'),
   specialBeacon: hailUrl('inventory/PH_ITEM_SPECIAL_BEACON_BASE_V01.webp'),
+  sealantTape: hailUrl('inventory/PH_ITEM_SEALANT_TAPE_BASE_V01.webp'),
+  dustShield: hailUrl('inventory/PH_ITEM_DUST_SHIELD_BASE_V01.webp'),
+  radioRepeater: hailUrl('inventory/PH_ITEM_RADIO_REPEATER_BASE_V01.webp'),
 } as const;
 
 export const HAIL_SVG = {
@@ -136,27 +142,22 @@ export function getHailSystemSprite(id: SystemId, integrity: number): {
 
   if (id === 'scrubber') {
     return {
-      sprite:
-        state === 'broken'
-          ? HAIL_EQUIPMENT.oxygenBroken
-          : state === 'degraded'
-            ? HAIL_EQUIPMENT.oxygenDegraded
-            : HAIL_EQUIPMENT.oxygenBase,
-      overlay: null,
+      sprite: HAIL_EQUIPMENT.oxygenBase,
+      overlay: state === 'broken' ? HAIL_FX.broken : state === 'degraded' ? HAIL_FX.degraded : null,
       state,
     };
   }
   if (id === 'recycler') {
     return {
-      sprite: state === 'broken' ? HAIL_EQUIPMENT.waterBroken : HAIL_EQUIPMENT.waterBase,
-      overlay: state === 'degraded' ? HAIL_FX.degraded : null,
+      sprite: HAIL_EQUIPMENT.waterBase,
+      overlay: state === 'broken' ? HAIL_FX.broken : state === 'degraded' ? HAIL_FX.degraded : null,
       state,
     };
   }
   if (id === 'solar') {
     return {
-      sprite: state === 'broken' ? HAIL_EQUIPMENT.powerBroken : HAIL_EQUIPMENT.powerBase,
-      overlay: state === 'degraded' ? HAIL_FX.degraded : null,
+      sprite: HAIL_EQUIPMENT.powerBase,
+      overlay: state === 'broken' ? HAIL_FX.broken : state === 'degraded' ? HAIL_FX.degraded : null,
       state,
     };
   }
