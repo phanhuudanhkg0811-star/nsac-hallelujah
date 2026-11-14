@@ -18,9 +18,11 @@
     "tailwind-merge": "^2.3.0",
     "zustand": "^4.5.2"
   },
-  "devDependencies": {
+  "optionalDependencies": {
     "@esbuild/linux-x64": "^0.28.2",
-    "@rollup/rollup-linux-x64-gnu": "^4.68.2",
+    "@rollup/rollup-linux-x64-gnu": "^4.68.2"
+  },
+  "devDependencies": {
     "@types/node": "^20.12.7",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
