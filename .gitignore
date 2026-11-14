@@ -4,6 +4,14 @@ dist/
 dist-ssr/
 *.local
 
+# Local Staging, Sandbox, QA Captures & Archives (not pushed to GitHub)
+assets_staging/
+qa/
+sandbox/
+NASA Data/
+*.zip
+*.rar
+
 # Legacy 60 Parsecs / Pipeline Archive (excluded from git repo)
 archive/legacy-public-assets/
 archive/legacy-src/

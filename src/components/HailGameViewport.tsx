@@ -56,10 +56,10 @@ const CREW_SLOTS: ReadonlyArray<{
   side: 'left' | 'right';
   style: { left: string; top: string; width: string; height: string };
 }> = [
-  { depth: 'foreground', side: 'left', style: { left: '20%', top: '36%', width: '16%', height: '57%' } },
+  { depth: 'foreground', side: 'left', style: { left: '14%', top: '38%', width: '16%', height: '55%' } },
   { depth: 'rear', side: 'left', style: { left: '36%', top: '42%', width: '12%', height: '38%' } },
   { depth: 'rear', side: 'right', style: { left: '52%', top: '42%', width: '12%', height: '38%' } },
-  { depth: 'foreground', side: 'right', style: { left: '64%', top: '36%', width: '16%', height: '57%' } },
+  { depth: 'foreground', side: 'right', style: { left: '70%', top: '38%', width: '16%', height: '55%' } },
 ];
 
 /**
@@ -74,36 +74,12 @@ const MAIN_STATIONS: ReadonlyArray<{
   style: { left: string; top: string; width: string; height: string };
 }> = [
   {
-    id: 'scrubber',
-    slotKey: 'left-wall',
-    mount: 'wall',
-    label: 'Máy lọc O₂',
-    panel: 'crafting',
-    style: { left: '2%', top: '13%', width: '16%', height: '32%' },
-  },
-  {
-    id: 'recycler',
-    slotKey: 'left-floor',
-    mount: 'floor',
-    label: 'Tái chế Nước WRS',
-    panel: 'crafting',
-    style: { left: '2%', top: '48%', width: '17%', height: '27%' },
-  },
-  {
     id: 'airlock',
     slotKey: 'right-wall',
     mount: 'wall',
-    label: 'Trạm CAPCOM',
+    label: 'CAPCOM & Rover',
     panel: 'comms',
-    style: { left: '82%', top: '13%', width: '16%', height: '32%' },
-  },
-  {
-    id: 'solar',
-    slotKey: 'right-floor',
-    mount: 'floor',
-    label: 'Pin & Năng lượng',
-    panel: 'crafting',
-    style: { left: '81%', top: '48%', width: '17%', height: '27%' },
+    style: { left: '81.1005%', top: '14.9841%', width: '15.9091%', height: '31.4559%' },
   },
 ];
 
@@ -116,15 +92,15 @@ const BLUEPRINT_ZONES: ReadonlyArray<{
   { label: 'HUD Top', coords: '0/0/100/8', tone: 'hud', style: { left: '0%', top: '0%', width: '100%', height: '8%' } },
   { label: 'Crew Focal Zone', coords: '18/30/64/63', tone: 'crew', style: { left: '18%', top: '30%', width: '64%', height: '63%' } },
   { label: 'Window (<=8%)', coords: '41/15/18/30', tone: 'window', style: { left: '41%', top: '15%', width: '18%', height: '30%' } },
-  { label: 'FG Left', coords: '20/36/16/57', tone: 'crew', style: { left: '20%', top: '36%', width: '16%', height: '57%' } },
+  { label: 'FG Left', coords: '14/38/16/55', tone: 'crew', style: { left: '14%', top: '38%', width: '16%', height: '55%' } },
   { label: 'Rear Left', coords: '36/42/12/38', tone: 'crew', style: { left: '36%', top: '42%', width: '12%', height: '38%' } },
   { label: 'Rear Right', coords: '52/42/12/38', tone: 'crew', style: { left: '52%', top: '42%', width: '12%', height: '38%' } },
-  { label: 'FG Right', coords: '64/36/16/57', tone: 'crew', style: { left: '64%', top: '36%', width: '16%', height: '57%' } },
-  { label: 'Decision Console', coords: '28/35.6/44/58.2', tone: 'console', style: { left: '28%', top: '35.6%', width: '44%', height: '58.2%' } },
-  { label: 'Left Wall', coords: '2/13/16/32', tone: 'station', style: { left: '2%', top: '13%', width: '16%', height: '32%' } },
-  { label: 'Left Floor', coords: '2/48/17/27', tone: 'station', style: { left: '2%', top: '48%', width: '17%', height: '27%' } },
-  { label: 'Right Wall', coords: '82/13/16/32', tone: 'station', style: { left: '82%', top: '13%', width: '16%', height: '32%' } },
-  { label: 'Right Floor', coords: '81/48/17/27', tone: 'station', style: { left: '81%', top: '48%', width: '17%', height: '27%' } },
+  { label: 'FG Right', coords: '70/38/16/55', tone: 'crew', style: { left: '70%', top: '38%', width: '16%', height: '55%' } },
+  { label: 'Decision Console', coords: '27.5/55.6/45/37.1', tone: 'console', style: { left: '27.5%', top: '55.6%', width: '45%', height: '37.1%' } },
+  { label: 'UL: Food & Aid (CSS 2x2)', coords: '3.05/14.98/15.91/31.46', tone: 'station', style: { left: '3.0502%', top: '14.9841%', width: '15.9091%', height: '31.4559%' } },
+  { label: 'LL: 3D Fabricator', coords: '2.87/53.56/16.21/31.14', tone: 'station', style: { left: '2.8708%', top: '53.56%', width: '16.2081%', height: '31.1371%' } },
+  { label: 'UR: CAPCOM & Rover', coords: '81.10/14.98/15.91/31.46', tone: 'station', style: { left: '81.1005%', top: '14.9841%', width: '15.9091%', height: '31.4559%' } },
+  { label: 'LR: Inventory & Sample (CSS 3x3)', coords: '80.98/53.56/16.21/31.14', tone: 'station', style: { left: '80.9809%', top: '53.56%', width: '16.2081%', height: '31.1371%' } },
   { label: 'Action Band', coords: '0/93/100/7', tone: 'action', style: { left: '0%', top: '93%', width: '100%', height: '7%' } },
 ];
 
@@ -253,7 +229,101 @@ export function HailGameViewport() {
             draggable={false}
           />
 
-          {/* L03: Strictly 4 Main Stations in Side Wall/Floor Bays (2% visual separation from crew focal zone) */}
+          {/* L03: Wall-Rack Consolidation (4 Corner Bays · Center Wall Kept Clear) */}
+          {/* UL Bay: Food & Aid Rack (CSS 2x2) */}
+          <div className="hail-bay-rack hail-bay-rack--ul" aria-label="Tủ lương thực và sơ cứu (UL)">
+            <div className="hail-bay-rack-shell">
+              <div className="hail-rack-header" aria-hidden="true">
+                <span className="hail-rack-header-stripe" />
+                <span className="hail-rack-header-rivet" />
+              </div>
+              <div className="hail-rack-grid hail-rack-grid--2x2">
+                <button
+                  type="button"
+                  className="hail-rack-cell"
+                  aria-label={`Khẩu phần MRE (${Math.round(gameState.resources.foodKg)} kg)`}
+                  onClick={() => open('end', 'left-wall')}
+                >
+                  <img
+                    src={HAIL_INVENTORY.mrePack}
+                    alt="Gói khẩu phần MRE"
+                    className={`hail-rack-item ${gameState.resources.foodKg <= 0 ? 'is-empty-slot' : ''}`}
+                    draggable={false}
+                  />
+                  <span className="hail-rack-cell-tag">MRE</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="hail-rack-cell"
+                  aria-label={`Khẩu phần MRE (${Math.round(gameState.resources.foodKg)} kg)`}
+                  onClick={() => open('end', 'left-wall')}
+                >
+                  <img
+                    src={HAIL_INVENTORY.mrePack}
+                    alt="Gói khẩu phần MRE"
+                    className={`hail-rack-item ${gameState.resources.foodKg < 15 ? 'is-empty-slot' : ''}`}
+                    draggable={false}
+                  />
+                  <span className="hail-rack-cell-tag">MRE</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="hail-rack-cell"
+                  aria-label={`Khẩu phần MRE (${Math.round(gameState.resources.foodKg)} kg)`}
+                  onClick={() => open('end', 'left-wall')}
+                >
+                  <img
+                    src={HAIL_INVENTORY.mrePack}
+                    alt="Gói khẩu phần MRE"
+                    className={`hail-rack-item ${gameState.resources.foodKg < 30 ? 'is-empty-slot' : ''}`}
+                    draggable={false}
+                  />
+                  <span className="hail-rack-cell-tag">MRE</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="hail-rack-cell"
+                  aria-label="Mở bộ sơ cứu y tế"
+                  onClick={() => open('character', 'left-wall')}
+                >
+                  <img
+                    src={HAIL_INVENTORY.medicalKit}
+                    alt="Bộ sơ cứu y tế"
+                    className="hail-rack-item"
+                    draggable={false}
+                  />
+                  <span className="hail-rack-cell-tag">Y tế</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* LL Bay: 3D Fabricator (HUMAN FRONTIER 2050+ 8-vertex cavity-locked sprite) */}
+          <button
+            type="button"
+            data-slot="left-floor"
+            className="hail-station hail-station--floor is-primary-focus"
+            style={{ left: '2.8708%', top: '53.56%', width: '16.2081%', height: '31.1371%' }}
+            aria-label={`3D Fabricator — Chế tạo & sửa chữa (${Math.round(gameState.resources.partsKg)} kg phụ tùng)`}
+            onClick={() => open('crafting', 'left-floor')}
+          >
+            <img
+              src={
+                panel === 'crafting'
+                  ? HAIL_EQUIPMENT.fabricatorWorking
+                  : HAIL_EQUIPMENT.fabricatorIdle
+              }
+              alt="3D Fabricator"
+              className="hail-sprite-contain"
+              draggable={false}
+            />
+            <span className="hail-station-tag">3D Fabricator</span>
+          </button>
+
+          {/* UR Bay: CAPCOM & Rover Comms */}
           {MAIN_STATIONS.map(st => {
             const sys = gameState.systems[st.id];
             const vis = getHailSystemSprite(st.id, sys.integrity);
@@ -283,29 +353,150 @@ export function HailGameViewport() {
             );
           })}
 
-          {/* L03.5: empty shell-fitted locker patches; contents are independent state-driven sprites */}
-          <div className="hail-locker hail-locker--left" aria-label="Tủ tiếp tế sinh tồn">
-            <img src={HAIL_EQUIPMENT.lockerLeftOpen} alt="" className="hail-locker-chassis" draggable={false} />
-            {gameState.resources.foodKg > 0 && <img src={HAIL_INVENTORY.mrePack} alt="Khẩu phần MRE" className="hail-locker-item is-top-1" draggable={false} />}
-            {gameState.resources.oxygenKg > 0 && <img src={HAIL_INVENTORY.oxygenCell} alt="Bình oxy dự phòng" className="hail-locker-item is-top-2" draggable={false} />}
-            <img src={HAIL_INVENTORY.filterSeal} alt="Gioăng lọc dự phòng" className="hail-locker-item is-top-3" draggable={false} />
-            {gameState.resources.waterL > 0 && <img src={HAIL_INVENTORY.waterPack} alt="Túi nước" className="hail-locker-item is-bottom-1" draggable={false} />}
-            <img src={HAIL_INVENTORY.medicalKit} alt="Bộ y tế" className="hail-locker-item is-bottom-2" draggable={false} />
-            {gameState.resources.partsKg > 0 && <img src={HAIL_INVENTORY.spareParts} alt="Linh kiện" className="hail-locker-item is-bottom-3" draggable={false} />}
-            {gameState.resources.foodKg <= 0 && <img src={HAIL_EQUIPMENT.lockerDoorLeftTop} alt="" className="hail-locker-door" draggable={false} />}
-            {gameState.resources.waterL <= 0 && <img src={HAIL_EQUIPMENT.lockerDoorLeftBottom} alt="" className="hail-locker-door" draggable={false} />}
-          </div>
+          {/* LR Bay: Inventory & Sample Rack (CSS 3x3: 6 Equipment + 3 Lunar Samples) */}
+          <div className="hail-bay-rack hail-bay-rack--lr" aria-label="Tủ dụng cụ và mẫu vật (LR)">
+            <div className="hail-bay-rack-shell">
+              <div className="hail-rack-header" aria-hidden="true">
+                <span className="hail-rack-header-stripe" />
+                <span className="hail-rack-header-rivet" />
+              </div>
+              <div className="hail-rack-grid hail-rack-grid--3x3">
+                <button
+                  type="button"
+                  className="hail-rack-cell"
+                  aria-label="Mở khoan lõi regolith"
+                  onClick={() => open('expedition', 'right-floor')}
+                >
+                  <img
+                    src={HAIL_INVENTORY.sampleDrill}
+                    alt="Khoan lõi regolith"
+                    className="hail-rack-item"
+                    draggable={false}
+                  />
+                  <span className="hail-rack-cell-tag">Khoan lõi</span>
+                </button>
 
-          <div className="hail-locker hail-locker--right" aria-label="Tủ mẫu vật và thiết bị">
-            <img src={HAIL_EQUIPMENT.lockerRightOpen} alt="" className="hail-locker-chassis" draggable={false} />
-            <img src={HAIL_INVENTORY.lunarSample} alt="Mẫu đá Mặt Trăng" className="hail-locker-item is-top-1" draggable={false} />
-            <img src={HAIL_INVENTORY.sampleDrill} alt="Khoan lấy mẫu" className="hail-locker-item is-top-2" draggable={false} />
-            <img src={HAIL_INVENTORY.specialBeacon} alt="Beacon khẩn cấp" className="hail-locker-item is-top-3" draggable={false} />
-            <img src={HAIL_INVENTORY.spareParts} alt="Linh kiện dự phòng" className="hail-locker-item is-bottom-1" draggable={false} />
-            <img src={HAIL_INVENTORY.filterSeal} alt="Gioăng lọc" className="hail-locker-item is-bottom-2" draggable={false} />
-            <img src={HAIL_INVENTORY.oxygenCell} alt="Cell oxy" className="hail-locker-item is-bottom-3" draggable={false} />
-            {gameState.phase === 'ended' && <img src={HAIL_EQUIPMENT.lockerDoorRightTop} alt="" className="hail-locker-door" draggable={false} />}
-            {gameState.phase === 'ended' && <img src={HAIL_EQUIPMENT.lockerDoorRightBottom} alt="" className="hail-locker-door" draggable={false} />}
+                <button
+                  type="button"
+                  className="hail-rack-cell"
+                  aria-label="Phin lọc & vòng đệm"
+                  onClick={() => open('crafting', 'right-floor')}
+                >
+                  <img
+                    src={HAIL_INVENTORY.filterSeal}
+                    alt="Phin lọc & vòng đệm"
+                    className="hail-rack-item"
+                    draggable={false}
+                  />
+                  <span className="hail-rack-cell-tag">Phin lọc</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="hail-rack-cell"
+                  aria-label="Phụ tùng sửa chữa"
+                  onClick={() => open('crafting', 'right-floor')}
+                >
+                  <img
+                    src={HAIL_INVENTORY.spareParts}
+                    alt="Phụ tùng sửa chữa"
+                    className="hail-rack-item"
+                    draggable={false}
+                  />
+                  <span className="hail-rack-cell-tag">Phụ tùng</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="hail-rack-cell"
+                  aria-label="Băng bịt rò hợp chất"
+                  onClick={() => open('crafting', 'right-floor')}
+                >
+                  <img
+                    src={HAIL_INVENTORY.sealantTape}
+                    alt="Băng bịt rò hợp chất"
+                    className="hail-rack-item"
+                    draggable={false}
+                  />
+                  <span className="hail-rack-cell-tag">Băng bịt rò</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="hail-rack-cell"
+                  aria-label="Tấm chắn bụi tĩnh điện"
+                  onClick={() => open('expedition', 'right-floor')}
+                >
+                  <img
+                    src={HAIL_INVENTORY.dustShield}
+                    alt="Tấm chắn bụi tĩnh điện"
+                    className="hail-rack-item"
+                    draggable={false}
+                  />
+                  <span className="hail-rack-cell-tag">Khiên bụi</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="hail-rack-cell"
+                  aria-label="Bộ tiếp sóng vô tuyến"
+                  onClick={() => open('comms', 'right-floor')}
+                >
+                  <img
+                    src={HAIL_INVENTORY.radioRepeater}
+                    alt="Bộ tiếp sóng vô tuyến"
+                    className="hail-rack-item"
+                    draggable={false}
+                  />
+                  <span className="hail-rack-cell-tag">Tiếp sóng</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="hail-rack-cell is-sample-slot"
+                  aria-label="Mẫu vật địa chất 1"
+                  onClick={() => open('expedition', 'right-floor')}
+                >
+                  <img
+                    src={HAIL_INVENTORY.lunarSample}
+                    alt="Mẫu vật địa chất 1"
+                    className="hail-rack-item"
+                    draggable={false}
+                  />
+                  <span className="hail-rack-cell-tag">Mẫu vật 1</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="hail-rack-cell is-sample-slot"
+                  aria-label="Mẫu vật địa chất 2"
+                  onClick={() => open('expedition', 'right-floor')}
+                >
+                  <img
+                    src={HAIL_INVENTORY.lunarSample}
+                    alt="Mẫu vật địa chất 2"
+                    className="hail-rack-item"
+                    draggable={false}
+                  />
+                  <span className="hail-rack-cell-tag">Mẫu vật 2</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="hail-rack-cell is-sample-slot"
+                  aria-label="Mẫu vật địa chất 3"
+                  onClick={() => open('expedition', 'right-floor')}
+                >
+                  <img
+                    src={HAIL_INVENTORY.lunarSample}
+                    alt="Mẫu vật địa chất 3"
+                    className="hail-rack-item"
+                    draggable={false}
+                  />
+                  <span className="hail-rack-cell-tag">Mẫu vật 3</span>
+                </button>
+              </div>
+            </div>
           </div>
 
           {/* L04-L06: Human-Centered Crew Focal Zone (18 / 30 / 64 / 63%) + Central Console (36 / 60 / 28 / 37%) */}
@@ -342,8 +533,8 @@ export function HailGameViewport() {
               );
             })}
 
-            {/* Central Decision Console (28 / 35.6 / 44 / 58.2%) — foreground layer in front of all crew */}
-            <div className="hail-decision-console" style={{ left: '28%', top: '35.6%', width: '44%', height: '58.2%' }}>
+            {/* Central Decision Console (27.5 / 55.6 / 45 / 37.1%) — large foreground centerpiece flanked by crew */}
+            <div className="hail-decision-console" style={{ left: '27.5%', top: '55.6%', width: '45%', height: '37.1%' }}>
               <img
                 src={HAIL_EQUIPMENT.consoleDesk}
                 alt="Bàn điều khiển trung tâm"
