@@ -1,0 +1,58 @@
+{
+  "oxygenKgPerDay": 0.84,
+  "waterLPerDay": 2.5,
+  "foodKgPerDay": 0.62,
+  "recovery": {"1": 0.85, "2": 0.9, "3": 0.93},
+  "solarOutput": {"1": 1, "2": 1.2, "3": 1.4},
+  "airlockLeakFactor": {"1": 1, "2": 0.75, "3": 0.5},
+  "scrubberFlow": {"1": 1, "2": 1.15, "3": 1.3},
+  "repairKg": 2,
+  "upgradeKg": {"1": 4, "2": 8},
+  "solarKWhPerDay": 25,
+  "fissionKWhPerDay": 8,
+  "essentialKWhPerDay": 12,
+  "recyclerKWhPerDay": 4,
+  "batteryCapacityKWh": 60,
+  "lunarHalfCycleDays": 14,
+  "marsDustTransmission": 0.15,
+  "marsDustWindows": [{"startSol": 8, "endSol": 16}],
+  "moxieOxygenKgPerDay": 0.12,
+  "moxieKWhPerDay": 2,
+  "airlockLeakKgPerDay": 1,
+  "maxCargoKg": 80,
+  "transitSols": {"moon": 4, "mars": 22},
+  "radioLatencyMs": {"moon": 1300, "mars": 840000},
+  "groundProcessingMs": 1000,
+  "marsLaunch": {
+    "minSol": 15,
+    "minActiveCrew": 3,
+    "minSystemLevelTotal": 6,
+    "minSystemIntegrity": 0.8,
+    "requiredResources": {
+      "oxygenKg": 35,
+      "waterL": 45,
+      "foodKg": 30,
+      "partsKg": 12,
+      "batteryKWh": 40
+    },
+    "transitConsumption": {
+      "oxygenKg": 10,
+      "waterL": 15,
+      "foodKg": 10,
+      "partsKg": 4
+    }
+  },
+  "marsVictory": {
+    "minSol": 20,
+    "minActiveCrew": 3,
+    "minSystemLevelTotal": 8,
+    "minSystemIntegrity": 0.85,
+    "requiredResources": {
+      "oxygenKg": 25,
+      "waterL": 35,
+      "foodKg": 20,
+      "partsKg": 10,
+      "batteryKWh": 35
+    }
+  }
+}

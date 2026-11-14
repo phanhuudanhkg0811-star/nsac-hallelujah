@@ -1,0 +1,400 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mission incident catalog",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/event"
+  },
+  "minItems": 1,
+  "$defs": {
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "prompt",
+        "weight",
+        "when",
+        "choices"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "weight": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "when": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/condition"
+          },
+          "minItems": 0
+        },
+        "choices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/choice"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "condition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "value"
+          ],
+          "properties": {
+            "kind": {
+              "const": "planet"
+            },
+            "value": {
+              "enum": [
+                "moon",
+                "mars"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "value"
+          ],
+          "properties": {
+            "kind": {
+              "const": "min-sol"
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "system",
+            "value"
+          ],
+          "properties": {
+            "kind": {
+              "const": "integrity-below"
+            },
+            "system": {
+              "enum": [
+                "scrubber",
+                "recycler",
+                "solar",
+                "airlock"
+              ]
+            },
+            "value": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        }
+      ]
+    },
+    "effect": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "system",
+            "amount"
+          ],
+          "properties": {
+            "kind": {
+              "const": "damage"
+            },
+            "system": {
+              "enum": [
+                "scrubber",
+                "recycler",
+                "solar",
+                "airlock"
+              ]
+            },
+            "amount": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "amount"
+          ],
+          "properties": {
+            "kind": {
+              "const": "oxygen-loss"
+            },
+            "amount": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "amount"
+          ],
+          "properties": {
+            "kind": {
+              "const": "stress"
+            },
+            "amount": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            }
+          }
+        }
+      ]
+    },
+    "outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "weight",
+        "summary",
+        "effects"
+      ],
+      "properties": {
+        "weight": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/effect"
+          },
+          "minItems": 0
+        }
+      }
+    },
+    "choice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "partsKg",
+        "outcomes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "partsKg": {
+          "type": "number",
+          "minimum": 0
+        },
+        "outcomes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/outcome"
+          },
+          "minItems": 1
+        }
+      }
+    }
+  },
+  "examples": [
+    [
+      {
+        "id": "solar-particles",
+        "title": "Bão hạt Mặt Trời",
+        "prompt": "CAPCOM cảnh báo bức xạ. Quyết định ngay trước ca EVA.",
+        "weight": 1,
+        "when": [
+          {
+            "kind": "min-sol",
+            "value": 2
+          }
+        ],
+        "choices": [
+          {
+            "id": "shelter",
+            "label": "Dừng EVA và vào khu trú ẩn",
+            "partsKg": 0,
+            "outcomes": [
+              {
+                "weight": 1,
+                "summary": "Phi hành đoàn đã vào khu trú ẩn.",
+                "effects": []
+              }
+            ]
+          },
+          {
+            "id": "finish-eva",
+            "label": "Hoàn thành công việc ngoài trạm",
+            "partsKg": 0,
+            "outcomes": [
+              {
+                "weight": 3,
+                "summary": "Đội EVA về trước đỉnh sự kiện.",
+                "effects": [
+                  {
+                    "kind": "stress",
+                    "amount": 8
+                  }
+                ]
+              },
+              {
+                "weight": 1,
+                "summary": "Cảnh báo liều kế buộc đội EVA quay về.",
+                "effects": [
+                  {
+                    "kind": "stress",
+                    "amount": 25
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "airlock-leak",
+        "title": "Rò rỉ oxy tại gioăng khóa khí",
+        "prompt": "Cảm biến phát hiện tốc độ thất thoát tăng sau lần mở khóa khí.",
+        "weight": 1,
+        "when": [
+          {
+            "kind": "min-sol",
+            "value": 3
+          }
+        ],
+        "choices": [
+          {
+            "id": "isolate",
+            "label": "Cô lập khóa khí",
+            "partsKg": 0,
+            "outcomes": [
+              {
+                "weight": 1,
+                "summary": "Đã cô lập khóa khí, một phần oxy đã thoát.",
+                "effects": [
+                  {
+                    "kind": "oxygen-loss",
+                    "amount": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "temporary-seal",
+            "label": "Lắp gioăng dự phòng",
+            "partsKg": 1,
+            "outcomes": [
+              {
+                "weight": 1,
+                "summary": "Gioăng giữ áp suất; thất thoát nhỏ khi thay.",
+                "effects": [
+                  {
+                    "kind": "oxygen-loss",
+                    "amount": 0.2
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "regolith-filter",
+        "title": "Bụi regolith làm suy giảm bộ lọc",
+        "prompt": "Chênh áp tăng qua cụm lọc sau nhiều lượt EVA.",
+        "weight": 1,
+        "when": [
+          {
+            "kind": "min-sol",
+            "value": 4
+          },
+          {
+            "kind": "planet",
+            "value": "moon"
+          }
+        ],
+        "choices": [
+          {
+            "id": "replace",
+            "label": "Thay lõi lọc",
+            "partsKg": 1,
+            "outcomes": [
+              {
+                "weight": 1,
+                "summary": "Lõi mới giữ lưu lượng danh định.",
+                "effects": []
+              }
+            ]
+          },
+          {
+            "id": "defer",
+            "label": "Giảm EVA và hoãn thay lõi",
+            "partsKg": 0,
+            "outcomes": [
+              {
+                "weight": 1,
+                "summary": "Bộ lọc giảm lưu lượng trong lúc chờ bảo trì.",
+                "effects": [
+                  {
+                    "kind": "damage",
+                    "amount": 0.2,
+                    "system": "scrubber"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  ]
+}

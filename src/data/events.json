@@ -1,0 +1,151 @@
+[
+  {
+    "id": "solar-particles",
+    "title": "Bão hạt Mặt Trời",
+    "prompt": "CAPCOM cảnh báo bức xạ. Quyết định ngay trước ca EVA.",
+    "weight": 1,
+    "when": [
+      {
+        "kind": "min-sol",
+        "value": 2
+      }
+    ],
+    "choices": [
+      {
+        "id": "shelter",
+        "label": "Dừng EVA và vào khu trú ẩn",
+        "partsKg": 0,
+        "outcomes": [
+          {
+            "weight": 1,
+            "summary": "Phi hành đoàn đã vào khu trú ẩn.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "finish-eva",
+        "label": "Hoàn thành công việc ngoài trạm",
+        "partsKg": 0,
+        "outcomes": [
+          {
+            "weight": 3,
+            "summary": "Đội EVA về trước đỉnh sự kiện.",
+            "effects": [
+              {
+                "kind": "stress",
+                "amount": 8
+              }
+            ]
+          },
+          {
+            "weight": 1,
+            "summary": "Cảnh báo liều kế buộc đội EVA quay về.",
+            "effects": [
+              {
+                "kind": "stress",
+                "amount": 25
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "airlock-leak",
+    "title": "Rò rỉ oxy tại gioăng khóa khí",
+    "prompt": "Cảm biến phát hiện tốc độ thất thoát tăng sau lần mở khóa khí.",
+    "weight": 1,
+    "when": [
+      {
+        "kind": "min-sol",
+        "value": 3
+      }
+    ],
+    "choices": [
+      {
+        "id": "isolate",
+        "label": "Cô lập khóa khí",
+        "partsKg": 0,
+        "outcomes": [
+          {
+            "weight": 1,
+            "summary": "Đã cô lập khóa khí, một phần oxy đã thoát.",
+            "effects": [
+              {
+                "kind": "oxygen-loss",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "temporary-seal",
+        "label": "Lắp gioăng dự phòng",
+        "partsKg": 1,
+        "outcomes": [
+          {
+            "weight": 1,
+            "summary": "Gioăng giữ áp suất; thất thoát nhỏ khi thay.",
+            "effects": [
+              {
+                "kind": "oxygen-loss",
+                "amount": 0.2
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "regolith-filter",
+    "title": "Bụi regolith làm suy giảm bộ lọc",
+    "prompt": "Chênh áp tăng qua cụm lọc sau nhiều lượt EVA.",
+    "weight": 1,
+    "when": [
+      {
+        "kind": "min-sol",
+        "value": 4
+      },
+      {
+        "kind": "planet",
+        "value": "moon"
+      }
+    ],
+    "choices": [
+      {
+        "id": "replace",
+        "label": "Thay lõi lọc",
+        "partsKg": 1,
+        "outcomes": [
+          {
+            "weight": 1,
+            "summary": "Lõi mới giữ lưu lượng danh định.",
+            "effects": []
+          }
+        ]
+      },
+      {
+        "id": "defer",
+        "label": "Giảm EVA và hoãn thay lõi",
+        "partsKg": 0,
+        "outcomes": [
+          {
+            "weight": 1,
+            "summary": "Bộ lọc giảm lưu lượng trong lúc chờ bảo trì.",
+            "effects": [
+              {
+                "kind": "damage",
+                "amount": 0.2,
+                "system": "scrubber"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
