@@ -168,7 +168,7 @@ export function HailGameViewport() {
   }, []);
 
   const open = useCallback((next: Panel, region: FocusRegion = 'console') => {
-    playSfx('open');
+    playSfx(next === 'comms' ? 'radioOn' : 'open');
     setPanel(next);
     setFocusRegion(region);
     setConfirmReset(false);

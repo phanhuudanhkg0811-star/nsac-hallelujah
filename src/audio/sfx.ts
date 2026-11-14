@@ -6,6 +6,7 @@ const SFX = {
   repair: 'PH_SFX_REPAIR_V01',
   upgrade: 'PH_SFX_UPGRADE_V01',
   radio: 'PH_SFX_RADIO_TRANSMIT_V01',
+  radioOn: 'PH_SFX_RADIO_ON_V01',
   alert: 'PH_SFX_ALERT_V01',
   endSol: 'PH_SFX_END_SOL_V01',
   launch: 'PH_SFX_LAUNCH_V01',
