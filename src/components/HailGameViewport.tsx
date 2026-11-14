@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import '../hail.css';
 import { useGameStore } from '../store/gameStore.ts';
+import { playSfx, startAmbient } from '../audio/sfx.ts';
 import type { SystemId } from '../types/index.ts';
 import {
   HAIL_ENV,
@@ -155,13 +156,19 @@ export function HailGameViewport() {
     return () => clearTimeout(timer);
   }, [notice]);
 
+  useEffect(() => {
+    window.addEventListener('pointerdown', () => startAmbient(), { once: true });
+  }, []);
+
   const closeFocus = useCallback(() => {
+    playSfx('click', 0.4);
     setPanel(null);
     setFocusRegion('room');
     setConfirmReset(false);
   }, []);
 
   const open = useCallback((next: Panel, region: FocusRegion = 'console') => {
+    playSfx('open');
     setPanel(next);
     setFocusRegion(region);
     setConfirmReset(false);

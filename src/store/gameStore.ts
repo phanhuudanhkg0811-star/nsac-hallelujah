@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import type { GameState, SimulationConfig, SystemId, Cargo } from '../types/index.ts';
 import { DaySimulationEngine } from '../engine/DaySimulationEngine.ts';
+import { playSfx } from '../audio/sfx.ts';
 import initialStateJson from '../data/initial-state.json';
 import balanceJson from '../data/balance.json';
 import eventsJson from '../data/events.json';
@@ -65,6 +66,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
       config,
       commands: [{ type: 'advance' }],
     });
+    if (next.activeEvent && !gameState.activeEvent) playSfx('alert');
     set({ gameState: next });
   },
 
@@ -75,6 +77,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
       config,
       commands: [{ type: 'choose', eventId: gameState.activeEvent, choiceId }],
     });
+    playSfx('click');
     set({
       gameState: next,
       dailyDecision:
@@ -90,6 +93,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
       config,
       commands: [{ type: 'repair', system }],
     });
+    if (next !== gameState) playSfx('repair'); // engine returns the same state when the repair is refused
     set({ gameState: next });
   },
 
@@ -99,6 +103,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
       config,
       commands: [{ type: 'upgrade', system }],
     });
+    if (next !== gameState) playSfx('upgrade');
     set({ gameState: next });
   },
 
@@ -119,6 +124,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
       config,
       commands: [{ type: 'transmit', id, message }],
     });
+    playSfx('radio');
     set({ gameState: next });
   },
 
@@ -153,6 +159,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
     });
 
     if (next.sol === gameState.sol) return;
+    playSfx('endSol');
 
     const o2Delta = Math.round((next.resources.oxygenKg - prevResources.oxygenKg) * 10) / 10;
     const waterDelta = Math.round((next.resources.waterL - prevResources.waterL) * 10) / 10;
@@ -182,6 +189,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
       commands: [{ type: 'launch-mars' }],
     });
     if (next.planet !== prevPlanet) {
+      playSfx('launch', 0.8);
       const briefs = briefsJson as StemBrief[];
       set({
         gameState: next,
